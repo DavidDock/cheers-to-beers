@@ -1,10 +1,16 @@
-import Button from "react-bootstrap/Button";
-import "./App.css";
+import styles from  "./App.module.css";
+import TopNav from "./components/TopNav";
+import SideNav from "./components/SideNav";
+import FooterNav from "./components/FooterNav";
 
 function App() {
   return (
-    <div className="App">
-      <Button variant="primary">Cheer</Button>
+    <div className={styles.App}>
+      <TopNav />
+      <div>
+        <SideNav />
+      </div>
+      <FooterNav />
     </div>
   );
 }
