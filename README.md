@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Cheers To Beers  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cheers To Beers is a social media platform where users can show thier love of different beers and share a drink with one another even if they aren't in the same room. It offers the chance to find friends, interact and review their own drinks.  
+The deployed site can be found [Cheers-To-Beers](https://cheers-to-beers-4e5512c864fe.herokuapp.com/)
 
-## Available Scripts
+## CONTENTS
 
-In the project directory, you can run:
+- [Cheers To Beers](#cheers-to-beers)
+  - [CONTENTS](#contents)
+  - [User Experience](#user-experience)
+    - [Who is the Website for](#who-is-the-website-for)
+    - [Design](#design)
+    - [Colour Scheme](#colour-scheme)
+    - [Typography](#typography)
+    - [Wireframes](#wireframes)
+  - [Agile Methodology](#agile-methodology)
+  - [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Frameworks Libaries and Programs Used](#frameworks-libaries-and-programs-used)
+  - [Features](#features)
+    - [Accessibility](#accessibility)
+    - [Future Implementations](#future-implementations)
+  - [Deployment](#deployment)
+    - [Heroku](#heroku)
+    - [Fork Repository](#fork-repository)
+    - [Clone Repository](#clone-repository)
+  - [Testing](#testing)
+  - [Credits](#credits)
+    - [Learning](#learning)
+  - [Media](#media)
 
-### `npm start`
+## User Experience
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Who is the Website for  
+For people with an interest in beers and wish to interact with other like minded people through a socail media website. It allows people to review their drinks and interact with other members by giving them a cheers, commenting their post or following them. It allows peolpe to share a drink with eachother even if they are not physically together.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Design  
+The idea of this website is to take the user into a bar setting with a dark backround and neon colors to emulate bar signs.
 
-### `npm test`
+### Colour Scheme
+The color scheme fits in with the overal design goals. With a dark overall feel with neon colors to match the atmosphere of a bar.  
+To meet WCAG 2.0 criteria, the color scheme was then passed to [eightshapes.com](https://eightshapes.com/) to generate an accessibility table, only accessible text colors were then used to ensure easy reading. Prodominantly white text was used as this worked well with the design theme.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Color-grid](public/documentaion/images/contrast-grid.png)
 
-### `npm run build`
+### Typography
+The choice of Typography again follows the overall style. Reenie-Beanie from [Google Fonts](https://fonts.google.com/specimen/Reenie+Beanie) was used throughout to add some playfull style to the website.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Reenie-Beanie](public/documentaion/images/reenie-beanie.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Wireframes
+![Layout-Logged-Out](public/documentaion/wirframes/layout-logged-out.png)
+![Layout-Logged-In](public/documentaion/wirframes/layout-logged-in.png)
+![About-And-Contact](public/documentaion/wirframes/about_contact.png)
+![Sign-Up-Sign-In](public/documentaion/wirframes/sign-up_in.png)
+![Posts-Search](public/documentaion/wirframes/posts-search.png)
+![Post-detail](public/documentaion/wirframes/post-detail.png)
+![Profile](public/documentaion/wirframes/profile.png)
+![Profile-Edit](public/documentaion/wirframes/profile-edit.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Agile Methodology 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Agile methodology was used throughout the deveploment for this project and I found it extremly helpful to keep track of my project.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The project was broken down into Epics and User Stories and the MoSCoW method was used to determine relevent features needed for the scope of this project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Issues were created in GitHub for each Epic and User Story with Tasks to complete and MoSCoW labels on each one. A Kanban board was also created to keep track of these Issues. A Milestone for the MVP was also created and linked to relevant Issues.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The project's issues can be found [Here](https://github.com/DavidDock/cheers-to-beers/issues)
 
-## Learn More
+The project's Kanban board can be found [Here](https://github.com/users/DavidDock/projects/3)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The User Story table can be found below:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![User-Stories](public/documentaion/images/cheers-frontend-user-stories.png)
 
-### Code Splitting
+## Technologies Used  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Languages Used  
 
-### Analyzing the Bundle Size
+### Frameworks Libaries and Programs Used  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Git - Used for version control
+- GitHub - Used to store the repository and GitHub projects for the Kanban board
+- [Google Fonts](https://fonts.google.com/) - Used for the font
+- [balsamiq](https://balsamiq.com/) - Used to create wireframes
 
-### Making a Progressive Web App
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Accessibility  
 
-### Advanced Configuration
+### Future Implementations  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Deployment  
 
-### Deployment
+### Heroku  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Fork Repository
 
-### `npm run build` fails to minify
+### Clone Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Testing
+
+Please refer to [TESTING.MD](TESTING.md)  
+
+## Credits  
+
+### Learning
+The code used for this project was taught to me by code insitute. The Code Insitutes project run throughs 'Django Rest Framework' and 'Moments' helped me greatly with the development of my project.
+
+## Media
+
+- [Tinypng.com/](https://tinypng.com/) - Used to compress images
+- [Favicon.io](https://favicon.io/) - Used to generate favicon
+- [Amiresponsive](https://ui.dev/amiresponsive) - Used to see site on different devices and create the image for the top of this README
