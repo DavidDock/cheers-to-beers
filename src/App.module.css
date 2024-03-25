@@ -24,3 +24,10 @@ a:focus {
         0 0 2rem #ffffff,
         inset 0 0 .8rem #bc13fe;
 }
+
+@media (min-width: 1024px) {
+    * {
+        font-size: 2rem;
+    }
+    
+}
