@@ -3,7 +3,8 @@
     border: 0.1rem solid #ffffff;
     border-radius: 0.5rem;
     background-color: transparent;
-    margin: 0.5rem 0.25rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
     box-shadow: 0 0 .1rem #fff,
               0 0 .1rem #fff,
               0 0 0.5rem #bc13fe,
