@@ -1,3 +1,10 @@
+.TopNavLinkContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+  }
+
 .Header {
     margin: 0.5rem 0;
     border-radius: 1rem;
@@ -83,3 +90,11 @@
     font: 400 1.5rem "Reenie Beanie";
     color: #ffffff;
   }
+
+  @media (min-width: 650px) {
+    .Header,
+    .Logo b {
+        font-size: 4rem;
+    }
+    
+}
