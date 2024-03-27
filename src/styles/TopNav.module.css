@@ -2,12 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-left: auto;
   }
 
 .Header {
-    margin: 0.5rem 0;
-    border-radius: 1rem;
     background-color: transparent;
     color: white;
     display: flex;
@@ -15,11 +12,13 @@
     justify-content: space-between;
   }
 
+/*
+neon sign learnt from https://codepen.io/nodws/pen/WNjXbr
+*/
 .Logo {
-    margin: 0.5rem;
     border: 0.2rem solid #fff;
     border-radius: 1rem;
-    padding: 0.4em;
+    padding: 0.4rem;
     box-shadow: 0 0 .1rem #fff,
               0 0 .1rem #fff,
               0 0 1rem #bc13fe,
