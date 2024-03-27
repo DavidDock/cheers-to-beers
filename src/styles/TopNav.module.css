@@ -84,12 +84,6 @@ neon sign learnt from https://codepen.io/nodws/pen/WNjXbr
   }
 }
 
-.Link {
-  border: 0.1rem solid white;
-  font: 400 1.5rem "Reenie Beanie";
-  color: #ffffff;
-}
-
 @media (min-width: 650px) {
 
   .Header {
