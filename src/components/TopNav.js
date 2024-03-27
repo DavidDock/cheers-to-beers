@@ -8,8 +8,8 @@ const TopNav = () => {
             <div className={`m-2 ${styles.Logo}`}><b>Ch<span>eer</span>s<span>²Be</span>ers</b>
             </div>
             <div className={styles.TopNavLinkContainer}>
-                <a className={`mr-4 mb-2 ${boarderStyles.NormalBoarder}`}>About</a>
-                <a className={`mr-4 mb-2 ${boarderStyles.NormalBoarder}`}>Login</a>
+                <a className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}>About</a>
+                <a className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}>Login</a>
             </div>
         </nav>
     )
