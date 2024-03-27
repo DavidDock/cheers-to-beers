@@ -1,99 +1,102 @@
 .TopNavLinkContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .Header {
-    background-color: transparent;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 /*
 neon sign learnt from https://codepen.io/nodws/pen/WNjXbr
 */
 .Logo {
-    border: 0.2rem solid #fff;
-    border-radius: 1rem;
-    padding: 0.4rem;
-    box-shadow: 0 0 .1rem #fff,
-              0 0 .1rem #fff,
-              0 0 1rem #bc13fe,
-              0 0 0.5rem #bc13fe,
-              0 0 1.4rem #bc13fe,
-              inset 0 0 .8rem #bc13fe; 
+  border: 0.2rem solid #fff;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  box-shadow: 0 0 .1rem #fff,
+    0 0 .1rem #fff,
+    0 0 1rem #bc13fe,
+    0 0 0.5rem #bc13fe,
+    0 0 1.4rem #bc13fe,
+    inset 0 0 .8rem #bc13fe;
+}
+
+.Logo b {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #39FF14;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+
+.Logo span {
+  animation: blink linear infinite 2s;
+}
+
+.logo span:nth-of-type(2) {
+  animation: blink linear infinite 3s;
+}
+
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
   }
-  
+
+  79% {
+    color: #333;
+  }
+
+  80% {
+
+    text-shadow: none;
+  }
+
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+.Link {
+  border: 0.1rem solid white;
+  font: 400 1.5rem "Reenie Beanie";
+  color: #ffffff;
+}
+
+@media (min-width: 650px) {
+
+  .Header {
+    font-size: 2rem;
+  }
   .Logo b {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #39FF14;
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
-  }
-  
-  .Logo span {
-    animation: blink linear infinite 2s;
-  }
-  
-  .logo span:nth-of-type(2) {
-    animation: blink linear infinite 3s;
-  }
-  
-  
-  @keyframes blink {
-    78% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-  
-    79% {
-      color: #333;
-    }
-  
-    80% {
-  
-      text-shadow: none;
-    }
-  
-    81% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-  
-    82% {
-      color: #333;
-      text-shadow: none;
-    }
-  
-    83% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-  
-    92% {
-      color: #333;
-      text-shadow: none;
-    }
-  
-    92.5% {
-      color: inherit;
-      text-shadow: inherit;
-    }
+    font-size: 2.5rem;
   }
 
-  .Link {
-    border: 0.1rem solid white;
-    font: 400 1.5rem "Reenie Beanie";
-    color: #ffffff;
-  }
-
-  @media (min-width: 650px) {
-    .Header,
-    .Logo b {
-        font-size: 2.5rem;
-    }
-    
 }

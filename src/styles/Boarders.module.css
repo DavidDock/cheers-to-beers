@@ -3,11 +3,52 @@
     border: 0.1rem solid #ffffff;
     border-radius: 0.5rem;
     background-color: transparent;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
     box-shadow: 0 0 .1rem #fff,
-              0 0 .1rem #fff,
-              0 0 0.5rem #bc13fe,
-              0 0 0.5rem #bc13fe,
-              0 0 0.8rem #bc13fe,
-              inset 0 0 .8rem #bc13fe;
-  }
+        0 0 .1rem #fff,
+        0 0 0.5rem #bc13fe,
+        0 0 0.5rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        inset 0 0 .8rem #bc13fe;
+}
+
+.RedBoarder {
+    color: #ffffff;
+    border: 0.1rem solid #ffffff;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    padding: 0 0.5rem;
+    box-shadow: 0 0 .1rem #fff,
+        0 0 .1rem #fff,
+        0 0 .5rem #ff0000,
+        0 0 0.5rem #ff0000,
+        0 0 .8rem #ff0000,
+        inset 0 0 .8rem #ff0000;
+}
+
+.LargeRedBoarder {
+    color: #ffffff;
+    border-radius: 1rem;
+    background-color: transparent;
+    padding: 0.5rem;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 1rem #ff0000,
+        0 0 1rem #ff0000,
+        0 0 0.5rem #ff0000,
+        0 0 1rem #ff0000,
+        inset 0 0 1rem #ff0000;
+}
+
+.NormalBoarder:hover,
+.NormalBoarder:focus,
+.RedBoarder:hover,
+.RedBoarder:focus {
+    box-shadow: 0 0 .2rem #ffffff,
+        0 0 .2rem #ffffff,
+        0 0 .8rem #ffffff,
+        0 0 0.6rem #ffffff,
+        0 0 2rem #ffffff,
+        inset 0 0 .8rem #bc13fe;
+    text-decoration: none;
+    color: white;
+}

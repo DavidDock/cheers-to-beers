@@ -1,28 +1,44 @@
 .App {
     font-family: "Reenie Beanie", sans-serif;
     box-sizing: border-box;
-    background: linear-gradient(90deg, rgba(68,18,78,1) 0%, rgba(8,13,23,1) 53%, rgba(10,8,59,1) 100%);
+    background: linear-gradient(90deg, rgba(68, 18, 78, 1) 0%, rgba(8, 13, 23, 1) 53%, rgba(10, 8, 59, 1) 100%);
     height: 100vh;
     color: white;
     display: grid;
     font-size: 1.5rem;
     grid-template-rows: 1fr 6fr 1fr;
-  }
+}
 
-a  {
+a {
     color: #ffffff;
 }
 
-a:hover,
-a:focus {
-    color: #ffffff;
-    text-decoration: none;
-    box-shadow: 0 0 .2rem #ffffff,
-        0 0 .2rem #ffffff,
-        0 0 .8rem #ffffff,
-        0 0 0.6rem #ffffff,
-        0 0 2rem #ffffff,
-        inset 0 0 .8rem #bc13fe;
-    border: none;
-    
+.Middle {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow-y: hidden;
+    padding: 1rem;
+
+}
+
+/* scrollbar */
+*::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+    margin: 0.7rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #442e8c;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #6d5da1;
+    border-radius: 10px;
 }

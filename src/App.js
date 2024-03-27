@@ -7,8 +7,11 @@ function App() {
   return (
     <div className={styles.App}>
       <TopNav />
-      <div>
+      <div className={styles.Middle}>
         <SideNav />
+        <div>
+          Main
+        </div>
       </div>
       <FooterNav />
     </div>
