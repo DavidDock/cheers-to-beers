@@ -13,6 +13,11 @@ a {
     color: #ffffff;
 }
 
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
 .Middle {
     display: flex;
     flex-direction: row;
