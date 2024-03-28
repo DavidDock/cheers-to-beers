@@ -43,6 +43,7 @@
 .NormalBoarder:focus,
 .RedBoarder:hover,
 .RedBoarder:focus {
+    border-radius: 1rem;
     box-shadow: 0 0 .2rem #ffffff,
         0 0 .2rem #ffffff,
         0 0 .8rem #ffffff,
