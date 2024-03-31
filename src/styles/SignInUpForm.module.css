@@ -3,6 +3,7 @@
     text-shadow: 0 -40px 500px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
     color: #ffffff;
     text-decoration: none;
+    border:transparent;
 }
 
 .Image {
@@ -13,6 +14,12 @@
     font-size: 1.5rem;
     color: #ffffff;
     text-shadow: 0 -40px 500px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+
+.RedWarning {
+    background-color: #000;
+    color: #ff4444;
+    border: none;
 }
 
 @media (min-width: 650px) {

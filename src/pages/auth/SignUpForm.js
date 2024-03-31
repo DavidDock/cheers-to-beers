@@ -49,7 +49,7 @@ const SignUpForm = () => {
             <Form.Group controlId="username">
               <Form.Label className="d-none">username</Form.Label>
               <Form.Control
-                className="text-center"
+                className={boarderStyles.Input}
                 type="text"
                 placeholder="Username"
                 name="username"
@@ -58,7 +58,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.username?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert key={idx} className={styles.RedWarning}>
                 {message}
               </Alert>
             ))}
@@ -66,7 +66,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
-                className="text-center"
+                className={boarderStyles.Input}
                 type="password"
                 placeholder="Password"
                 name="password1"
@@ -75,7 +75,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.password1?.map((message, idx) => (
-              <Alert key={idx} variant="warning">
+              <Alert key={idx} className={styles.RedWarning}>
                 {message}
               </Alert>
             ))}
@@ -83,7 +83,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password2">
               <Form.Label className="d-none">Confirm password</Form.Label>
               <Form.Control
-                className="text-center"
+                className={boarderStyles.Input}
                 type="password"
                 placeholder="Confirm password"
                 name="password2"
@@ -92,7 +92,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.password2?.map((message, idx) => (
-              <Alert key={idx} variant="warning">
+              <Alert key={idx} className={styles.RedWarning}>
                 {message}
               </Alert>
             ))}
@@ -113,7 +113,7 @@ const SignUpForm = () => {
             {/* Link */}
             <div className="justify-content-center text-center">
                 <span>Already Registered?
-                    <Link className={`pl-2 ${styles.Link}`} to="/signin">
+                    <Link className={`ml-2 ${styles.Link}`} to="/signin">
                           Login
                     </Link>
                 </span>

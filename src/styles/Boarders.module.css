@@ -56,6 +56,24 @@
     background-color: transparent;
 }
 
+.Input {
+    text-align: center;
+    color: #000;
+}
+
+.Input:hover,
+.Input:focus {
+    border: none;
+    box-shadow: 0 0 .1rem #bc13fe,
+        0 0 .1rem #bc13fe,
+        0 0 .1rem #bc13fe,
+        0 0 0.2rem #bc13fe,
+        0 0 0.75rem #bc13fe,
+        inset 0 0 .1rem #bc13fe;
+    text-decoration: none;
+    color: #000;
+}
+
 .Active {
     box-shadow: 0 0 .2rem #ffffff,
         0 0 .2rem #ffffff,
