@@ -36,7 +36,7 @@ const SignUpForm = () => {
         }
       };
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center px-2">
+        <div className="d-flex flex-column justify-content-center align-items-center px-2 my-4 my-md-0">
             {/* Heading */}
             <div className="d-flex justify-content-center align-items-center my-4" >
                 <img className={styles.Image} src={logo} alt="Beer Glass" height="25"></img>
