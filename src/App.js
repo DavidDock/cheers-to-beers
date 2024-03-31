@@ -17,6 +17,7 @@ function App() {
         <SideNav />
         <div className={styles.Main}>
           <Container className="py-0">
+            {/* Container for content in route */}
             <Switch>
               <Route exact path="/" render={() => <h1>Home page</h1>} />
               <Route exact path="/signin" render={() => <h1>Log in</h1>} />

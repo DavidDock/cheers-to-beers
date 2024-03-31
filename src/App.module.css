@@ -6,7 +6,7 @@
     display: grid;
     grid-template-rows: 1fr 10fr 1fr;
     color: white;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 a {
