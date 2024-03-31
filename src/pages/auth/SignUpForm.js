@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
+import axios from "axios";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import logo from "../../assets/beer-cheers.png";
-
+import boarderStyles from "../../styles/Boarders.module.css";
 import { Form, Button, Alert } from "react-bootstrap";
-import axios from "axios";
 
 const SignUpForm = () => {
     const [signUpData, setSignUpData] = useState({
@@ -36,7 +36,7 @@ const SignUpForm = () => {
         }
       };
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center p-2">
+        <div className="d-flex flex-column justify-content-center align-items-center">
             {/* Heading */}
             <div className="d-flex justify-content-center align-items-center my-4" >
                 <img className={styles.Image} src={logo} alt="Beer Glass" height="25"></img>
@@ -49,7 +49,7 @@ const SignUpForm = () => {
             <Form.Group controlId="username">
               <Form.Label className="d-none">username</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className="text-center"
                 type="text"
                 placeholder="Username"
                 name="username"
@@ -66,7 +66,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className="text-center"
                 type="password"
                 placeholder="Password"
                 name="password1"
@@ -83,7 +83,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password2">
               <Form.Label className="d-none">Confirm password</Form.Label>
               <Form.Control
-                className={styles.Input}
+                className="text-center"
                 type="password"
                 placeholder="Confirm password"
                 name="password2"
@@ -98,9 +98,10 @@ const SignUpForm = () => {
             ))}
 
             <Button
+              className={`d-block mx-auto my-4 ${boarderStyles.NormalBoarder}`}
               type="submit"
             >
-              Sign up
+              Register
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
               <Alert key={idx} variant="warning" className="mt-3">
@@ -110,7 +111,7 @@ const SignUpForm = () => {
           </Form>
           
             {/* Link */}
-            <div className="mt-4 justify-content-center text-center">
+            <div className="justify-content-center text-center">
                 <span>Already Registered?
                     <Link className={`pl-2 ${styles.Link}`} to="/signin">
                           Login

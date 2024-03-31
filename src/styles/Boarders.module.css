@@ -44,6 +44,7 @@
 .RedBoarder:hover,
 .RedBoarder:focus {
     border-radius: 1rem;
+    border: 0.1rem solid #ffffff;
     box-shadow: 0 0 .2rem #ffffff,
         0 0 .2rem #ffffff,
         0 0 .8rem #ffffff,
@@ -52,6 +53,7 @@
         inset 0 0 .8rem #bc13fe;
     text-decoration: none;
     color: white;
+    background-color: transparent;
 }
 
 .Active {
