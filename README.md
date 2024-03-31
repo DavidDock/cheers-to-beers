@@ -1,7 +1,11 @@
 # Cheers To Beers  
 
 Cheers To Beers is a social media platform where users can show thier love of different beers and share a drink with one another even if they aren't in the same room. It offers the chance to find friends, interact and review their own drinks.  
-The deployed site can be found [Cheers-To-Beers](https://cheers-to-beers-4e5512c864fe.herokuapp.com/)
+The deployed site can be found here - [Cheers-To-Beers](https://cheers-to-beers-4e5512c864fe.herokuapp.com/)  
+
+This website uses the Cheers To Beers API.  
+The repository can be found here- [Cheers-API-GitHub-Repository](https://github.com/DavidDock/cheers-api)  
+The deployed API found here- [Cheers-API](https://cheers-to-beers-api-5a858b4697bd.herokuapp.com/) 
 
 ## CONTENTS
 
@@ -96,9 +100,25 @@ The User Story table can be found below:
 
 ### Heroku  
 
+- Make sure the backend api has the correct CLIENT_ORIGIN convig var to match the frontend url. Details can be found in the README's deployment section of [Cheers-API-GitHub-Repository](https://github.com/DavidDock/cheers-api)
+- Log in to Heroku and create App with unique name
+- Click on deploy and choose GitHub and link to the repository [Cheers-To-Beers-GitHub-Repository](https://github.com/DavidDock/cheers-to-beers)
+- Click on deply branch
+- Open App
+
+Visit the deployed site: [Cheers-To-Beers](https://cheers-to-beers-4e5512c864fe.herokuapp.com/)  
+
 ### Fork Repository
+- Go to the [Cheers-To-Beers-GitHub-Repository](https://github.com/DavidDock/cheers-to-beers)
+- Click "Fork" which can be found in the top right corner
 
 ### Clone Repository
+- Go to the [Cheers-To-Beers-GitHub-Repository](https://github.com/DavidDock/cheers-to-beers)
+- Under the repository click on "go to" then under the "local" tab copy the HTTPS clone URL
+- In your local development environment go to the terminal
+- Change the current working directory to the location you want the cloned directory to be made
+- Type "git clone" and then paste the clone URL and press enter
+
 
 ## Testing
 

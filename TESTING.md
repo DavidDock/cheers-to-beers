@@ -42,6 +42,7 @@ The favicon can successfully be seen
 Can see the basic nav bar, footer and sidebar.
 
 #### Results
+The top, side and footer navs can be correctly seen with relevent links.
 
 ### Router
  
@@ -50,6 +51,7 @@ Can see the basic nav bar, footer and sidebar.
 * Can see a page not found if needed.
 
 #### Results
+The router is working correctly with all links created going to the correct route.
 
 ### Connect to API
  
@@ -57,6 +59,7 @@ Can see the basic nav bar, footer and sidebar.
 Have the front and backend connected.
 
 #### Results
+The backend had given the front end permission to use the api and is connected correctly.
 
 ### Sign-up
  
@@ -64,6 +67,7 @@ Have the front and backend connected.
 A new user can sign up
 
 #### Results
+A new user can sign up correctly and a profile is created.
 
 ### Sign-In
  
