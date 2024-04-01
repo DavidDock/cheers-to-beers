@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import styles from "../styles/TopNav.module.css";
 import boarderStyles from "../styles/Boarders.module.css";
 import { NavLink } from "react-router-dom";
-import { CurrentUserContext } from "../App";
+import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const TopNav = () => {
-    const currentUser = useContext(CurrentUserContext);
+    const currentUser = useCurrentUser();
 
     const loggedInIcons = (
         <>
