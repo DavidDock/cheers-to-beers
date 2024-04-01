@@ -10,6 +10,9 @@ import "./api/axiosDefaults";
 import { createContext, useEffect, useState } from "react";
 import axios from "axios"
 
+export const CurrentUserContext = createContext()
+export const SetCurrentUserContext = createContext()
+
 function App() {
 
   const [currentUser, setCurrentUser] = useState(null);
@@ -28,28 +31,32 @@ function App() {
   }, []);
 
   return (
-    <div className={styles.App}>
-      {/* Grid for TopNav Middle FooterNav */}
-      <TopNav />
-      <div className={styles.Middle}>
-        {/* Middle Flex container for SideNav and Main */}
-        <SideNav />
-        <div className={styles.Main}>
-          <Container className="py-0">
-            {/* Container for content in route */}
-            <Switch>
-              <Route exact path="/" render={() => <h1>Home page</h1>} />
-              <Route exact path="/signin" render={() => <SignInForm />} />
-              <Route exact path="/signup" render={() => <SignUpForm />} />
-              <Route exact path="/about" render={() => <h1>About</h1>} />
-              <Route exact path="/contact" render={() => <h1>Contact</h1>} />
-              <Route render={() => <p>Page not found!</p>} />
-            </Switch>
-          </Container>
+    <CurrentUserContext.Provider value={currentUser}>
+      <SetCurrentUserContext.Provider value={setCurrentUser}>
+        <div className={styles.App}>
+          {/* Grid for TopNav Middle FooterNav */}
+          <TopNav />
+          <div className={styles.Middle}>
+            {/* Middle Flex container for SideNav and Main */}
+            <SideNav />
+            <div className={styles.Main}>
+              <Container className="py-0">
+                {/* Container for content in route */}
+                <Switch>
+                  <Route exact path="/" render={() => <h1>Home page</h1>} />
+                  <Route exact path="/signin" render={() => <SignInForm />} />
+                  <Route exact path="/signup" render={() => <SignUpForm />} />
+                  <Route exact path="/about" render={() => <h1>About</h1>} />
+                  <Route exact path="/contact" render={() => <h1>Contact</h1>} />
+                  <Route render={() => <p>Page not found!</p>} />
+                </Switch>
+              </Container>
+            </div>
+          </div>
+          <FooterNav />
         </div>
-      </div>
-      <FooterNav />
-    </div>
+      </SetCurrentUserContext.Provider>
+    </CurrentUserContext.Provider>
   );
 }
 

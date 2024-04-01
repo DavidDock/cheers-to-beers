@@ -1,9 +1,45 @@
-import React from 'react';
+import React, { useContext } from "react";
 import styles from "../styles/TopNav.module.css";
 import boarderStyles from "../styles/Boarders.module.css";
 import { NavLink } from "react-router-dom";
+import { CurrentUserContext } from "../App";
 
 const TopNav = () => {
+    const currentUser = useContext(CurrentUserContext);
+
+    const loggedInIcons = (
+        <>
+            <NavLink
+                exact
+                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
+                activeClassName={boarderStyles.Active}
+                to="/about"
+            >
+                About
+            </NavLink>
+            <NavLink
+                exact
+                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
+                activeClassName={boarderStyles.Active}
+                to="/"
+            >
+                {currentUser?.username}
+            </NavLink>
+        </>
+    );
+    const loggedOutIcons = (
+        <>
+            <NavLink
+                exact
+                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
+                activeClassName={boarderStyles.Active}
+                to="/signin"
+            >
+                Login
+            </NavLink>
+        </>
+    );
+
     return (
         <nav className={`my-2 ${styles.Header}`}>
             <NavLink to="/">
@@ -11,22 +47,7 @@ const TopNav = () => {
                 </div>
             </NavLink>
             <div className={styles.TopNavLinkContainer}>
-                <NavLink
-                    exact
-                    className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
-                    activeClassName={boarderStyles.Active}
-                    to="/about"
-                >
-                    About
-                </NavLink>
-                <NavLink
-                    exact
-                    className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
-                    activeClassName={boarderStyles.Active}
-                    to="/signin"
-                >
-                    Login
-                </NavLink>
+            {currentUser ? loggedInIcons : loggedOutIcons}
             </div>
         </nav>
     )
