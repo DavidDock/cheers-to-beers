@@ -104,7 +104,7 @@ const SignUpForm = () => {
               Register
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="mt-3">
+              <Alert key={idx} className={`mt-3 ${styles.RedWarning}`}>
                 {message}
               </Alert>
             ))}
