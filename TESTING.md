@@ -67,7 +67,7 @@ The backend had given the front end permission to use the api and is connected c
 A new user can sign up
 
 #### Results
-A new user can sign up correctly and a profile is created.
+A new user can sign up correctly and a profile is created and relevent errors shown if details entered are incorrect.
 
 ### Sign-In
  
@@ -75,6 +75,7 @@ A new user can sign up correctly and a profile is created.
 A user can sign in
 
 #### Results
+A user can sign in using the form with relavent errors shown if details entered are incorrect.
 
 ### Logged in status
  
@@ -82,6 +83,7 @@ A user can sign in
 A user can see if they are logged in 
 
 #### Results
+When a user is logged in they can see the relevant icons on all nav bars by using the current user context throughout the app.
 
 ### Refresh access tokens
  
