@@ -22,6 +22,7 @@ const SignInForm = () => {
       const history = useHistory();
 
       const handleSubmit = async (event) => {
+        // Submit sign in form
         event.preventDefault();
         try {
           const { data } = await axios.post("/dj-rest-auth/login/", signInData);
@@ -33,6 +34,7 @@ const SignInForm = () => {
       };
 
       const handleChange = (event) => {
+        // Set the signInData state upon input
         setSignInData({
           ...signInData,
           [event.target.name]: event.target.value,

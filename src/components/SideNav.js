@@ -6,7 +6,8 @@ import { NavLink } from "react-router-dom";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 
 const SideNav = () => {
-
+  // Use context to get current user data
+  // Display relevant NavLinks depending on logged in status
   const currentUser = useCurrentUser();
 
     const loggedInIcons = (

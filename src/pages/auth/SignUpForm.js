@@ -20,6 +20,7 @@ const SignUpForm = () => {
       const history = useHistory();
     
       const handleChange = (event) => {
+        // Set the signUpData upon input
         setSignUpData({
           ...signUpData,
           [event.target.name]: event.target.value,
@@ -27,6 +28,7 @@ const SignUpForm = () => {
       };
     
       const handleSubmit = async (event) => {
+        // Submits data to create user and profile
         event.preventDefault();
         try {
           await axios.post("/dj-rest-auth/registration/", signUpData);
