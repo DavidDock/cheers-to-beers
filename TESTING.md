@@ -67,7 +67,7 @@ The backend had given the front end permission to use the api and is connected c
 A new user can sign up
 
 #### Results
-A new user can sign up correctly and a profile is created and relevent errors shown if details entered are incorrect.
+A new user can sign up correctly and a profile is created and relevent errors shown if details entered are incorrect
 
 ### Sign-In
  
@@ -75,7 +75,7 @@ A new user can sign up correctly and a profile is created and relevent errors sh
 A user can sign in
 
 #### Results
-A user can sign in using the form with relavent errors shown if details entered are incorrect.
+A user can sign in using the form with relavent errors shown if details entered are incorrect
 
 ### Logged in status
  
@@ -83,7 +83,7 @@ A user can sign in using the form with relavent errors shown if details entered 
 A user can see if they are logged in 
 
 #### Results
-When a user is logged in they can see the relevant icons on all nav bars by using the current user context throughout the app.
+When a user is logged in they can successfully see the relevant icons on all nav bars by using the current user context throughout the app.
 
 ### Refresh access tokens
  
@@ -91,6 +91,7 @@ When a user is logged in they can see the relevant icons on all nav bars by usin
 The user stays logged in until they log out
 
 #### Results
+When logged in the user successfully stays logged in until they logout
 
 ### Sign-Out
  
@@ -99,6 +100,7 @@ The user stays logged in until they log out
 * Correct icons are displayed.
 
 #### Results
+When the logged in user logs out the current user successfully is null and the relevant icons can be seen
 
 ### Profile avatar
  
@@ -106,6 +108,7 @@ The user stays logged in until they log out
 The logged in user can see their avatar.
 
 #### Results
+The logged in user can successfully see their avatar displayed
 
 ### Create Post
  
