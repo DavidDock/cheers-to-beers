@@ -8,6 +8,7 @@ import Avatar from "./Avatar";
 const TopNav = () => {
     // Use context to get current user data
     // Display relevant NavLinks depending on logged in status
+    // Display Avatar giving relevant props
     const currentUser = useCurrentUser();
 
     const loggedInIcons = (

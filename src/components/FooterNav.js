@@ -7,6 +7,7 @@ import axios from "axios";
 
 const FooterNav = () => {
     // Use context to get current user data
+    // Functionality to log out
     // Display relevant NavLinks depending on logged in status
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
