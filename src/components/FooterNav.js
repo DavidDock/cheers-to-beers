@@ -22,7 +22,7 @@ const FooterNav = () => {
             <NavLink
                 exact
                 className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
-                activeClassName={boarderStyles.Active}
+                onClick ={() => {}}
                 to="/"
             >
                 Logout

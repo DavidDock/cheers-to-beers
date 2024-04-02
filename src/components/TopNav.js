@@ -3,6 +3,7 @@ import styles from "../styles/TopNav.module.css";
 import boarderStyles from "../styles/Boarders.module.css";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "./Avatar";
 
 const TopNav = () => {
     // Use context to get current user data
@@ -21,11 +22,10 @@ const TopNav = () => {
             </NavLink>
             <NavLink
                 exact
-                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
-                activeClassName={boarderStyles.Active}
-                to="/"
+                className={`mr-4 mt-2 ${boarderStyles.RedBoarder}`}
+                to={`/profiles/${currentUser?.profile_id}`}
             >
-                {currentUser?.username}
+                <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
             </NavLink>
         </>
     );
