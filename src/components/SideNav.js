@@ -13,7 +13,14 @@ const SideNav = () => {
     const loggedInIcons = (
       <div className={styles.List}>
       <h1 className={`my-2 mx-2 text-center ${styles.GreenTitle}`}>Posts</h1>
-      <a className={`my-2 mx-2 text-center ${boarderStyles.RedBoarder}`}>ADD</a>
+      <NavLink
+        exact
+        className={`my-2 mx-2 text-center ${boarderStyles.RedBoarder}`}
+        activeClassName={boarderStyles.Active}
+        to="contact"
+      >
+        ADD
+      </NavLink>
       <NavLink
         exact
         className={`my-2 mx-2 text-center ${boarderStyles.NormalBoarder}`}
@@ -22,9 +29,30 @@ const SideNav = () => {
       >
         All
       </NavLink>
-      <a className={`my-2 mx-2 text-center ${boarderStyles.NormalBoarder}`}>STARRED</a>
-      <a className={`my-2 mx-2 text-center ${boarderStyles.NormalBoarder}`}>FRIENDS</a>
-      <a className={`my-2 mx-2 text-center ${boarderStyles.NormalBoarder}`}>YOURS</a>
+      <NavLink
+        exact
+        className={`my-2 mx-2 text-center ${boarderStyles.NormalBoarder}`}
+        activeClassName={boarderStyles.Active}
+        to="contact"
+      >
+        STARED
+      </NavLink>
+      <NavLink
+        exact
+        className={`my-2 mx-2 text-center ${boarderStyles.NormalBoarder}`}
+        activeClassName={boarderStyles.Active}
+        to="contact"
+      >
+        FRIENDS
+      </NavLink>
+      <NavLink
+        exact
+        className={`my-2 mx-2 text-center ${boarderStyles.NormalBoarder}`}
+        activeClassName={boarderStyles.Active}
+        to="contact"
+      >
+        YOURS
+      </NavLink>
     </div>
     );
     const loggedOutIcons = (
