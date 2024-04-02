@@ -22,7 +22,7 @@ const TopNav = () => {
             </NavLink>
             <NavLink
                 exact
-                className={`mr-4 mt-2 ${boarderStyles.RedBoarder}`}
+                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
                 to={`/profiles/${currentUser?.profile_id}`}
             >
                 <Avatar src={currentUser?.profile_image} text="Profile" height={40} />

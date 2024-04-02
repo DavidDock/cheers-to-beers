@@ -2,12 +2,23 @@ import React from 'react';
 import styles from "../styles/FooterNav.module.css";
 import boarderStyles from "../styles/Boarders.module.css";
 import { NavLink } from "react-router-dom";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
+import axios from "axios";
 
 const FooterNav = () => {
     // Use context to get current user data
     // Display relevant NavLinks depending on logged in status
-  const currentUser = useCurrentUser();
+    const currentUser = useCurrentUser();
+    const setCurrentUser = useSetCurrentUser();
+
+    const handleSignOut = async () => {
+        try {
+          await axios.post("dj-rest-auth/logout/");
+          setCurrentUser(null);
+        } catch (err) {
+          console.log(err);
+        }
+      };
 
     const loggedInIcons = (
         <>
@@ -22,7 +33,7 @@ const FooterNav = () => {
             <NavLink
                 exact
                 className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
-                onClick ={() => {}}
+                onClick ={handleSignOut}
                 to="/"
             >
                 Logout
