@@ -13,6 +13,7 @@ import Asset from "../../components/Asset";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import boarderStyles from "../../styles/Boarders.module.css";
+import { Rating } from "react-simple-star-rating";
 
 function PostCreateForm() {
 
@@ -24,6 +25,9 @@ function PostCreateForm() {
     image: "",
     type: "",
   });
+  
+  const [rating, setRating] = useState(0);
+
   const { title, content, type, image } = postData;
 
   const handleChange = (event) => {
@@ -41,6 +45,10 @@ function PostCreateForm() {
         image: URL.createObjectURL(event.target.files[0]),
       });
     }
+  };
+
+  const handleRating = (rate) => {
+    setRating(rate / 20);
   };
 
 
@@ -134,7 +142,7 @@ function PostCreateForm() {
               />
             </Form.Group>
 
-            <Form.Group className="text-center">
+            {/*<Form.Group className="text-center">
               <Form.Label>Rating</Form.Label>
               <Form.Control
                   className={boarderStyles.Input}
@@ -143,6 +151,9 @@ function PostCreateForm() {
                   value={""}
                   onChange={""}
               />
+            </Form.Group> */}
+            <Form.Group>
+              <Rating onClick={handleRating} size={20} /* Available Props */ />
             </Form.Group>
             <div className="d-md-none">{textFields}</div>
           </Container>
