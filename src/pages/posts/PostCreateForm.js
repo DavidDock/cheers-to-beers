@@ -33,7 +33,7 @@ function PostCreateForm() {
       <Form.Group>
         <Form.Label>Content</Form.Label>
         <Form.Control
-          className={boarderStyles.Input}
+          className={boarderStyles.TextArea}
           as="textarea"
           rows={4}
           name="content"
@@ -59,7 +59,7 @@ function PostCreateForm() {
             >
                 cancel
             </Button>
-            <Button className={`mx-2 my-3 ${boarderStyles.NormalBoarder}`} type="submit">
+            <Button className={`mx-3 my-3 ${boarderStyles.NormalBoarder}`} type="submit">
                 create
             </Button>
         </div>
@@ -68,8 +68,8 @@ function PostCreateForm() {
 
   return (
     <Form>
-      <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+      <Row className="px-2">
+        <Col className="py-2 p-0 p-md-2" md={7}>
           <Container
             className={` ${styles.Container} d-flex flex-column justify-content-center align-items-center`}
           >
@@ -86,20 +86,19 @@ function PostCreateForm() {
                 </Form.Label>
             </Form.Group>
             <Form.Group className="text-center">
-        <Form.Label>Rating</Form.Label>
-        <Form.Control
-            className={boarderStyles.Input}
-            type="text"
-            name="rating"
-            value={""}
-            onChange={""}
-        />
-    </Form.Group>
-
+              <Form.Label>Rating</Form.Label>
+              <Form.Control
+                  className={boarderStyles.Input}
+                  type="text"
+                  name="rating"
+                  value={""}
+                  onChange={""}
+              />
+            </Form.Group>
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+        <Col md={5} className="d-none d-md-block p-0 p-md-2">
           <Container className="">{textFields}</Container>
         </Col>
       </Row>

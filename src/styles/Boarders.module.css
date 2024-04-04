@@ -77,6 +77,18 @@
     margin: none;
 }
 
+.TextArea:hover,
+.TextArea:focus {
+    border-color: #bc13fe;
+    box-shadow: 0 0 0rem #ffffff,
+        0 0 0rem #ffffff,
+        0 0 0rem #ffffff,
+        0 0 0rem #ffffff,
+        0 0 0rem #ffffff,
+        inset 0 0 .6rem #bc13fe;
+}
+
+
 .Active {
     box-shadow: 0 0 .2rem #ffffff,
         0 0 .2rem #ffffff,
