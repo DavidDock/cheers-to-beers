@@ -1,3 +1,9 @@
 .Container {
     min-height: 21rem;
   }
+
+  .RedWarning {
+    background-color: #000;
+    color: #ff4444;
+    border: none;
+}
