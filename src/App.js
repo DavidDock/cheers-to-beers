@@ -5,6 +5,7 @@ import SideNav from "./components/SideNav";
 import FooterNav from "./components/FooterNav";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
+import PostCreateForm from "./pages/posts/PostCreateForm";
 import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
 
@@ -26,6 +27,7 @@ function App() {
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/about" render={() => <h1>About</h1>} />
               <Route exact path="/contact" render={() => <h1>Contact</h1>} />
+              <Route exact path="/posts/create" render={() => <PostCreateForm />} />
               <Route render={() => <p>Page not found!</p>} />
             </Switch>
           </Container>

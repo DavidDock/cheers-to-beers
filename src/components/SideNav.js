@@ -17,7 +17,7 @@ const SideNav = () => {
         exact
         className={`my-2 mx-2 text-center ${boarderStyles.RedBoarder}`}
         activeClassName={boarderStyles.Active}
-        to="contact"
+        to="/posts/create"
       >
         ADD
       </NavLink>
