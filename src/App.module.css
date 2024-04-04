@@ -18,6 +18,12 @@ a:focus {
     text-decoration: none;
 }
 
+.Image {
+    max-height: 40vh;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
 .Middle {
     display: flex;
     flex-direction: row;
