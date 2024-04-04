@@ -73,6 +73,8 @@
         inset 0 0 .1rem #bc13fe;
     text-decoration: none;
     color: #000;
+    padding: none;
+    margin: none;
 }
 
 .Active {

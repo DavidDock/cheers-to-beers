@@ -20,19 +20,49 @@ function PostCreateForm() {
 
   const textFields = (
     <div className="text-center">
-      {/* Add your form fields here */}
-
-    
-    
-      <Button
-        className={`mx-2 my-3 ${boarderStyles.NormalBoarder}`}
-        onClick={() => {}}
-      >
-        cancel
-      </Button>
-      <Button className={`mx-2 my-3 ${boarderStyles.NormalBoarder}`} type="submit">
-        create
-      </Button>
+      <Form.Group>
+        <Form.Label>Title</Form.Label>
+        <Form.Control
+          className={boarderStyles.Input}
+          type="text"
+          name="title"
+          value={""}
+          onChange={""}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Content</Form.Label>
+        <Form.Control
+          className={boarderStyles.Input}
+          as="textarea"
+          rows={4}
+          name="content"
+          value={""}
+          onChange={""}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Beer Type</Form.Label>
+        <Form.Control
+          className={boarderStyles.Input}
+          type="text"
+          name="type"
+          value={""}
+          onChange={""}
+        />
+      </Form.Group>
+      
+        <div>
+            <Button
+                className={`mx-2 my-3 ${boarderStyles.NormalBoarder}`}
+                onClick={() => { }}
+            >
+                cancel
+            </Button>
+            <Button className={`mx-2 my-3 ${boarderStyles.NormalBoarder}`} type="submit">
+                create
+            </Button>
+        </div>
     </div>
   );
 
@@ -41,7 +71,7 @@ function PostCreateForm() {
       <Row>
         <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
           <Container
-            className={` ${styles.Container} d-flex flex-column justify-content-center`}
+            className={` ${styles.Container} d-flex flex-column justify-content-center align-items-center`}
           >
             <Form.Group className="text-center">
               
@@ -50,12 +80,22 @@ function PostCreateForm() {
                   htmlFor="image-upload"
                 >
                   <Asset
-                    spinner="spinner"
+                    src={Upload}
                     message="Click or tap to upload an image"
                   />
                 </Form.Label>
-
             </Form.Group>
+            <Form.Group className="text-center">
+        <Form.Label>Rating</Form.Label>
+        <Form.Control
+            className={boarderStyles.Input}
+            type="text"
+            name="rating"
+            value={""}
+            onChange={""}
+        />
+    </Form.Group>
+
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
