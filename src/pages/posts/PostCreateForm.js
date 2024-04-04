@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -15,6 +15,9 @@ import appStyles from "../../App.module.css";
 import boarderStyles from "../../styles/Boarders.module.css";
 import { Rating } from "react-simple-star-rating";
 
+import { useHistory } from "react-router";
+import { axiosReq } from "../../api/axiosDefaults";
+
 function PostCreateForm() {
 
   const [errors, setErrors] = useState({});
@@ -25,10 +28,12 @@ function PostCreateForm() {
     image: "",
     type: "",
   });
-  
-  const [rating, setRating] = useState(0);
 
   const { title, content, type, image } = postData;
+
+  const [rating, setRating] = useState(0);
+  const imageInput = useRef(null);
+  const history = useHistory();
 
   const handleChange = (event) => {
     setPostData({
@@ -49,6 +54,27 @@ function PostCreateForm() {
 
   const handleRating = (rate) => {
     setRating(rate / 20);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+
+    formData.append("title", title);
+    formData.append("content", content);
+    formData.append("type", type);
+    formData.append("score", rating);
+    formData.append("image", imageInput.current.files[0]);
+
+    try {
+      const { data } = await axiosReq.post("/posts/", formData);
+      history.push(`/posts/${data.id}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
   };
 
 
@@ -101,7 +127,7 @@ function PostCreateForm() {
   );
 
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <Row className="px-2">
         <Col className="py-2 p-0 p-md-2" md={7}>
           <Container
@@ -139,25 +165,19 @@ function PostCreateForm() {
                 id="image-upload"
                 accept="image/*"
                 onChange={handleChangeImage}
+                ref={imageInput}
               />
             </Form.Group>
 
-            {/*<Form.Group className="text-center">
-              <Form.Label>Rating</Form.Label>
-              <Form.Control
-                  className={boarderStyles.Input}
-                  type="text"
-                  name="rating"
-                  value={""}
-                  onChange={""}
-              />
-            </Form.Group> */}
             <Form.Group>
               <Rating onClick={handleRating} size={20} /* Available Props */ />
             </Form.Group>
+
             <div className="d-md-none">{textFields}</div>
           </Container>
+
         </Col>
+
         <Col md={5} className="d-none d-md-block p-0 p-md-2">
           <Container className="">{textFields}</Container>
         </Col>
