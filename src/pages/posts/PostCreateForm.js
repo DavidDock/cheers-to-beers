@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
 import Upload from "../../assets/upload.png";
+import Asset from "../../components/Asset";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
@@ -48,7 +49,10 @@ function PostCreateForm() {
                   className="d-flex justify-content-center"
                   htmlFor="image-upload"
                 >
-                  ASSET
+                  <Asset
+                    spinner="spinner"
+                    message="Click or tap to upload an image"
+                  />
                 </Form.Label>
 
             </Form.Group>
