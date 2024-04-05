@@ -1,4 +1,5 @@
 import React from "react";
+import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/Post.module.css";
 import { Rating } from "react-simple-star-rating";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
@@ -26,10 +27,75 @@ const Post = (props) => {
     image,
     updated_at,
     postPage,
+    setPosts,
   } = props;
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const handleStar = async () => {
+    try {
+      const { data } = await axiosRes.post("/stars/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, stars_count: post.stars_count + 1, star_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleUnstar = async () => {
+    try {
+      await axiosRes.delete(`/stars/${star_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, stars_count: post.stars_count - 1, star_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleCheer = async () => {
+    try {
+      const { data } = await axiosRes.post("/cheers/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, cheers_count: post.cheers_count + 1, cheer_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleUncheer = async () => {
+    try {
+      await axiosRes.delete(`/cheers/${cheer_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, cheers_count: post.cheers_count - 1, cheer_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <Card className={styles.Post}>
@@ -66,11 +132,11 @@ const Post = (props) => {
               <i className="fa-regular fa-star mr-md-2" />
             </OverlayTrigger>
           ) : star_id ? (
-            <span onClick={() => {}}>
+            <span onClick={handleUnstar}>
               <i className={`fa-regular fa-star mr-md-2 ${styles.Star}`} />
             </span>
           ) : currentUser ? (
-            <span onClick={() => {}}>
+            <span onClick={handleStar}>
               <i className={`fa-regular fa-star mr-md-2 ${styles.StarOutline}`} />
             </span>
           ) : (
@@ -90,11 +156,11 @@ const Post = (props) => {
               <img className="ml-2 ml-md-4 mr-md-2 mb-1" src={logoempty} alt="Empty Beer Glass" height="30"></img>
             </OverlayTrigger>
           ) : cheer_id ? (
-            <span onClick={() => {}}>
+            <span onClick={handleUncheer}>
               <img className="ml-2 ml-md-4 mr-md-2 mb-1" src={logocheers} alt="Full Beer Glass" height="30"></img>
             </span>
           ) : currentUser ? (
-            <span onClick={() => {}}>
+            <span onClick={handleCheer}>
               <img className={`ml-2 ml-md-4 mr-md-2 mb-1 ${styles.Empty}`} src={logoempty} alt="Empty Beer Glass" height="30"></img>
             </span>
           ) : (

@@ -31,7 +31,7 @@ function PostPage() {
 
   return (
     <Row className="d-flex justify-content-center">
-      <Col className= {`mx-4 mx-md-5 my-4 ${styles.PostPage}`} lg={8}>
+      <Col className= {`mx-4 mx-md-5 my-4 ${styles.PostPage}`} lg={7}>
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className="">
           Comments
