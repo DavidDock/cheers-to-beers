@@ -8,23 +8,18 @@
     max-height: 80vh;
 }
 
-  .Star {
-    color: #39FF14;
-  }
-  
-  .Star:hover {
-    color: #39FF14;
-  }
-  
-  .StarOutline:hover {
-    color: #ff0000;
-  }
+.Star {
+  color: #39FF14;
+}
 
-  .Empty:hover {
-    box-shadow: 0 0 0.1rem #fff,
-        0 0 .2rem #fff,
-        0 0 0.2rem #bc13fe,
-        0 0 0.2rem #bc13fe,
-        0 0 0.2rem #bc13fe,
-        inset 0 0 .2rem #bc13fe;
-  }
+.Star:hover {
+  color: #39FF14;
+}
+
+.StarOutline:hover {
+  color: #ff0000;
+}
+
+.Empty:hover {
+  background: radial-gradient(circle, rgba(188,19,254, 0.5)10%,rgba(188,19,254, 0.4)20%, rgba(188,19,254, 0.3)30%, rgba(188,19,254, 0.2)45%, black 65%);
+}
