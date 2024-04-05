@@ -1,0 +1,30 @@
+.Post {
+    background-color: black;
+    text-align: center;
+  }
+
+.Image {
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+  .Star {
+    color: #39FF14;
+  }
+  
+  .Star:hover {
+    color: #39FF14;
+  }
+  
+  .StarOutline:hover {
+    color: #ff0000;
+  }
+
+  .Empty:hover {
+    box-shadow: 0 0 0.1rem #fff,
+        0 0 .2rem #fff,
+        0 0 0.2rem #bc13fe,
+        0 0 0.2rem #bc13fe,
+        0 0 0.2rem #bc13fe,
+        inset 0 0 .2rem #bc13fe;
+  }

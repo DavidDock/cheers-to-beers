@@ -1,0 +1,12 @@
+.PostPage {
+    color: white;
+    background-color: black;
+    box-shadow: 0 0 .2rem #fff,
+      0 0 0.8rem #fff,
+      0 0 0.8rem #bc13fe,
+      0 0 0.4rem #bc13fe,
+      0 0 0.8rem #bc13fe,
+      inset 0 0 1rem #000000;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
