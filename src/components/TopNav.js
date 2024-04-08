@@ -28,7 +28,7 @@ const TopNav = () => {
                 className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
                 to={`/profiles/${currentUser?.profile_id}`}
             >
-                <Avatar className="py-2" src={currentUser?.profile_image} text="Profile" height={35} />
+                <Avatar src={currentUser?.profile_image} text="Profile" height={35} />
             </NavLink>
         </>
     );

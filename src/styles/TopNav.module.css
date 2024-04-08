@@ -14,6 +14,10 @@
   justify-content: space-between;
 }
 
+.Avatar {
+  margin: 0.5rem;
+}
+
 /*
 neon sign learnt from https://codepen.io/nodws/pen/WNjXbr
 */

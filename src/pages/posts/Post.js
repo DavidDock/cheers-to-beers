@@ -135,88 +135,96 @@ const Post = (props) => {
           alt= {`Picture of ${title}`}
           className={`p-0 ${styles.Image} ${borderStyles.RedBorderImage}`} />
       </Link>
+
       <Card.Body className="text-center">
         {title && <Card.Title className={styles.Underline}>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
         {type && <Card.Text>Beer Type: {type}</Card.Text>}
         {/* Rating component */}
-        {score  !== 0 && <Card.Text><Rating readonly initialValue={score} size={25} /></Card.Text>}
-        <div>
+        {score  !== 0 && <Card.Text><Rating readonly initialValue={score} size={20} /></Card.Text>}
+        <div className="d-flex justify-content-around ">
+
+          <div className="d-flex flex-column flex-wrap">
           {/* Star post:
           Differnt conditions for if owner/ current user or loggedin*/}
-          {is_owner ? (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>You can't like your own post!</Tooltip>}
-            >
-              <i className="fa-regular fa-star mr-md-2" />
-            </OverlayTrigger>
-          ) : star_id ? (
-            <span onClick={handleUnstar}>
-              <i className={`fa-regular fa-star mr-md-2 ${styles.Star}`} />
-            </span>
-          ) : currentUser ? (
-            <span onClick={handleStar}>
-              <i className={`fa-regular fa-star mr-md-2 ${styles.StarOutline}`} />
-            </span>
-          ) : (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Log in to like posts!</Tooltip>}
-            >
-              <i className="fa-regular fa-star mr-md-2" />
-            </OverlayTrigger>
-          )}
-          {stars_count}
+            {is_owner ? (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>You can't like your own post!</Tooltip>}
+              >
+                <i className="fa-regular fa-star" />
+              </OverlayTrigger>
+            ) : star_id ? (
+              <span onClick={handleUnstar}>
+                <i className={`fa-regular fa-star ${styles.Star}`} />
+              </span>
+            ) : currentUser ? (
+              <span onClick={handleStar}>
+                <i className={`fa-regular fa-star ${styles.StarOutline}`} />
+              </span>
+            ) : (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Log in to like posts!</Tooltip>}
+              >
+                <i className="fa-regular fa-star2" />
+              </OverlayTrigger>
+            )}
+            {stars_count}
+          </div>
+
+          <div className="d-flex flex-column justify-content-center">
           {/* Cheer post:
           Differnt conditions for if owner/ current user or loggedin*/}
-          {is_owner ? (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>You can't cheer your own post!</Tooltip>}
-            >
-              <img
-                className="ml-2 ml-md-4 mr-md-2 mb-1"
-                src={logoempty}
-                alt="Empty Beer Glass"
-                height="30"></img>
-            </OverlayTrigger>
-          ) : cheer_id ? (
-            <span onClick={handleUncheer}>
-              <img
-                className={`ml-2 ml-md-4 mr-md-2 mb-1 ${styles.Pointer}`}
-                src={logocheers}
-                alt="Full Beer Glass"
-                height="30"></img>
-            </span>
-          ) : currentUser ? (
-            <span onClick={handleCheer}>
-              <img
-                className={`ml-2 ml-md-4 mr-md-2 mb-1 ${styles.Pointer}`}
-                src={emptyImage}
-                alt="Empty Beer Glass"
-                height="30"
-                onMouseEnter={() => setEmptyImage(logoemptyred)}
-                onMouseLeave={() => setEmptyImage(logoempty)}></img>
-            </span>
-          ) : (
-            <OverlayTrigger
-              placement="top"
-              overlay={<Tooltip>Log in to cheer posts!</Tooltip>}
-            >
-              <img
-                className="ml-2 ml-md-4 mr-md-2 mb-1"
-                src={logoempty}
-                alt="Empty Beer Glass"
-                height="30"></img>
-            </OverlayTrigger>
-          )}
-          {cheers_count}
-          {/* Post comments */}
-          <Link to={`/posts/${id}`}>
-            <i className={`far fa-comments ml-2 ml-md-4 mr-md-2 ${styles.CommentsIcon}`} />
-          </Link>
-          {comments_count}
+            {is_owner ? (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>You can't cheer your own post!</Tooltip>}
+              >
+                <img
+                  src={logoempty}
+                  alt="Empty Beer Glass"
+                  height="30"></img>
+              </OverlayTrigger>
+            ) : cheer_id ? (
+              <span onClick={handleUncheer}>
+                <img
+                  className={styles.Pointer}
+                  src={logocheers}
+                  alt="Full Beer Glass"
+                  height="30"></img>
+              </span>
+            ) : currentUser ? (
+              <span onClick={handleCheer}>
+                <img
+                  className={styles.Pointer}
+                  src={emptyImage}
+                  alt="Empty Beer Glass"
+                  height="30"
+                  onMouseEnter={() => setEmptyImage(logoemptyred)}
+                  onMouseLeave={() => setEmptyImage(logoempty)}></img>
+              </span>
+            ) : (
+              <OverlayTrigger
+                placement="top"
+                overlay={<Tooltip>Log in to cheer posts!</Tooltip>}
+              >
+                <img
+                  src={logoempty}
+                  alt="Empty Beer Glass"
+                  height="30"></img>
+              </OverlayTrigger>
+            )}
+            {cheers_count}
+          </div>
+
+          <div className="d-flex flex-column justify-content-center">
+            {/* Post comments */}
+            <Link to={`/posts/${id}`}>
+              <i className={`far fa-comments ${styles.CommentsIcon}`} />
+            </Link>
+            {comments_count}
+          </div>
         </div>
       </Card.Body>
     </Card>
