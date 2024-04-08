@@ -20,6 +20,7 @@ import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
 function PostCreateForm() {
+  // Set Post data, errors and rating
 
   const [errors, setErrors] = useState({});
 
@@ -37,6 +38,7 @@ function PostCreateForm() {
   const history = useHistory();
 
   const handleChange = (event) => {
+    // Handle change in form and setData for title, content and type
     setPostData({
       ...postData,
       [event.target.name]: event.target.value,
@@ -44,6 +46,7 @@ function PostCreateForm() {
   };
 
   const handleChangeImage = (event) => {
+    // Handle change in form for image
     if (event.target.files.length) {
       URL.revokeObjectURL(image);
       setPostData({
@@ -54,10 +57,12 @@ function PostCreateForm() {
   };
 
   const handleRating = (rate) => {
+    // Handle change in form for rating
     setRating(rate / 20);
   };
 
   const handleSubmit = async (event) => {
+    // Send new form data to API to create a post
     event.preventDefault();
     const formData = new FormData();
 
@@ -80,6 +85,7 @@ function PostCreateForm() {
 
 
   const textFields = (
+    // Textfields for form
     <div className="text-center">
       <Form.Group>
         <Form.Label>Title</Form.Label>
@@ -150,6 +156,7 @@ function PostCreateForm() {
             className={` ${styles.Container} d-flex flex-column justify-content-center align-items-center`}
           >
             <Form.Group className="text-center">
+              {/* Form Image, change image and errors */}
               {image ? (
                 <>
                   <figure>
@@ -191,19 +198,20 @@ function PostCreateForm() {
             ))}
 
             <Form.Group>
-              <Rating onClick={handleRating} size={20} /* Available Props */ />
+              {/* Form rating and errors */}
+              <Rating onClick={handleRating} size={20} />
             </Form.Group>
             {errors.score?.map((message, idx) => (
               <Alert key={idx} className={styles.RedWarning}>
                 {message}
               </Alert>
             ))}
-
+            {/* Form textfields */}
             <div className="d-md-none">{textFields}</div>
           </Container>
 
         </Col>
-
+        {/* Form textfields on larger devices */}
         <Col md={5} className="d-none d-md-block p-0 p-md-2">
           <Container className="">{textFields}</Container>
         </Col>

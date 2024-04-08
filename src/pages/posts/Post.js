@@ -13,6 +13,7 @@ import logocheers from "../../assets/beer-cheers.png";
 import { useState } from "react";
 
 const Post = (props) => {
+  // Deconstruct Post props
   const {
     id,
     owner,
@@ -32,13 +33,15 @@ const Post = (props) => {
     postPage,
     setPosts,
   } = props;
-
+  
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
-
+  
+  // const to allow onMouseEnter/Leave fuction
   const [emptyImage, setEmptyImage] = useState(logoempty);
 
   const handleStar = async () => {
+    // Add star to API
     try {
       const { data } = await axiosRes.post("/stars/", { post: id });
       setPosts((prevPosts) => ({
@@ -55,6 +58,7 @@ const Post = (props) => {
   };
 
   const handleUnstar = async () => {
+    // Remove star from API
     try {
       await axiosRes.delete(`/stars/${star_id}/`);
       setPosts((prevPosts) => ({
@@ -71,6 +75,7 @@ const Post = (props) => {
   };
 
   const handleCheer = async () => {
+    // Add cheer to API
     try {
       const { data } = await axiosRes.post("/cheers/", { post: id });
       setPosts((prevPosts) => ({
@@ -87,6 +92,7 @@ const Post = (props) => {
   };
 
   const handleUncheer = async () => {
+    // Remove cheer from API
     try {
       await axiosRes.delete(`/cheers/${cheer_id}/`);
       setPosts((prevPosts) => ({
@@ -117,21 +123,25 @@ const Post = (props) => {
         </Media>
         <Card.Text className="d-flex d-md-none align-items-center justify-content-center mt-2">
           <span>{updated_at}</span>
+          {/* Is owner edit post buttons */}
           {is_owner && postPage && "..."}
         </Card.Text>
       </Card.Body>
       <Link to={`/posts/${id}`}>
         <Card.Img
           src={image}
-          alt={title}
+          alt= {`Picture of ${title}`}
           className={`p-0 ${styles.Image} ${boarderStyles.RedBoarderImage}`} />
       </Link>
       <Card.Body className="text-center">
         {title && <Card.Title className={styles.Underline}>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
         {type && <Card.Text>Beer Type: {type}</Card.Text>}
+        {/* Rating component */}
         {score  !== 0 && <Card.Text><Rating readonly initialValue={score} size={25} /></Card.Text>}
         <div>
+          {/* Star post:
+          Differnt conditions for if owner/ current user or loggedin*/}
           {is_owner ? (
             <OverlayTrigger
               placement="top"
@@ -156,6 +166,8 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {stars_count}
+          {/* Cheer post:
+          Differnt conditions for if owner/ current user or loggedin*/}
           {is_owner ? (
             <OverlayTrigger
               placement="top"
@@ -198,6 +210,7 @@ const Post = (props) => {
             </OverlayTrigger>
           )}
           {cheers_count}
+          {/* Post comments */}
           <Link to={`/posts/${id}`}>
             <i className={`far fa-comments ml-2 ml-md-4 mr-md-2 ${styles.CommentsIcon}`} />
           </Link>

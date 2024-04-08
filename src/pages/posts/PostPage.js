@@ -13,6 +13,7 @@ function PostPage() {
   const [post, setPost] = useState({ results: [] });
 
   useEffect(() => {
+    // On mount set the post
     const handleMount = async () => {
       try {
         const [{ data: post }] = await Promise.all([
