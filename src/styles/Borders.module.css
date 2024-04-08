@@ -1,4 +1,4 @@
-.NormalBoarder {
+.NormalBorder {
     color: #ffffff;
     border: 0.1rem solid #ffffff;
     border-radius: 0.5rem;
@@ -12,7 +12,7 @@
         inset 0 0 .8rem #bc13fe;
 }
 
-.RedBoarder {
+.RedBorder {
     color: #ffffff;
     border: 0.1rem solid #ffffff;
     border-radius: 0.5rem;
@@ -26,7 +26,7 @@
         inset 0 0 .8rem #ff0000;
 }
 
-.RedBoarderImage {
+.RedBorderImage {
     color: #ffffff;
     border: 0.1rem solid #ffffff;
     border-radius: 0.5rem;
@@ -40,7 +40,7 @@
         inset 0 0 .8rem #ff0000;
 }
 
-.LargeRedBoarder {
+.LargeRedBorder {
     color: #ffffff;
     border-radius: 1rem;
     background-color: transparent;
@@ -53,10 +53,10 @@
         inset 0 0 1rem #ff0000;
 }
 
-.NormalBoarder:hover,
-.NormalBoarder:focus,
-.RedBoarder:hover,
-.RedBoarder:focus {
+.NormalBorder:hover,
+.NormalBorder:focus,
+.RedBorder:hover,
+.RedBorder:focus {
     border-radius: 1rem;
     border: 0.1rem solid #ffffff;
     box-shadow: 0 0 .2rem #ffffff,

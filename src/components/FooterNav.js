@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "../styles/FooterNav.module.css";
-import boarderStyles from "../styles/Boarders.module.css";
+import borderStyles from "../styles/Borders.module.css";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 import axios from "axios";
@@ -25,15 +25,15 @@ const FooterNav = () => {
         <>
             <NavLink
                 exact
-                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
-                activeClassName={boarderStyles.Active}
+                className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
+                activeClassName={borderStyles.Active}
                 to="/contact"
             >
                 Contact
             </NavLink>
             <NavLink
                 exact
-                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
+                className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
                 onClick ={handleSignOut}
                 to="/"
             >
@@ -45,8 +45,8 @@ const FooterNav = () => {
         <>
             <NavLink
                 exact
-                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
-                activeClassName={boarderStyles.Active}
+                className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
+                activeClassName={borderStyles.Active}
                 to="/signup"
             >
                 Register

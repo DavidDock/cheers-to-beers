@@ -13,7 +13,7 @@ import Asset from "../../components/Asset";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
-import boarderStyles from "../../styles/Boarders.module.css";
+import borderStyles from "../../styles/Borders.module.css";
 import { Rating } from "react-simple-star-rating";
 
 import { useHistory } from "react-router";
@@ -90,7 +90,7 @@ function PostCreateForm() {
       <Form.Group>
         <Form.Label>Title</Form.Label>
         <Form.Control
-          className={boarderStyles.Input}
+          className={borderStyles.Input}
           type="text"
           name="title"
           value={title}
@@ -105,7 +105,7 @@ function PostCreateForm() {
       <Form.Group>
         <Form.Label>Content</Form.Label>
         <Form.Control
-          className={boarderStyles.TextArea}
+          className={borderStyles.TextArea}
           as="textarea"
           rows={4}
           name="content"
@@ -121,7 +121,7 @@ function PostCreateForm() {
       <Form.Group>
         <Form.Label>Beer Type</Form.Label>
         <Form.Control
-          className={boarderStyles.Input}
+          className={borderStyles.Input}
           type="text"
           name="type"
           value={type}
@@ -136,12 +136,12 @@ function PostCreateForm() {
       
         <div>
             <Button
-                className={`mx-2 my-3 ${boarderStyles.NormalBoarder}`}
+                className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
                 onClick={() => history.goBack()}
             >
                 cancel
             </Button>
-            <Button className={`mx-3 my-3 ${boarderStyles.NormalBoarder}`} type="submit">
+            <Button className={`mx-3 my-3 ${borderStyles.NormalBorder}`} type="submit">
                 create
             </Button>
         </div>
@@ -164,7 +164,7 @@ function PostCreateForm() {
                   </figure>
                   <div>
                     <Form.Label
-                      className={boarderStyles.NormalBoarder}
+                      className={borderStyles.NormalBorder}
                       htmlFor="image-upload"
                     >
                       Change the image

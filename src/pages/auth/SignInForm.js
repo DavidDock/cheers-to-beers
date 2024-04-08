@@ -4,7 +4,7 @@ import axios from "axios";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import logo from "../../assets/beer-cheers.png";
-import boarderStyles from "../../styles/Boarders.module.css";
+import borderStyles from "../../styles/Borders.module.css";
 import { Form, Button, Alert } from "react-bootstrap";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
@@ -55,7 +55,7 @@ const SignInForm = () => {
             <Form.Group controlId="username">
               <Form.Label className="d-none">username</Form.Label>
               <Form.Control
-                className={boarderStyles.Input}
+                className={borderStyles.Input}
                 type="text"
                 placeholder="Username"
                 name="username"
@@ -72,7 +72,7 @@ const SignInForm = () => {
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
-                className={boarderStyles.Input}
+                className={borderStyles.Input}
                 type="password"
                 placeholder="Password"
                 name="password"
@@ -87,7 +87,7 @@ const SignInForm = () => {
             ))}
 
             <Button
-              className={`d-block mx-auto my-3 ${boarderStyles.NormalBoarder}`}
+              className={`d-block mx-auto my-3 ${borderStyles.NormalBorder}`}
               type="submit"
             >
               Login

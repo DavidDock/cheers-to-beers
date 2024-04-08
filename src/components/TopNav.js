@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/TopNav.module.css";
-import boarderStyles from "../styles/Boarders.module.css";
+import borderStyles from "../styles/Borders.module.css";
 import { NavLink } from "react-router-dom";
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
@@ -15,15 +15,15 @@ const TopNav = () => {
         <>
             <NavLink
                 exact
-                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
-                activeClassName={boarderStyles.Active}
+                className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
+                activeClassName={borderStyles.Active}
                 to="/about"
             >
                 About
             </NavLink>
             <NavLink
                 exact
-                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
+                className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
                 to={`/profiles/${currentUser?.profile_id}`}
             >
                 <Avatar className="py-2" src={currentUser?.profile_image} text="Profile" height={35} />
@@ -34,8 +34,8 @@ const TopNav = () => {
         <>
             <NavLink
                 exact
-                className={`mr-4 mt-2 ${boarderStyles.NormalBoarder}`}
-                activeClassName={boarderStyles.Active}
+                className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
+                activeClassName={borderStyles.Active}
                 to="/signin"
             >
                 Login

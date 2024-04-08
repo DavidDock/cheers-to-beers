@@ -4,7 +4,7 @@ import axios from "axios";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import logo from "../../assets/beer-cheers.png";
-import boarderStyles from "../../styles/Boarders.module.css";
+import borderStyles from "../../styles/Borders.module.css";
 import { Form, Button, Alert } from "react-bootstrap";
 
 const SignUpForm = () => {
@@ -51,7 +51,7 @@ const SignUpForm = () => {
             <Form.Group controlId="username">
               <Form.Label className="d-none">username</Form.Label>
               <Form.Control
-                className={boarderStyles.Input}
+                className={borderStyles.Input}
                 type="text"
                 placeholder="Username"
                 name="username"
@@ -68,7 +68,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password1">
               <Form.Label className="d-none">Password</Form.Label>
               <Form.Control
-                className={boarderStyles.Input}
+                className={borderStyles.Input}
                 type="password"
                 placeholder="Password"
                 name="password1"
@@ -85,7 +85,7 @@ const SignUpForm = () => {
             <Form.Group controlId="password2">
               <Form.Label className="d-none">Confirm password</Form.Label>
               <Form.Control
-                className={boarderStyles.Input}
+                className={borderStyles.Input}
                 type="password"
                 placeholder="Confirm password"
                 name="password2"
@@ -100,7 +100,7 @@ const SignUpForm = () => {
             ))}
 
             <Button
-              className={`d-block mx-auto my-3 ${boarderStyles.NormalBoarder}`}
+              className={`d-block mx-auto my-3 ${borderStyles.NormalBorder}`}
               type="submit"
             >
               Register

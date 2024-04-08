@@ -1,7 +1,7 @@
 import React from "react";
 import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/Post.module.css";
-import boarderStyles from "../../styles/Boarders.module.css";
+import borderStyles from "../../styles/Borders.module.css";
 import { Rating } from "react-simple-star-rating";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
@@ -131,7 +131,7 @@ const Post = (props) => {
         <Card.Img
           src={image}
           alt= {`Picture of ${title}`}
-          className={`p-0 ${styles.Image} ${boarderStyles.RedBoarderImage}`} />
+          className={`p-0 ${styles.Image} ${borderStyles.RedBorderImage}`} />
       </Link>
       <Card.Body className="text-center">
         {title && <Card.Title className={styles.Underline}>{title}</Card.Title>}
