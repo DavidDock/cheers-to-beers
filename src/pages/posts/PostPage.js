@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import styles from "../../styles/PostPage.module.css";
+import borderStyles from "../../styles/Borders.module.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -32,7 +33,7 @@ function PostPage() {
 
   return (
     <Row className="d-flex justify-content-center">
-      <Col className= {`mx-4 mx-md-5 my-4 ${styles.PostPage}`} lg={7}>
+      <Col className= {`mx-4 mx-md-5 my-4 ${borderStyles.PurpleBorder}`} lg={7}>
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className="">
           Comments
