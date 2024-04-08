@@ -32,8 +32,8 @@
   cursor: pointer;
 }
 
-.Empty:hover,
-.Empty:focus {
+.CommentsIcon:hover,
+.CommentsIcon:focus {
   cursor: pointer;
-  background: radial-gradient(circle, rgba(188,19,254, 0.5)10%,rgba(188,19,254, 0.4)20%, rgba(188,19,254, 0.3)30%, rgba(188,19,254, 0.2)45%, black 65%);
+  color: #bc13fe;
 }

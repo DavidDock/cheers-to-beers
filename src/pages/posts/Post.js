@@ -8,7 +8,9 @@ import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import logoempty from "../../assets/beer.png";
+import logoemptyred from "../../assets/beerred.png";
 import logocheers from "../../assets/beer-cheers.png";
+import { useState } from "react";
 
 const Post = (props) => {
   const {
@@ -33,6 +35,8 @@ const Post = (props) => {
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+
+  const [emptyImage, setEmptyImage] = useState(logoempty);
 
   const handleStar = async () => {
     try {
@@ -117,7 +121,10 @@ const Post = (props) => {
         </Card.Text>
       </Card.Body>
       <Link to={`/posts/${id}`}>
-        <Card.Img src={image} alt={title} className={`p-0 ${styles.Image} ${boarderStyles.RedBoarderImage}`} />
+        <Card.Img
+          src={image}
+          alt={title}
+          className={`p-0 ${styles.Image} ${boarderStyles.RedBoarderImage}`} />
       </Link>
       <Card.Body className="text-center">
         {title && <Card.Title className={styles.Underline}>{title}</Card.Title>}
@@ -154,27 +161,45 @@ const Post = (props) => {
               placement="top"
               overlay={<Tooltip>You can't cheer your own post!</Tooltip>}
             >
-              <img className="ml-2 ml-md-4 mr-md-2 mb-1" src={logoempty} alt="Empty Beer Glass" height="30"></img>
+              <img
+                className="ml-2 ml-md-4 mr-md-2 mb-1"
+                src={logoempty}
+                alt="Empty Beer Glass"
+                height="30"></img>
             </OverlayTrigger>
           ) : cheer_id ? (
             <span onClick={handleUncheer}>
-              <img className={`ml-2 ml-md-4 mr-md-2 mb-1 ${styles.Pointer}`} src={logocheers} alt="Full Beer Glass" height="30"></img>
+              <img
+                className={`ml-2 ml-md-4 mr-md-2 mb-1 ${styles.Pointer}`}
+                src={logocheers}
+                alt="Full Beer Glass"
+                height="30"></img>
             </span>
           ) : currentUser ? (
             <span onClick={handleCheer}>
-              <img className={`ml-2 ml-md-4 mr-md-2 mb-1 ${styles.Empty}`} src={logoempty} alt="Empty Beer Glass" height="30"></img>
+              <img
+                className={`ml-2 ml-md-4 mr-md-2 mb-1 ${styles.Pointer}`}
+                src={emptyImage}
+                alt="Empty Beer Glass"
+                height="30"
+                onMouseEnter={() => setEmptyImage(logoemptyred)}
+                onMouseLeave={() => setEmptyImage(logoempty)}></img>
             </span>
           ) : (
             <OverlayTrigger
               placement="top"
               overlay={<Tooltip>Log in to cheer posts!</Tooltip>}
             >
-              <img className="ml-2 ml-md-4 mr-md-2 mb-1" src={logoempty} alt="Empty Beer Glass" height="30"></img>
+              <img
+                className="ml-2 ml-md-4 mr-md-2 mb-1"
+                src={logoempty}
+                alt="Empty Beer Glass"
+                height="30"></img>
             </OverlayTrigger>
           )}
           {cheers_count}
           <Link to={`/posts/${id}`}>
-            <i className="far fa-comments ml-2 ml-md-4 mr-md-2" />
+            <i className={`far fa-comments ml-2 ml-md-4 mr-md-2 ${styles.CommentsIcon}`} />
           </Link>
           {comments_count}
         </div>
