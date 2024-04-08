@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
-import styles from "../../styles/PostPage.module.css";
 import borderStyles from "../../styles/Borders.module.css";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
+import { Container, Col, Row } from "react-bootstrap";
+
 import Post from "./Post";
 
 function PostPage() {

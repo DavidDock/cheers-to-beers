@@ -1,16 +1,18 @@
 import React from "react";
+import { Rating } from "react-simple-star-rating";
 import { axiosRes } from "../../api/axiosDefaults";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
 import styles from "../../styles/Post.module.css";
 import borderStyles from "../../styles/Borders.module.css";
-import { Rating } from "react-simple-star-rating";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import Avatar from "../../components/Avatar";
 import logoempty from "../../assets/beer.png";
 import logoemptyred from "../../assets/beerred.png";
 import logocheers from "../../assets/beer-cheers.png";
-import { useState } from "react";
 
 const Post = (props) => {
   // Deconstruct Post props

@@ -1,7 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import styles from "../styles/TopNav.module.css";
 import borderStyles from "../styles/Borders.module.css";
-import { NavLink } from "react-router-dom";
+
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
 

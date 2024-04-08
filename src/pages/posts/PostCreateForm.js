@@ -1,12 +1,7 @@
 import React, { useRef, useState } from "react";
-
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import Alert from "react-bootstrap/Alert";
-import { Image } from "react-bootstrap";
+import { Rating } from "react-simple-star-rating";
+import { useHistory } from "react-router";
+import { axiosReq } from "../../api/axiosDefaults";
 
 import Upload from "../../assets/upload.png";
 import Asset from "../../components/Asset";
@@ -14,10 +9,7 @@ import Asset from "../../components/Asset";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import borderStyles from "../../styles/Borders.module.css";
-import { Rating } from "react-simple-star-rating";
-
-import { useHistory } from "react-router";
-import { axiosReq } from "../../api/axiosDefaults";
+import { Image, Alert, Container, Col, Row, Button, Form } from "react-bootstrap";
 
 function PostCreateForm() {
   // Set Post data, errors and rating

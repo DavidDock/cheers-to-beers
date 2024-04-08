@@ -1,9 +1,11 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
+import axios from "axios";
+
 import styles from "../styles/FooterNav.module.css";
 import borderStyles from "../styles/Borders.module.css";
-import { NavLink } from "react-router-dom";
+
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
-import axios from "axios";
 
 const FooterNav = () => {
     // Use context to get current user data

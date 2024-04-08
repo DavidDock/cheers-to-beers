@@ -4,9 +4,10 @@ import axios from "axios";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import logo from "../../assets/beer-cheers.png";
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+
 import borderStyles from "../../styles/Borders.module.css";
 import { Form, Button, Alert } from "react-bootstrap";
-import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 
 const SignInForm = () => {
     const setCurrentUser = useSetCurrentUser();
