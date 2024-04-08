@@ -116,6 +116,7 @@ The logged in user can successfully see their avatar displayed
 The logged in user van create a post.
 
 #### Results
+A user can successfully create a post with errors if invalid data given
 
 ### View Post Page
  
@@ -123,6 +124,7 @@ The logged in user van create a post.
 You can view a single post.
 
 #### Results
+A single post can be seen on posts/#id with all relevant information displayed
 
 ### Star and Unstar a post
  
@@ -130,6 +132,7 @@ You can view a single post.
 You can star and unstar a post.
 
 #### Results
+A logged in user can successfully star and unstar a post. The owner of the post cant star their own post and a non-user is be prompted to log in upon hover.
 
 ### Cheer and Uncheer a post
  
@@ -137,6 +140,7 @@ You can star and unstar a post.
 You can cheer and uncheer a post
 
 #### Results
+A logged in user can successfully cheer and uncheer a post. The owner of the post cant cheer their own post and a non-user is be prompted to log in upon hover.
 
 ### View all posts
  
