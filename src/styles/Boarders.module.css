@@ -26,6 +26,20 @@
         inset 0 0 .8rem #ff0000;
 }
 
+.RedBoarderImage {
+    color: #ffffff;
+    border: 0.1rem solid #ffffff;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    padding: 0 0.5rem;
+    box-shadow: 0 0 .1rem #fff,
+        0 0 .1rem #fff,
+        0 0 .5rem #ff0000,
+        0 0 0.5rem #ff0000,
+        0 0 .8rem #ff0000,
+        inset 0 0 .8rem #ff0000;
+}
+
 .LargeRedBoarder {
     color: #ffffff;
     border-radius: 1rem;

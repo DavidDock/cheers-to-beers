@@ -4,15 +4,22 @@
   }
 
 .Image {
+  width: auto;
     max-width: 90%;
     max-height: 80vh;
+}
+
+.Underline {
+  text-decoration: underline;
 }
 
 .Star {
   color: #39FF14;
 }
 
-.Star:hover {
+.Star:hover,
+.Star:focus {
+  cursor: pointer;
   color: #39FF14;
 }
 
@@ -20,6 +27,13 @@
   color: #ff0000;
 }
 
-.Empty:hover {
+.Pointer:hover,
+.Pointer:focus {
+  cursor: pointer;
+}
+
+.Empty:hover,
+.Empty:focus {
+  cursor: pointer;
   background: radial-gradient(circle, rgba(188,19,254, 0.5)10%,rgba(188,19,254, 0.4)20%, rgba(188,19,254, 0.3)30%, rgba(188,19,254, 0.2)45%, black 65%);
 }

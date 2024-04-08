@@ -1,6 +1,7 @@
 import React from "react";
 import { axiosRes } from "../../api/axiosDefaults";
 import styles from "../../styles/Post.module.css";
+import boarderStyles from "../../styles/Boarders.module.css";
 import { Rating } from "react-simple-star-rating";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
@@ -116,13 +117,13 @@ const Post = (props) => {
         </Card.Text>
       </Card.Body>
       <Link to={`/posts/${id}`}>
-        <Card.Img src={image} alt={title} className={styles.Image} />
+        <Card.Img src={image} alt={title} className={`p-0 ${styles.Image} ${boarderStyles.RedBoarderImage}`} />
       </Link>
-      <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
+      <Card.Body className="text-center">
+        {title && <Card.Title className={styles.Underline}>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
-        {type && <Card.Text>{type}</Card.Text>}
-        {score && <Card.Text><Rating readonly initialValue={score} size={25} /></Card.Text>}
+        {type && <Card.Text>Beer Type: {type}</Card.Text>}
+        {score  !== 0 && <Card.Text><Rating readonly initialValue={score} size={25} /></Card.Text>}
         <div>
           {is_owner ? (
             <OverlayTrigger
@@ -157,7 +158,7 @@ const Post = (props) => {
             </OverlayTrigger>
           ) : cheer_id ? (
             <span onClick={handleUncheer}>
-              <img className="ml-2 ml-md-4 mr-md-2 mb-1" src={logocheers} alt="Full Beer Glass" height="30"></img>
+              <img className={`ml-2 ml-md-4 mr-md-2 mb-1 ${styles.Pointer}`} src={logocheers} alt="Full Beer Glass" height="30"></img>
             </span>
           ) : currentUser ? (
             <span onClick={handleCheer}>
