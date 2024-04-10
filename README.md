@@ -92,6 +92,46 @@ The User Story table can be found below:
 
 ## Features
 
+### Navigation Bars and Footer  
+
+Having three navigation bars allows users to have easy access to all features. These navigation bars are pivotal to the overal design theme of the website echoing bar signs and menus, giving the user the feel that they are in a virtual bar.
+
+#### Top Nav Bar
+User Logged Out  
+
+![Top-Nav-Logged-Out](public/documentaion/images/features/toploggedout.png)
+
+User Logged In  
+
+![Top-Nav-Logged-In](public/documentaion/images/features/toploggedin.png)  
+
+The Top Nav bar has the LOGO for Cheers To Beers which links back to home displaying all posts. If the user is not a member it allows the user to go to the log in page. If the user is a member their profile image is displayed with a link to thier profile and also a link to the about page.
+
+#### Footer
+User Logged Out  
+
+![Footer-Logged-Out](public/documentaion/images/features/footerloggedout.png)
+
+User Logged In  
+
+![Footer-Logged-In](public/documentaion/images/features/footerloggedin.png)  
+
+The Footer has a Goodbye LOGO and If the user is a member a logout button and a link to the contact page. If the user is not a member it provides a link to the registration page.
+
+#### Side Nav bar
+User Logged Out and In 
+
+![Footer-Logged-Out](public/documentaion/images/features/sidenav.png)  
+
+The Side navigation bar allows the logged in user easy access to filter the posts by them all, thier starred posts, their friends posts and thier own posts. If the are not logged in yet then it provides links to the about and contact pages.
+
+### Register and Log In
+
+![Register](public/documentaion/images/features/register.png)
+![Log-In](public/documentaion/images/features/login.png)  
+
+The User can Register and Log In, they prompted if an error is made during form submission.
+
 ### Accessibility  
 
 ### Future Implementations  
