@@ -167,7 +167,7 @@ const Post = (props) => {
                 placement="top"
                 overlay={<Tooltip>Log in to like posts!</Tooltip>}
               >
-                <i className="fa-regular fa-star2" />
+                <i className="fa-regular fa-star" />
               </OverlayTrigger>
             )}
             {stars_count}
