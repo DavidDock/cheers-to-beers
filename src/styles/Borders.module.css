@@ -12,6 +12,20 @@
         inset 0 0 .8rem #bc13fe;
 }
 
+.TitleBorder {
+    color: #ffffff;
+    border: 0.1rem solid #ffffff;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    padding: 0 0.5rem;
+    box-shadow: 0 0 .1rem #fff,
+        0 0 .1rem #fff,
+        0 0 0.3rem #bc13fe,
+        0 0 0.3rem #bc13fe,
+        0 0 0.4rem #bc13fe,
+        inset 0 0 .4rem #bc13fe;
+}
+
 .RedBorder {
     color: #ffffff;
     border: 0.1rem solid #ffffff;

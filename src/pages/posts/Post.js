@@ -137,7 +137,7 @@ const Post = (props) => {
       </Link>
 
       <Card.Body className="text-center">
-        {title && <Card.Title className={styles.Underline}>{title}</Card.Title>}
+        {title && <Card.Title className={`my-2 ${styles.Underline} ${borderStyles.TitleBorder}`}>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
         {type && <Card.Text>Beer Type: {type}</Card.Text>}
         {/* Rating component */}
