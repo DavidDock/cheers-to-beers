@@ -130,7 +130,13 @@ The Side navigation bar allows the logged in user easy access to filter the post
 ![Register](public/documentaion/images/features/register.png)
 ![Log-In](public/documentaion/images/features/login.png)  
 
-The User can Register and Log In, they prompted if an error is made during form submission.
+The User can Register and Log In, they are prompted if an error is made during form submission.
+
+### Create Post
+
+![Create-Post](public/documentaion/images/features/addpost.png)  
+
+The User can create a post with a image and title required and a score, content and beer type optional. The user is given an error message if the form data is invalid or left blank. Once they create their post it takes them to the created post page.
 
 ### Accessibility  
 
