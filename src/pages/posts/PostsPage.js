@@ -72,8 +72,8 @@ useEffect(() => {
                             dataLength={posts.results.length}
                             loader={<Asset spinner />}
                             hasMore={!!posts.next}
-                            height="1000"
-                            scrollThreshold="0.5"
+                            height="400"
+                            scrollThreshold="50%"
                             next={() => fetchMoreData(posts, setPosts)}
                             className={`p-4 p-md-5 ${styles.InfiniteContainer}`}
                         />
