@@ -26,7 +26,7 @@ function App() {
         {/* Middle Flex container for SideNav and Main */}
         <SideNav />
         <div className={styles.Main}>
-          <Container className="py-0">
+          <Container className="p-0">
             {/* Container for content in route */}
             <Switch>
               <Route

@@ -44,7 +44,7 @@ useEffect(() => {
   
   return (
     <Row className="d-flex justify-content-center p-0 m-0">
-        <Col lg={7}>
+        <Col lg={7} className="p-0">
 
             {/* Search  bar*/}
             <i className={`fas fa-search ${styles.SearchIcon}`} />
