@@ -75,7 +75,7 @@ useEffect(() => {
                             height="400"
                             scrollThreshold="50%"
                             next={() => fetchMoreData(posts, setPosts)}
-                            className={`p-2 p-md-5 ${styles.InfiniteContainer}`}
+                            className={`p-3 p-md-5 ${styles.InfiniteContainer}`}
                         />
                     ) : (
                         <Container >
