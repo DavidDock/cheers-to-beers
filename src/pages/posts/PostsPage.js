@@ -44,7 +44,7 @@ useEffect(() => {
   
   return (
     <Row className="d-flex justify-content-center p-0 m-0">
-        <Col lg={7} className={styles.Row}>
+        <Col lg={7} className={styles.Col}>
 
             {/* Search  bar*/}
             <i className={`fas fa-search ${styles.SearchIcon}`} />
@@ -57,7 +57,7 @@ useEffect(() => {
                 onChange={(event) => setQuery(event.target.value)}
                 type="text"
                 className={`mr-sm-2 ${borderStyles.Input}`}
-                placeholder="Search posts"
+                placeholder="Search"
                 />
             </Form>
 
@@ -75,7 +75,7 @@ useEffect(() => {
                             height="400"
                             scrollThreshold="50%"
                             next={() => fetchMoreData(posts, setPosts)}
-                            className={`p-4 p-md-5 ${styles.InfiniteContainer}`}
+                            className={`p-2 p-md-5 ${styles.InfiniteContainer}`}
                         />
                     ) : (
                         <Container >
