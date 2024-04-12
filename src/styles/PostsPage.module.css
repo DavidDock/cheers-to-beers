@@ -1,11 +1,15 @@
 .SearchBar input {
     border-radius: 20px;
     color: #242a3d;
-    padding-left: 2.5rem;
+    padding-left: 2rem;
     margin-bottom: 1rem;
     border: #000000;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     
+}
+
+.Row {
+    padding: 0 0.5rem 0 0;
 }
 
 .InfiniteContainer {
@@ -16,10 +20,18 @@
     color: #ff0000;
     position: absolute;
     font-size: 1rem;
-    padding: 0.5rem 4rem;
+    padding: 0.75rem 3.5rem 0.5rem;
   }
   
   .SearchIcon:hover {
     cursor: default;
     color: #bc13fe;
   }
+
+  @media (min-width: 650px) {
+
+    .SearchBar input {
+        font-size: 1.5rem;
+    }
+
+}
