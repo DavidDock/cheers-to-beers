@@ -30,10 +30,10 @@ function PostPage() {
 
 
   return (
-    <Row className="d-flex justify-content-center">
-      <Col className= {`mx-4 mx-md-5 my-4 ${borderStyles.PurpleBorder}`} lg={7}>
+    <Row className="ml-3 mr-1 mx-md-5 my-2 d-flex justify-content-center">
+      <Col className={borderStyles.PurpleBorder} lg={7}>
         <Post {...post.results[0]} setPosts={setPost} postPage />
-        <Container className="">
+        <Container>
           Comments
         </Container>
       </Col>

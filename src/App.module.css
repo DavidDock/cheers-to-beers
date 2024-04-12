@@ -7,6 +7,8 @@
     grid-template-rows: 1fr 10fr 1fr;
     color: white;
     font-size: 1.1rem;
+    padding: none;
+    margin: none;
 }
 
 a {
@@ -39,8 +41,9 @@ a:focus {
     flex-direction: column;
     flex-grow: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     max-height: 100%;
-    padding: none;
+    padding: 0;
   }
 
 /* scrollbar */
