@@ -43,7 +43,7 @@ useEffect(() => {
   }, [filter, query, pathname]);
   
   return (
-    <Row className="d-flex justify-content-center p-0">
+    <Row className="d-flex justify-content-center p-0 m-0">
         <Col lg={7}>
 
             {/* Search  bar*/}

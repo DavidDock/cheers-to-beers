@@ -115,7 +115,7 @@ const Post = (props) => {
     <Card className= {postsPage ? `mb-5 ${styles.Post} ${borderStyles.PurpleBorder}` : `${styles.Post}` }>
       <Card.Body>
         <Media className="align-items-center justify-content-center justify-content-md-between">
-          <Link to={`/profiles/${profile_id}`}>
+          <Link to={`/profiles/${profile_id}`} className={styles.OwnerName}>
             <Avatar src={profile_image} height={45} />
             {owner}
           </Link>
