@@ -61,7 +61,7 @@ function App() {
                 render={() => (
                   <PostsPage
                     message="No results found. Adjust the search keyword or add a post."
-                    filter={`'owner__profile'=${profile_id}&`}
+                    filter={`owner__profile=${profile_id}&`}
                   />
                 )}
               />

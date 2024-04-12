@@ -33,6 +33,7 @@ const Post = (props) => {
     image,
     updated_at,
     postPage,
+    postsPage,
     setPosts,
   } = props;
   
@@ -111,7 +112,7 @@ const Post = (props) => {
   };
 
   return (
-    <Card className={styles.Post}>
+    <Card className= {postsPage ? `mb-4 ${styles.Post} ${borderStyles.PurpleBorder}` : `${styles.Post}` }>
       <Card.Body>
         <Media className="align-items-center justify-content-center justify-content-md-between">
           <Link to={`/profiles/${profile_id}`}>
