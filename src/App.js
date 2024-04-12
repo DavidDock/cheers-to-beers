@@ -22,7 +22,7 @@ function App() {
     <div className={styles.App}>
       {/* Grid for TopNav Middle FooterNav */}
       <TopNav />
-      <div className={styles.Middle}>
+      <div className={styles.Middle } infinite-scroll-parent >
         {/* Middle Flex container for SideNav and Main */}
         <SideNav />
         <div className={styles.Main}>

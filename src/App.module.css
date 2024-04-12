@@ -39,6 +39,7 @@ a:focus {
     flex-direction: column;
     flex-grow: 1;
     overflow-y: auto;
+    max-height: 100%;
   }
 
 /* scrollbar */

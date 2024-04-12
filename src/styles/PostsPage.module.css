@@ -4,15 +4,19 @@
     padding-left: 2.5rem;
     margin-bottom: 1rem;
     border: #000000;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     
+}
+
+.InfiniteContainer {
+    height: 80vh;
 }
   
   .SearchIcon {
     color: #ff0000;
     position: absolute;
     font-size: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 4rem;
   }
   
   .SearchIcon:hover {

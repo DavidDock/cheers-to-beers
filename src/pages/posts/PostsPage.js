@@ -7,6 +7,9 @@ import borderStyles from "../../styles/Borders.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
+
 import NoResults from "../../assets/no-results.png";
 import Post from "./Post";
 import Asset from "../../components/Asset";
@@ -40,13 +43,13 @@ useEffect(() => {
   }, [filter, query, pathname]);
   
   return (
-    <Row className="d-flex justify-content-center">
-        <Col className= "mx-4 mx-md-5 my-4" lg={7}>
+    <Row className="d-flex justify-content-center p-0">
+        <Col lg={7}>
 
             {/* Search  bar*/}
             <i className={`fas fa-search ${styles.SearchIcon}`} />
             <Form
-                className={`mx-auto mb-4 ${styles.SearchBar}`}
+                className={`mx-5 ${styles.SearchBar}`}
                 onSubmit={(event) => event.preventDefault()}
             >
                 <Form.Control
@@ -62,14 +65,23 @@ useEffect(() => {
             {hasLoaded ? (
                 <>
                     {posts.results.length ? (
-                    posts.results.map((post) => (
-                        <Post key={post.id} postsPage {...post} setPosts={setPosts} />
-                    ))
+                        <InfiniteScroll
+                            children={posts.results.map((post) => (
+                            <Post key={post.id} {...post} postsPage setPosts={setPosts} />
+                            ))}
+                            dataLength={posts.results.length}
+                            loader={<Asset spinner />}
+                            hasMore={!!posts.next}
+                            height="1000"
+                            scrollThreshold="0.5"
+                            next={() => fetchMoreData(posts, setPosts)}
+                            className={`p-4 p-md-5 ${styles.InfiniteContainer}`}
+                        />
                     ) : (
-                    <Container >
-                        {/* Display no-results asset if no posts*/}
-                        <Asset src={NoResults} message={message} />
-                    </Container>
+                        <Container >
+                            {/* Display no-results asset if no posts*/}
+                            <Asset src={NoResults} message={message} />
+                        </Container>
                     )}
                 </>
                 ) : (

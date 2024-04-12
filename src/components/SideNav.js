@@ -64,7 +64,7 @@ const SideNav = () => {
         exact
         className={`my-2 mx-2 text-center ${borderStyles.NormalBorder}`}
         activeClassName={borderStyles.Active}
-        to="about"
+        to="/about"
       >
         About
       </NavLink>
@@ -72,7 +72,7 @@ const SideNav = () => {
         exact
         className={`my-2 mx-2 text-center ${borderStyles.NormalBorder}`}
         activeClassName={borderStyles.Active}
-        to="contact"
+        to="/contact"
       >
         Contact
       </NavLink>
