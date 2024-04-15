@@ -10,6 +10,7 @@ import FooterNav from "./components/FooterNav";
 import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
+import PostEditForm from "./pages/posts/PostEditForm";
 import PostPage from "./pages/posts/PostPage";
 import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
@@ -70,6 +71,7 @@ function App() {
               <Route exact path="/about" render={() => <h1>About</h1>} />
               <Route exact path="/contact" render={() => <h1>Contact</h1>} />
               <Route exact path="/posts/create" render={() => <PostCreateForm />} />
+              <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
               <Route exact path="/posts/:id" render={() => <PostPage />} />
               <Route render={() => <p>Page not found!</p>} />
             </Switch>
