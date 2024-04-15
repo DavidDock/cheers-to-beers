@@ -5,7 +5,7 @@ import styles from "../styles/MoreDropdown.module.css";
 // Dropdown needs access to the DOM node in order to position the Menu
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
   <i
-    className="fas fa-ellipsis-v"
+    className={`fas fa-ellipsis-v ${styles.DropdownItem}`}
     ref={ref}
     onClick={(e) => {
       e.preventDefault();
@@ -17,7 +17,7 @@ const ThreeDots = React.forwardRef(({ onClick }, ref) => (
 export const MoreDropdown = ({ handleEdit, handleDelete }) => {
   return (
     <Dropdown className="ml-auto" drop="down">
-      <Dropdown.Toggle as={ThreeDots} />
+      <Dropdown.Toggle as={ThreeDots}/>
 
       <Dropdown.Menu
         className={`text-center ${styles.DropdownMenu}`}

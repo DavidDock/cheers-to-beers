@@ -13,6 +13,7 @@
 .DropdownItem:focus {
     background-color: transparent;
     color: #ff0000;
+    cursor: pointer;
 }              
   
 .Absolute {
