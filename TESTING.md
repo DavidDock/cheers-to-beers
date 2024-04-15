@@ -148,6 +148,7 @@ A logged in user can successfully cheer and uncheer a post. The owner of the pos
 See all posts by most recent
 
 #### Results
+All posts can be successfully seen ordered by most recent
 
 ### Filter posts
  
@@ -155,6 +156,7 @@ See all posts by most recent
 See all posts by filter when button pressed.
 
 #### Results
+When logged in each filter link can be pressed on the SideNav and relevent posts are shown.
 
 ### Search Posts
  
@@ -162,6 +164,7 @@ See all posts by filter when button pressed.
 Search function working on Posts page
 
 #### Results
+The search function works within all or filtered posts, you can successfully search by title, type or user.
 
 ### Infinite scroll
  
@@ -169,6 +172,7 @@ Search function working on Posts page
 See posts loading when scrolling down
 
 #### Results
+The infinite scroll works on posts, fetching more posts every 10 posts.
 
 ### Edit Post
  
