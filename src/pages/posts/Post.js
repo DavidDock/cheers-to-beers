@@ -1,7 +1,7 @@
 import React from "react";
 import { Rating } from "react-simple-star-rating";
 import { axiosRes } from "../../api/axiosDefaults";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 
 import styles from "../../styles/Post.module.css";
@@ -40,9 +40,23 @@ const Post = (props) => {
   
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const history = useHistory();
   
   // const to allow onMouseEnter/Leave fuction
   const [emptyImage, setEmptyImage] = useState(logoempty);
+
+  const handleEdit = () => {
+    history.push(`/posts/${id}/edit`);
+  };
+
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/posts/${id}/`);
+      history.goBack();
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const handleStar = async () => {
     // Add star to API
@@ -122,13 +136,23 @@ const Post = (props) => {
           </Link>
           <div className="d-none d-md-flex align-items-center">
             <span className="mx-3">{updated_at}</span>
-            {is_owner && postPage && <MoreDropdown />}
+            {is_owner && postPage && (
+             <MoreDropdown
+             handleEdit={handleEdit}
+             handleDelete={handleDelete}
+             />
+            )}
           </div>
         </Media>
         <Card.Text className="d-flex d-md-none align-items-center justify-content-center mt-2">
           <span className="mr-2">{updated_at}</span>
           {/* Is owner edit post buttons */}
-          {is_owner && postPage && <MoreDropdown />}
+          {is_owner && postPage && (
+             <MoreDropdown
+             handleEdit={handleEdit}
+             handleDelete={handleDelete}
+             />
+          )}
         </Card.Text>
       </Card.Body>
       <Link to={`/posts/${id}`}>
