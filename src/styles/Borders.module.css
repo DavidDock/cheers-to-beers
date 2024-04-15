@@ -26,6 +26,7 @@
         inset 0 0 .4rem #bc13fe;
 }
 
+.LittleRedBorder,
 .RedBorder {
     color: #ffffff;
     border: 0.1rem solid #ffffff;
@@ -92,6 +93,21 @@
         0 0 0.6rem #ffffff,
         0 0 2rem #ffffff,
         inset 0 0 .8rem #bc13fe;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+}
+
+.LittleRedBorder:hover,
+.LittleRedBorder:focus {
+    border-radius: 1rem;
+    border: 0.1rem solid #ffffff;
+    box-shadow: 0 0 .2rem #ffffff,
+        0 0 .2rem #ffffff,
+        0 0 .4rem #ffffff,
+        0 0 0.4rem #ffffff,
+        0 0 0.9rem #ffffff,
+        inset 0 0 .4rem #bc13fe;
     text-decoration: none;
     color: white;
     background-color: transparent;

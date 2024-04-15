@@ -33,7 +33,7 @@ function PostsPage({ message, filter = "" }) {
         };
 
         setHasLoaded(false);
-        // set has loaded timer whilst fetching posts
+        // set has loaded timer  fetching posts
         const timer = setTimeout(() => {
             fetchPosts();
         }, 750);

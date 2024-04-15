@@ -1,0 +1,13 @@
+.Modal {
+    font-family: "Reenie Beanie", sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+@media (min-width: 650px) {
+
+    .Modal {
+        font-size: 1.5rem;
+    }
+
+}
