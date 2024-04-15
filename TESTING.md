@@ -180,6 +180,7 @@ The infinite scroll works on posts, fetching more posts every 10 posts.
 A logged in user can edit their post.
 
 #### Results
+The logged in user can successfully edit their post with new text fields, image and rating. They are then redirected to that post.
 
 ### Delete Post
  
@@ -187,6 +188,7 @@ A logged in user can edit their post.
 A logged in user can delete their post.
 
 #### Results
+A logged in user can successfully delete their post.
 
 ### Create a comment
  
