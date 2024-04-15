@@ -20,27 +20,28 @@ function PostsPage({ message, filter = "" }) {
     const { pathname } = useLocation();
     const [query, setQuery] = useState("");
 
-useEffect(() => {
-    // fetch posts depending on filter and set
-    const fetchPosts = async () => {
-      try {
-        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
-        setPosts(data);
-        setHasLoaded(true);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+    useEffect(() => {
+        // fetch posts depending on filter and set
+        const fetchPosts = async () => {
+        try {
+            const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+            setPosts(data);
+            setHasLoaded(true);
+        } catch (err) {
+            console.log(err);
+        }
+        };
 
-    setHasLoaded(false);
-    const timer = setTimeout(() => {
-        fetchPosts();
-      }, 750);
-      return () => {
-        clearTimeout(timer);
-      };
+        setHasLoaded(false);
+        // set has loaded timer whilst fetching posts
+        const timer = setTimeout(() => {
+            fetchPosts();
+        }, 750);
+        return () => {
+            clearTimeout(timer);
+        };
 
-  }, [filter, query, pathname]);
+    }, [filter, query, pathname]);
   
   return (
     <Row className="d-flex justify-content-center p-0 m-0">
