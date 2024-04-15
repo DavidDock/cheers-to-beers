@@ -13,6 +13,7 @@ import Avatar from "../../components/Avatar";
 import logoempty from "../../assets/beer.png";
 import logoemptyred from "../../assets/beerred.png";
 import logocheers from "../../assets/beer-cheers.png";
+import { MoreDropdown } from "../../components/MoreDropdown";
 
 const Post = (props) => {
   // Deconstruct Post props
@@ -120,14 +121,14 @@ const Post = (props) => {
             {owner}
           </Link>
           <div className="d-none d-md-flex align-items-center">
-            <span>{updated_at}</span>
-            {is_owner && postPage && "..."}
+            <span className="mx-3">{updated_at}</span>
+            {is_owner && postPage && <MoreDropdown />}
           </div>
         </Media>
         <Card.Text className="d-flex d-md-none align-items-center justify-content-center mt-2">
-          <span>{updated_at}</span>
+          <span className="mr-2">{updated_at}</span>
           {/* Is owner edit post buttons */}
-          {is_owner && postPage && "..."}
+          {is_owner && postPage && <MoreDropdown />}
         </Card.Text>
       </Card.Body>
       <Link to={`/posts/${id}`}>
