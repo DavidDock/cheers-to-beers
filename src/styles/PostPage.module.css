@@ -4,6 +4,10 @@
     text-align: center;
 }
 
+.InfiniteContainer {
+    height: 40vh;
+}
+
 @media (min-width: 650px) {
 
 

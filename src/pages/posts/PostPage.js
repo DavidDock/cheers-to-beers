@@ -6,6 +6,9 @@ import styles from "../../styles/PostPage.module.css"
 import borderStyles from "../../styles/Borders.module.css";
 import { Container, Col, Row, Button, Modal } from "react-bootstrap";
 
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/utils";
+
 import Post from "./Post";
 import Asset from "../../components/Asset";
 import CommentCreateForm from "../comments/CommentCreateForm";
@@ -93,14 +96,23 @@ function PostPage() {
                   ) : null}
                   {/* Show comments if any and relevant message in user logged in/not */}
                   {comments.results.length ? (
-                    comments.results.map((comment) => (
+                    <InfiniteScroll
+                    children={comments.results.map((comment) => (
                       <Comment
-                       key={comment.id}
-                       {...comment}
-                       setPost={setPost}
-                       setComments={setComments}
+                        key={comment.id}
+                        {...comment}
+                        setPost={setPost}
+                        setComments={setComments}
                       />
-                    ))
+                    ))}
+                    dataLength={comments.results.length}
+                    loader={<Asset spinner />}
+                    height="400"
+                    scrollThreshold="50%"
+                    className={`p-3 p-md-5 ${styles.InfiniteContainer}`}
+                    hasMore={!!comments.next}
+                    next={() => fetchMoreData(comments, setComments)}
+                  />
                   ) : currentUser ? (
                     <span>No comments yet, be the first to comment!</span>
                   ) : (

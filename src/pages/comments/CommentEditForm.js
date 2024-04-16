@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
 
 import styles from "../../styles/CommentCreateEditForm.module.css";
+import borderStyles from "../../styles/Borders.module.css"
 
 function CommentEditForm(props) {
   const { id, content, setShowEditForm, setComments } = props;
@@ -42,7 +43,7 @@ function CommentEditForm(props) {
     <Form onSubmit={handleSubmit}>
       <Form.Group className="pr-1">
         <Form.Control
-          className={styles.Form}
+          className={`${styles.Form} ${borderStyles.TextArea}`}
           as="textarea"
           value={formContent}
           onChange={handleChange}
