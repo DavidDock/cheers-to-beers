@@ -5,13 +5,13 @@
   }
   
   .Button {
-    border: 0.2rem solid #ffffff;
+    border: 0.2rem solid #ff0000;
     box-shadow: 0 0 .2rem #ffffff,
         0 0 .2rem #ffffff,
         0 0 .4rem #ffffff,
         0 0 0.4rem #ffffff,
         0 0 0.9rem #ffffff,
-        inset 0 0 .4rem #ff0000;
+        inset 0 0 .6rem #ff0000;
     background-color: black;
     color: white;
     border-radius: 0.5rem;
@@ -24,13 +24,13 @@
   .Button:hover,
   .Button:focus {
     cursor: pointer;
-    border: 0.2rem solid #ffffff;
+    border: 0.2rem solid #39FF14;
     box-shadow: 0 0 .2rem #ffffff,
         0 0 .2rem #ffffff,
         0 0 .4rem #ffffff,
         0 0 0.4rem #ffffff,
         0 0 0.9rem #ffffff,
-        inset 0 0 .4rem #39FF14;
+        inset 0 0 .6rem #39FF14;
     text-decoration: none;
     color: #39FF14 ;
     background-color: black;
