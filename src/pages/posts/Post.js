@@ -169,7 +169,7 @@ const Post = (props) => {
         {type && <Card.Text>Beer Type: {type}</Card.Text>}
         {/* Rating component */}
         {score  !== 0 && <Card.Text><Rating readonly initialValue={score} size={20} /></Card.Text>}
-        <div className="d-flex justify-content-around flex-wrap ">
+        <div className="d-flex justify-content-around flex-wrap align-items-center ">
 
           <div className="d-flex flex-column justify-content-center">
           {/* Star post:
