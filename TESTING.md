@@ -197,6 +197,7 @@ A logged in user can successfully delete their post.
 * Number of comments of post can be seen.
 
 #### Results
+A logged in user can successfully create a comment and the number of comments increase under the comments icon.
 
 ### View comments
  
@@ -205,14 +206,16 @@ A logged in user can successfully delete their post.
 * Infinite scroll of comments.
 
 #### Results
+All comments can be seen in the comments modal when pressed, the comments keep loading when scrolling down until there are none left.
 
 ### Delete comment
- 
+
 #### Acceptance Criteria
 * Can delete own comment.
 * Correct number of comments is displayed.
 
 #### Results
+A user can successfully delete their own comment clicking on the dropdown in the comments modal and pressing the bin icon. The number of comments under the comments icon in the post then successfully decreases.
 
 ### Edit comment
  
@@ -220,6 +223,7 @@ A logged in user can successfully delete their post.
 Can edit own comment
 
 #### Results
+The comment owner can click on the dropdown next to their comment and press the edit button, they then can edit the comment successfully.
 
 ### User Profile
  
