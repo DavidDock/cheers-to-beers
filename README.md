@@ -138,6 +138,26 @@ The User can Register and Log In, they are prompted if an error is made during f
 
 The User can create a post with a image and title required and a score, content and beer type optional. The user is given an error message if the form data is invalid or left blank. Once they create their post it takes them to the created post page.
 
+### Delete Post
+
+![Delete-Post](public/documentaion/images/features/deletepost.png)  
+
+The Logged in user can see the "Three dot" dropdown menu on thier own posts and when clicking the bin button it deletes their post.
+
+### Edit Post
+
+![Edit-Post](public/documentaion/images/features/editpost.png)  
+
+When the logged in user clicks on the "Three dot" dropdown menu on thier own posts they can click on the edit icon. They then can change all details on their post. Again the user is given an error message if the form data is invalid or left blank. Once they edit their post it takes them to the created post page.
+
+### Posts Page
+
+![Posts-Page](public/documentaion/images/features/postspage.png)  
+
+This is the home page for the website and all posts will be seen and can be scrolled down until they are all shown.  
+The logged in user can filter these posts using the side navigation bar and the relevant posts will be shown. The filters show their own posts, their stared posts and the posts of people they follow.  
+The user can search through the posts using the search bar and this wil search posts by author, title or type.
+
 ### Accessibility  
 
 ### Future Implementations  
