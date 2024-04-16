@@ -156,3 +156,11 @@
     text-decoration: none;
     color: white;
   }
+
+  @media (min-width: 650px) {
+
+    .NormalBorder {
+        font-size: 1.5rem;
+    }
+
+}
