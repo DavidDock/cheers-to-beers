@@ -168,9 +168,9 @@ const Post = (props) => {
         {type && <Card.Text>Beer Type: {type}</Card.Text>}
         {/* Rating component */}
         {score  !== 0 && <Card.Text><Rating readonly initialValue={score} size={20} /></Card.Text>}
-        <div className="d-flex justify-content-around ">
+        <div className="d-flex justify-content-around flex-wrap ">
 
-          <div className="d-flex flex-column flex-wrap">
+          <div className="d-flex flex-column justify-content-center">
           {/* Star post:
           Differnt conditions for if owner/ current user or loggedin*/}
             {is_owner ? (
