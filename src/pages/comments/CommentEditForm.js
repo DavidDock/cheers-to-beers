@@ -42,9 +42,11 @@ function CommentEditForm(props) {
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group className="pr-1">
+        <Form.Label className="d-none" for="content">comment</Form.Label>
         <Form.Control
           className={`${styles.Form} ${borderStyles.TextArea}`}
           as="textarea"
+          id="content"
           value={formContent}
           onChange={handleChange}
           rows={2}
