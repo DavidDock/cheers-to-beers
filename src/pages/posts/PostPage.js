@@ -66,7 +66,7 @@ function PostPage() {
               <Button className={`m-4 ${borderStyles.LittleRedBorder} ${styles.Title}`} onClick={handleShow}>
                 Comments
               </Button>
-
+              {/* Modal for comments */}
               <Modal show={show}
                      onHide={handleClose}
                      className={styles.Modal}
@@ -79,6 +79,7 @@ function PostPage() {
                 </Modal.Header>
 
                 <Modal.Body>
+                  {/* Show comment add form if logged */}
                   {currentUser ? (
                     <CommentCreateForm
                       profile_id={currentUser.profile_id}
@@ -90,9 +91,15 @@ function PostPage() {
                   ) : comments.results.length ? (
                     "Comments"
                   ) : null}
+                  {/* Show comments if any and relevant message in user logged in/not */}
                   {comments.results.length ? (
                     comments.results.map((comment) => (
-                      <Comment key={comment.id} {...comment} />
+                      <Comment
+                       key={comment.id}
+                       {...comment}
+                       setPost={setPost}
+                       setComments={setComments}
+                      />
                     ))
                   ) : currentUser ? (
                     <span>No comments yet, be the first to comment!</span>

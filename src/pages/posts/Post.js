@@ -44,7 +44,8 @@ const Post = (props) => {
   
   // const to allow onMouseEnter/Leave fuction
   const [emptyImage, setEmptyImage] = useState(logoempty);
-
+  
+  // handle edit and delete functions
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
   };
