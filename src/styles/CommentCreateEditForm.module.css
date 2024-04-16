@@ -5,7 +5,7 @@
   }
   
   .Button {
-    border: 0.2rem solid #bc13fe;
+    border: 0.1rem solid #bc13fe;
     box-shadow: 0 0 .2rem #ffffff,
         0 0 .2rem #ffffff,
         0 0 .4rem #ffffff,
@@ -20,11 +20,15 @@
     margin: 0.25rem;
     font-size: 1.1rem;
   }
+
+.Button:disabled {
+    opacity: 1;
+}
   
   .Button:hover,
   .Button:focus {
     cursor: pointer;
-    border: 0.2rem solid #39FF14;
+    border: 0.1rem solid #39FF14;
     box-shadow: 0 0 .2rem #ffffff,
         0 0 .2rem #ffffff,
         0 0 .4rem #ffffff,
@@ -32,7 +36,7 @@
         0 0 0.9rem #ffffff,
         inset 0 0 .6rem #39FF14;
     text-decoration: none;
-    color: #39FF14 ;
+    color: white;
     background-color: black;
   }
 
