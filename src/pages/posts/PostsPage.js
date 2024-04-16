@@ -53,10 +53,12 @@ function PostsPage({ message, filter = "" }) {
                 className={`mx-5 mt-1 ${styles.SearchBar}`}
                 onSubmit={(event) => event.preventDefault()}
             >
+                <Form.Label className="d-none" for="search">Search</Form.Label>
                 <Form.Control
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 type="text"
+                id="search"
                 className={`mr-sm-2 ${borderStyles.Input}`}
                 placeholder="Search"
                 />

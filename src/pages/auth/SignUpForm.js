@@ -58,6 +58,7 @@ const SignUpForm = () => {
                 name="username"
                 value={username}
                 onChange={handleChange}
+                autoComplete="off"
               />
             </Form.Group>
             {errors.username?.map((message, idx) => (
