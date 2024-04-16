@@ -156,7 +156,25 @@ When the logged in user clicks on the "Three dot" dropdown menu on thier own pos
 
 This is the home page for the website and all posts will be seen and can be scrolled down until they are all shown.  
 The logged in user can filter these posts using the side navigation bar and the relevant posts will be shown. The filters show their own posts, their stared posts and the posts of people they follow.  
-The user can search through the posts using the search bar and this wil search posts by author, title or type.
+The user can search through the posts using the search bar and this wil search posts by author, title or type.  
+The logged in user can use the star and cheer funtionality on each post.
+
+### Post Page
+
+![Post-Page](public/documentaion/images/features/post.png)  
+
+This displays all the single post details which includes funtionality to star and cheer the post if the user is logged in.  
+The number of stars, cheers and comments are displayed which changes once one is added.  
+There is a link to the comment modal were the user can view, add, edit and delete comments.
+
+### Comments
+
+![Comments](public/documentaion/images/features/comments.png)  
+
+This modal opens when "comments" is clicked on the post page.  
+All the comments for the post can be viewed by scrolling down.    
+If the user is logged in they can add a comment using the form.  
+The logged in user can also delete and edit their comment using the dropdown menu.  
 
 ### Accessibility  
 
