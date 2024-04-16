@@ -8,6 +8,9 @@ import { Container, Col, Row, Button, Modal } from "react-bootstrap";
 
 import Post from "./Post";
 import Asset from "../../components/Asset";
+import CommentCreateForm from "../comments/CommentCreateForm";
+
+import { useCurrentUser } from "../../contexts/CurrentUserContext"
 
 function PostPage() {
   const { id } = useParams();
@@ -17,6 +20,10 @@ function PostPage() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const currentUser = useCurrentUser();
+  const profile_image = currentUser?.profile_image;
+  const [comments, setComments] = useState({ results: [] });
 
   useEffect(() => {
     // On mount set the post
@@ -53,7 +60,7 @@ function PostPage() {
           <Col className={borderStyles.PurpleBorder} lg={7}>
             <Post {...post.results[0]} setPosts={setPost} postPage />
             <Container className="p-0 m-0">
-              <Button className={`m-4 ${borderStyles.LittleRedBorder}`} onClick={handleShow}>
+              <Button className={`m-4 ${borderStyles.LittleRedBorder} ${styles.Title}`} onClick={handleShow}>
                 Comments
               </Button>
 
@@ -69,7 +76,17 @@ function PostPage() {
                 </Modal.Header>
 
                 <Modal.Body>
-                  Woohoo, you are reading this text in a modal!
+                  {currentUser ? (
+                    <CommentCreateForm
+                      profile_id={currentUser.profile_id}
+                      profileImage={profile_image}
+                      post={id}
+                      setPost={setPost}
+                      setComments={setComments}
+                    />
+                  ) : comments.results.length ? (
+                    "Comments"
+                  ) : null}
                 </Modal.Body>
                 
               </Modal>

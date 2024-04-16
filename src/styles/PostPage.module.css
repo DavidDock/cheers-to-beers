@@ -6,6 +6,11 @@
 
 @media (min-width: 650px) {
 
+
+    .Title {
+        font-size: 1.5rem;
+    }
+
     .Modal {
         font-size: 1.5rem;
     }
