@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-
+import { Form, InputGroup, Alert } from "react-bootstrap";
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import borderStyles from "../../styles/Borders.module.css"
+
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
+  const [errors, setErrors] = useState({});
 
   const handleChange = (event) => {
     setContent(event.target.value);
@@ -39,6 +39,7 @@ function CommentCreateForm(props) {
       setContent("");
     } catch (err) {
       console.log(err);
+      setErrors(err.response?.data);
     }
   };
 
@@ -61,6 +62,11 @@ function CommentCreateForm(props) {
           />
         </InputGroup>
       </Form.Group>
+      {errors.content?.map((message, idx) => (
+        <Alert key={idx} className={styles.RedWarning}>
+          {message}
+        </Alert>
+      ))}
       <button
         className={`${styles.Button} btn d-block ml-auto`}
         disabled={!content.trim()}

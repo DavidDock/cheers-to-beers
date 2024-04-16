@@ -2,6 +2,7 @@
     border: none;
     border-bottom: 2px #ff0000 solid;
     font-size: 1.1rem;
+    word-break: break-all;
   }
   
   .Button {
@@ -24,6 +25,13 @@
 .Button:disabled {
     opacity: 1;
 }
+
+.RedWarning {
+  background-color: #000;
+  color: #ff4444;
+  border: none;
+}
+
   
   .Button:hover,
   .Button:focus {

@@ -8,3 +8,7 @@
     font-weight: lighter;
     color: rgba(8, 13, 23, 1);
   }
+
+  .WordBreak {
+    word-break: break-all;
+  }
