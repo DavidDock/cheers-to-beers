@@ -5,13 +5,13 @@
   }
   
   .Button {
-    border: 0.2rem solid #ff0000;
+    border: 0.2rem solid #bc13fe;
     box-shadow: 0 0 .2rem #ffffff,
         0 0 .2rem #ffffff,
         0 0 .4rem #ffffff,
         0 0 0.4rem #ffffff,
         0 0 0.9rem #ffffff,
-        inset 0 0 .6rem #ff0000;
+        inset 0 0 .6rem #bc13fe;
     background-color: black;
     color: white;
     border-radius: 0.5rem;

@@ -89,7 +89,7 @@ function PostPage() {
                       setComments={setComments}
                     />
                   ) : comments.results.length ? (
-                    "Comments"
+                    null
                   ) : null}
                   {/* Show comments if any and relevant message in user logged in/not */}
                   {comments.results.length ? (
