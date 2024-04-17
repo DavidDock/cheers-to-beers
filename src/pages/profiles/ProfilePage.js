@@ -11,7 +11,7 @@ import { fetchMoreData } from "../../utils/utils";
 import Post from "../posts/Post";
 import NoResults from "../../assets/no-results.png";
 
-import { axiosReq } from "../../api/axiosDefaults";
+import { axiosReq, axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
 
@@ -37,7 +37,42 @@ function ProfilePage() {
   });
   const is_owner = currentUser?.username === profileData?.owner;
 
+  const handleFollow = async (profileData) => {
+    // create a follow and amend profile data
+    try {
+      const { data } = await axiosRes.post("/followers/", {
+        followed: profileData.id,
+      });
+
+      setProfileData((prevState) => ({
+        ...prevState,
+        ...profileData,
+        followers_count: profileData.followers_count + 1,
+        following_id: data.id,
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleUnfollow = async (profileData) => {
+    // delete a follow and amend profile data
+    try {
+      await axiosRes.delete(`/followers/${profileData.following_id}/`);
+
+      setProfileData((prevState) => ({
+        ...prevState,
+        ...profileData,
+        followers_count: profileData.followers_count - 1,
+        following_id: null,
+      }));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
+    // fetch and set profile data and profile owners posts
     const fetchProfileData = async () => {
       try {
         const [{ data: pageProfile }, { data: profilePosts }] = await Promise.all([
@@ -55,6 +90,7 @@ function ProfilePage() {
   }, [id]);
 
   const mainProfile = (
+    // profile owner details
     <>
       <Row className="p-0 m-0 text-center">
         <Col lg={3} className="text-lg-left mt-4">
@@ -82,19 +118,20 @@ function ProfilePage() {
           </Row>
         </Col>
         <Col lg={3} className="text-lg-right mt-4">
+        {/* follow/unfollow button or none depending on user and following id */}
         {currentUser &&
             !is_owner &&
             (profileData?.following_id ? (
               <Button
                 className={`${borderStyles.RedBorder} ${styles.LargerText}`}
-                onClick={() => {}}
+                onClick={() => handleUnfollow(profileData)}
               >
                 unfollow
               </Button>
             ) : (
               <Button
                 className={`${borderStyles.RedBorder} ${styles.LargerText}`}
-                onClick={() => {}}
+                onClick={() => handleFollow(profileData)}
               >
                 follow
               </Button>
@@ -107,10 +144,12 @@ function ProfilePage() {
   );
 
   const mainProfilePosts = (
+    // posts for profile owner
     <>
       <hr />
       <p className={`text-center ${styles.Red} ${styles.LargerText}`}>{profileData?.owner}'s posts</p>
       <hr />
+      {/* display all posts with infinte scroll or no-posts asset */}
       {profilePosts.results.length ? (
         <InfiniteScroll
           children={profilePosts.results.map((post) => (
@@ -135,6 +174,7 @@ function ProfilePage() {
   return (
     <Row className="m-0 p-0 d-flex justify-content-center">
       <Col className={`mx-2 p-2 ${borderStyles.PurpleBorder}`} lg={7}>
+      {/* show profile details and owners post or spinner until loaded */}
         
         {hasLoaded ? (
           <>
