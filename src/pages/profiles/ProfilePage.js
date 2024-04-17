@@ -109,7 +109,7 @@ function ProfilePage() {
   const mainProfilePosts = (
     <>
       <hr />
-      <p className={`text-center ${styles.Red}`}>{profileData?.owner}'s posts</p>
+      <p className={`text-center ${styles.Red} ${styles.LargerText}`}>{profileData?.owner}'s posts</p>
       <hr />
       {profilePosts.results.length ? (
         <InfiniteScroll
@@ -134,7 +134,7 @@ function ProfilePage() {
 
   return (
     <Row className="m-0 p-0 d-flex justify-content-center">
-      <Col className={`mx-2 ${borderStyles.PurpleBorder}`} lg={7}>
+      <Col className={`mx-2 p-2 ${borderStyles.PurpleBorder}`} lg={7}>
         
         {hasLoaded ? (
           <>
