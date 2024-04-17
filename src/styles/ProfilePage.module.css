@@ -1,14 +1,27 @@
 .ProfileImage {
     object-fit: cover;
-    height: auto;
-    width: 65%;
+    width: 5rem;
+    height: 5rem;
     margin: 0.5rem;
   }
 
-@media (min-width: 650px) {
+.LargerText {
+  font-size: 1.5rem;
+}
+
+.Green {
+  color: #00ff00;
+}
+
+.Red {
+  color: #ff0000;
+}
+
+@media (min-width: 400px) {
 
     .ProfileImage {
-      width: 50%;
+      width: 8rem;
+      height: 8rem;
     }
 
 }
@@ -16,7 +29,8 @@
 @media (min-width: 991px) {
 
   .ProfileImage {
-    width: 80%;
+    width: 5rem;
+    height: 5rem;
   }
 
 }

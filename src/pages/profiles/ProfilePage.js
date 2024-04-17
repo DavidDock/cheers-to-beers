@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Container, Col, Row, Image } from "react-bootstrap";
+import { Button, Col, Row, Image } from "react-bootstrap";
 
 import Asset from "../../components/Asset";
 import styles from "../../styles/ProfilePage.module.css";
@@ -29,6 +29,7 @@ function ProfilePage() {
     created_at: "",
     updated_at: "",
   });
+  const is_owner = currentUser?.username === profileData?.owner;
 
   useEffect(() => {
     const fetchProfileData = async () => {
@@ -48,21 +49,51 @@ function ProfilePage() {
   const mainProfile = (
     <>
       <Row className="p-0 m-0 text-center">
-        <Col lg={3} className="text-lg-left my-4">
+        <Col lg={3} className="text-lg-left mt-4">
             <Image
                 className={styles.ProfileImage}
                 roundedCircle
                 src={profileData.image}
             />
         </Col>
-        <Col lg={6}>
-          <h3 className="m-2">{profileData?.owner}</h3>
-          <p>Profile stats</p>
+        <Col className="mt-4" lg={6}>
+          <h3 className={styles.Green}>{profileData?.owner}</h3>
+          <Row className="justify-content-center no-gutters">
+            <Col className="my-2">
+              <div>{profileData?.posts_count}</div>
+              <div className={styles.Red}>posts</div>
+            </Col>
+            <Col className="my-2 mx-2">
+              <div>{profileData?.followers_count}</div>
+              <div className={styles.Red}>followers</div>
+            </Col>
+            <Col className="my-2">
+              <div>{profileData?.following_count}</div>
+              <div className={styles.Red}>following</div>
+            </Col>
+          </Row>
         </Col>
-        <Col lg={3} className="text-lg-right">
-        <p>Follow button</p>
+        <Col lg={3} className="text-lg-right mt-4">
+        {currentUser &&
+            !is_owner &&
+            (profileData?.following_id ? (
+              <Button
+                className={`${borderStyles.RedBorder} ${styles.LargerText}`}
+                onClick={() => {}}
+              >
+                unfollow
+              </Button>
+            ) : (
+              <Button
+                className={`${borderStyles.RedBorder} ${styles.LargerText}`}
+                onClick={() => {}}
+              >
+                follow
+              </Button>
+            ))}
         </Col>
-        <Col className="p-3">{profileData.content}</Col>
+        {profileData?.content && <Row className="mx-auto p-3 text-center">{profileData.content}</Row>}
+        {profileData?.favourite && <Row className={`mx-auto p-3 text-center ${styles.Green}`}>Favourite Beer: {profileData.favourite}</Row>}
       </Row>
     </>
   );
@@ -77,7 +108,7 @@ function ProfilePage() {
 
   return (
     <Row className="m-0 p-0 d-flex justify-content-center">
-      <Col className={borderStyles.PurpleBorder} lg={7}>
+      <Col className={`mx-2 ${borderStyles.PurpleBorder}`} lg={7}>
         
         {hasLoaded ? (
           <>
