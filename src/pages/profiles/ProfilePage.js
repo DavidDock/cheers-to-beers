@@ -48,7 +48,7 @@ function ProfilePage() {
   const mainProfile = (
     <>
       <Row className="p-0 m-0 text-center">
-        <Col lg={3} className="text-lg-left my-3">
+        <Col lg={3} className="text-lg-left my-4">
             <Image
                 className={styles.ProfileImage}
                 roundedCircle
@@ -76,18 +76,18 @@ function ProfilePage() {
   );
 
   return (
-    <Row className="ml-3 mr-1 mx-md-5 my-2 d-flex justify-content-center">
+    <Row className="m-0 p-0 d-flex justify-content-center">
       <Col className={borderStyles.PurpleBorder} lg={7}>
-        <Container>
-          {hasLoaded ? (
-            <>
-              {mainProfile}
-              {mainProfilePosts}
-            </>
-          ) : (
-            <Asset spinner />
-          )}
-        </Container>
+        
+        {hasLoaded ? (
+          <>
+            {mainProfile}
+            {mainProfilePosts}
+          </>
+        ) : (
+          <Asset spinner />
+        )}
+        
       </Col>
     </Row>
   );
