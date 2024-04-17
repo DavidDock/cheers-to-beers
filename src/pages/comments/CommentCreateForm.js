@@ -50,13 +50,13 @@ function CommentCreateForm(props) {
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profileImage} />
           </Link>
-          <Form.Label className="d-none" htmlFor="content">comment</Form.Label>
+          <Form.Label className="d-none" htmlFor="add-new-content">comment</Form.Label>
           <Form.Control
             className={` ${styles.Form} ${borderStyles.TextArea}`}
             placeholder="my comment..."
             as="textarea"
             value={content}
-            id="content"
+            id="add-new-content"
             onChange={handleChange}
             rows={2}
           />

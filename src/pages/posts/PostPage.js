@@ -74,7 +74,6 @@ function PostPage() {
                      onHide={handleClose}
                      className={styles.Modal}
                      size="lg"
-                     aria-labelledby="contained-modal-title-vcenter"
                      centered
               >
                 <Modal.Header closeButton>
