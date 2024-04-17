@@ -17,6 +17,10 @@
   color: #ff0000;
 }
 
+.InfiniteContainer {
+  height: 60vh;
+}
+
 @media (min-width: 400px) {
 
     .ProfileImage {
