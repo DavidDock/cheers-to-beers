@@ -145,7 +145,7 @@ const Post = (props) => {
             )}
           </div>
         </Media>
-        <Card.Text className="d-flex d-md-none align-items-center justify-content-center mt-2">
+        <div className="d-flex d-md-none align-items-center justify-content-center mt-2">
           <span className="mr-2">{updated_at}</span>
           {/* Is owner edit post buttons */}
           {is_owner && postPage && (
@@ -154,7 +154,7 @@ const Post = (props) => {
              handleDelete={handleDelete}
              />
           )}
-        </Card.Text>
+        </div>
       </Card.Body>
       <Link to={`/posts/${id}`}>
         <Card.Img
