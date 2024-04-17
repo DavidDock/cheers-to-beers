@@ -80,9 +80,10 @@ function PostCreateForm() {
     // Textfields for form
     <div className="text-center">
       <Form.Group>
-        <Form.Label>Title</Form.Label>
+        <Form.Label htmlFor="title">Title</Form.Label>
         <Form.Control
           className={borderStyles.Input}
+          id="title"
           type="text"
           name="title"
           value={title}
@@ -95,9 +96,10 @@ function PostCreateForm() {
         </Alert>
       ))}
       <Form.Group>
-        <Form.Label>Content</Form.Label>
+        <Form.Label htmlFor="content">Content</Form.Label>
         <Form.Control
           className={borderStyles.TextArea}
+          id="content"
           as="textarea"
           rows={4}
           name="content"
@@ -111,9 +113,77 @@ function PostCreateForm() {
         </Alert>
       ))}
       <Form.Group>
-        <Form.Label>Beer Type</Form.Label>
+        <Form.Label htmlFor="type">Beer Type</Form.Label>
         <Form.Control
           className={borderStyles.Input}
+          id="type"
+          type="text"
+          name="type"
+          value={type}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors.type?.map((message, idx) => (
+        <Alert key={idx} className={styles.RedWarning}>
+          {message}
+        </Alert>
+      ))}
+      
+        <div>
+            <Button
+                className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
+                onClick={() => history.goBack()}
+            >
+                cancel
+            </Button>
+            <Button className={`mx-3 my-3 ${borderStyles.NormalBorder}`} type="submit">
+                create
+            </Button>
+        </div>
+    </div>
+  );
+
+  const textFieldsLarger = (
+    // Textfields for form
+    <div className="text-center">
+      <Form.Group>
+        <Form.Label htmlFor="larger title">Title</Form.Label>
+        <Form.Control
+          className={borderStyles.Input}
+          type="text"
+          id="larger title"
+          name="title"
+          value={title}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors.title?.map((message, idx) => (
+        <Alert key={idx} className={styles.RedWarning}>
+          {message}
+        </Alert>
+      ))}
+      <Form.Group>
+        <Form.Label htmlFor="larger content">Content</Form.Label>
+        <Form.Control
+          className={borderStyles.TextArea}
+          id="larger content"
+          as="textarea"
+          rows={4}
+          name="content"
+          value={content}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors.content?.map((message, idx) => (
+        <Alert key={idx} className={styles.RedWarning}>
+          {message}
+        </Alert>
+      ))}
+      <Form.Group>
+        <Form.Label htmlFor="larger type">Beer Type</Form.Label>
+        <Form.Control
+          className={borderStyles.Input}
+          id="larger type"
           type="text"
           name="type"
           value={type}
@@ -205,7 +275,7 @@ function PostCreateForm() {
         </Col>
         {/* Form textfields on larger devices */}
         <Col md={5} className="d-none d-md-block p-0 p-md-2">
-          <Container className="">{textFields}</Container>
+          <Container className="">{textFieldsLarger}</Container>
         </Col>
       </Row>
     </Form>
