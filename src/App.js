@@ -17,6 +17,7 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+import About from "./pages/About";
 
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 
@@ -73,7 +74,7 @@ function App() {
               />
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
-              <Route exact path="/about" render={() => <h1>About</h1>} />
+              <Route exact path="/about" render={() => <About />} />
               <Route exact path="/contact" render={() => <h1>Contact</h1>} />
               <Route exact path="/posts/create" render={() => <PostCreateForm />} />
               <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />

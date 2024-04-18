@@ -1,0 +1,25 @@
+.Image {
+    margin: 0rem 1rem;
+}
+
+.RedTitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 0 -40px 500px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+
+@media (min-width: 650px) {
+
+    .RedTitle {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .Image {
+        display: none;
+    }
+
+}
