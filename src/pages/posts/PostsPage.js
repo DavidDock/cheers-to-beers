@@ -23,13 +23,13 @@ function PostsPage({ message, filter = "" }) {
     useEffect(() => {
         // fetch posts depending on filter and set
         const fetchPosts = async () => {
-        try {
-            const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
-            setPosts(data);
-            setHasLoaded(true);
-        } catch (err) {
-            console.log(err);
-        }
+            try {
+                const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+                setPosts(data);
+                setHasLoaded(true);
+            } catch (err) {
+                console.log(err);
+            }
         };
 
         setHasLoaded(false);
@@ -42,59 +42,59 @@ function PostsPage({ message, filter = "" }) {
         };
 
     }, [filter, query, pathname]);
-  
-  return (
-    <Row className="d-flex justify-content-center p-0 m-0">
-        <Col lg={7} className={styles.Col}>
 
-            {/* Search  bar*/}
-            <i className={`fas fa-search ${styles.SearchIcon}`} />
-            <Form
-                className={`mx-5 mt-1 ${styles.SearchBar}`}
-                onSubmit={(event) => event.preventDefault()}
-            >
-                <Form.Label className="sr-only" htmlFor="search">Search</Form.Label>
-                <Form.Control
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                type="text"
-                id="search"
-                className={`mr-sm-2 ${borderStyles.Input}`}
-                placeholder="Search"
-                />
-            </Form>
+    return (
+        <Row className="d-flex justify-content-center p-0 m-0">
+            <Col lg={7} className={styles.Col}>
 
-            {/* Display posts or spinner*/}
-            {hasLoaded ? (
-                <>
-                    {posts.results.length ? (
-                        <InfiniteScroll
-                            children={posts.results.map((post) => (
-                            <Post key={post.id} {...post} postsPage setPosts={setPosts} />
-                            ))}
-                            dataLength={posts.results.length}
-                            loader={<Asset spinner />}
-                            hasMore={!!posts.next}
-                            height="400"
-                            scrollThreshold="50%"
-                            next={() => fetchMoreData(posts, setPosts)}
-                            className={`p-3 p-md-5 ${styles.InfiniteContainer}`}
-                        />
-                    ) : (
-                        <Container >
-                            {/* Display no-results asset if no posts*/}
-                            <Asset src={NoResults} message={message} />
-                        </Container>
-                    )}
-                </>
+                {/* Search  bar*/}
+                <i className={`fas fa-search ${styles.SearchIcon}`} />
+                <Form
+                    className={`mx-5 mt-1 ${styles.SearchBar}`}
+                    onSubmit={(event) => event.preventDefault()}
+                >
+                    <Form.Label className="sr-only" htmlFor="search">Search</Form.Label>
+                    <Form.Control
+                        value={query}
+                        onChange={(event) => setQuery(event.target.value)}
+                        type="text"
+                        id="search"
+                        className={`mr-sm-2 ${borderStyles.Input}`}
+                        placeholder="Search"
+                    />
+                </Form>
+
+                {/* Display posts or spinner*/}
+                {hasLoaded ? (
+                    <>
+                        {posts.results.length ? (
+                            <InfiniteScroll
+                                children={posts.results.map((post) => (
+                                    <Post key={post.id} {...post} postsPage setPosts={setPosts} />
+                                ))}
+                                dataLength={posts.results.length}
+                                loader={<Asset spinner />}
+                                hasMore={!!posts.next}
+                                height="400"
+                                scrollThreshold="50%"
+                                next={() => fetchMoreData(posts, setPosts)}
+                                className={`p-3 p-md-5 ${styles.InfiniteContainer}`}
+                            />
+                        ) : (
+                            <Container >
+                                {/* Display no-results asset if no posts*/}
+                                <Asset src={NoResults} message={message} />
+                            </Container>
+                        )}
+                    </>
                 ) : (
-                <Container >
-                    <Asset spinner />
-                </Container>
+                    <Container >
+                        <Asset spinner />
+                    </Container>
                 )}
-        </Col>
-    </Row>
-  );
+            </Col>
+        </Row>
+    );
 }
 
 export default PostsPage;

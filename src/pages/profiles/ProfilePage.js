@@ -77,8 +77,8 @@ function ProfilePage() {
     const fetchProfileData = async () => {
       try {
         const [{ data: pageProfile }, { data: profilePosts }] = await Promise.all([
-            axiosReq.get(`/profiles/${id}/`),
-            axiosReq.get(`/posts/?owner__profile=${id}`),
+          axiosReq.get(`/profiles/${id}/`),
+          axiosReq.get(`/posts/?owner__profile=${id}`),
         ]);
         setProfileData(pageProfile);
         setProfilePosts(profilePosts);
@@ -96,12 +96,12 @@ function ProfilePage() {
       {profileData?.is_owner && <ProfileEditDropdown id={profileData?.id} />}
       <Row className="p-0 m-0 text-center">
         <Col lg={3} className="text-lg-left mt-4">
-            <Image
-                className={styles.ProfileImage}
-                roundedCircle
-                src={profileData.image}
-                alt={`${profileData.owner} s picture`}
-            />
+          <Image
+            className={styles.ProfileImage}
+            roundedCircle
+            src={profileData.image}
+            alt={`${profileData.owner} s picture`}
+          />
         </Col>
         <Col className="mt-4" lg={6}>
           <h3 className={styles.Green}>{profileData?.owner}</h3>
@@ -121,8 +121,8 @@ function ProfilePage() {
           </Row>
         </Col>
         <Col lg={3} className="text-lg-right mt-4">
-        {/* follow/unfollow button or none depending on user and following id */}
-        {currentUser &&
+          {/* follow/unfollow button or none depending on user and following id */}
+          {currentUser &&
             !is_owner &&
             (profileData?.following_id ? (
               <Button
@@ -140,8 +140,8 @@ function ProfilePage() {
               </Button>
             ))}
         </Col>
-        {profileData?.content && <Row className="mx-auto p-3 text-center">{profileData.content}</Row>}
-        {profileData?.favourite && <Row className={`mx-auto p-3 text-center ${styles.Green}`}>Favourite Beer: {profileData.favourite}</Row>}
+        {profileData?.content && <p className="mx-auto p-3 text-center w-100">{profileData.content}</p>}
+        {profileData?.favourite && <p className={`mx-auto p-3 text-center w-100 ${styles.Green}`}>Favourite Beer: {profileData.favourite}</p>}
       </Row>
     </>
   );
@@ -177,8 +177,8 @@ function ProfilePage() {
   return (
     <Row className="m-0 p-0 d-flex justify-content-center">
       <Col className={`mx-2 p-2 ${borderStyles.PurpleBorder}`} lg={7}>
-      {/* show profile details and owners post or spinner until loaded */}
-        
+        {/* show profile details and owners post or spinner until loaded */}
+
         {hasLoaded ? (
           <>
             {mainProfile}
@@ -187,7 +187,7 @@ function ProfilePage() {
         ) : (
           <Asset spinner />
         )}
-        
+
       </Col>
     </Row>
   );

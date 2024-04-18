@@ -47,13 +47,13 @@ function PostPage() {
     };
 
     setHasLoaded(false);
-        // set has loaded timer whilst fetching post
-        const timer = setTimeout(() => {
-          handleMount();
-        }, 750);
-        return () => {
-            clearTimeout(timer);
-        };
+    // set has loaded timer whilst fetching post
+    const timer = setTimeout(() => {
+      handleMount();
+    }, 750);
+    return () => {
+      clearTimeout(timer);
+    };
 
   }, [id]);
 
@@ -71,10 +71,10 @@ function PostPage() {
               </Button>
               {/* Modal for comments */}
               <Modal show={show}
-                     onHide={handleClose}
-                     className={styles.Modal}
-                     size="lg"
-                     centered
+                onHide={handleClose}
+                className={styles.Modal}
+                size="lg"
+                centered
               >
                 <Modal.Header closeButton>
                   <Modal.Title>Comments</Modal.Title>
@@ -96,34 +96,34 @@ function PostPage() {
                   {/* Show comments if any and relevant message in user logged in/not */}
                   {comments.results.length ? (
                     <InfiniteScroll
-                    children={comments.results.map((comment) => (
-                      <Comment
-                        key={comment.id}
-                        {...comment}
-                        setPost={setPost}
-                        setComments={setComments}
-                      />
-                    ))}
-                    dataLength={comments.results.length}
-                    loader={<Asset spinner />}
-                    height="400"
-                    scrollThreshold="50%"
-                    className={`p-3 p-md-5 ${styles.InfiniteContainer}`}
-                    hasMore={!!comments.next}
-                    next={() => fetchMoreData(comments, setComments)}
-                  />
+                      children={comments.results.map((comment) => (
+                        <Comment
+                          key={comment.id}
+                          {...comment}
+                          setPost={setPost}
+                          setComments={setComments}
+                        />
+                      ))}
+                      dataLength={comments.results.length}
+                      loader={<Asset spinner />}
+                      height="400"
+                      scrollThreshold="50%"
+                      className={`p-3 p-md-5 ${styles.InfiniteContainer}`}
+                      hasMore={!!comments.next}
+                      next={() => fetchMoreData(comments, setComments)}
+                    />
                   ) : currentUser ? (
                     <span>No comments yet, be the first to comment!</span>
                   ) : (
                     <span>No comments... yet</span>
                   )}
                 </Modal.Body>
-                
+
               </Modal>
 
             </Container>
           </Col>
-        </Row>        
+        </Row>
 
       ) : (
         <Container >

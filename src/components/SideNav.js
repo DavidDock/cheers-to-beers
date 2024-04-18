@@ -12,8 +12,8 @@ const SideNav = () => {
   // Display relevant NavLinks depending on logged in status
   const currentUser = useCurrentUser();
 
-    const loggedInIcons = (
-      <div className={styles.List}>
+  const loggedInIcons = (
+    <div className={styles.List}>
       <h1 className={`my-2 mx-2 text-center ${styles.GreenTitle}`}>Posts</h1>
       <NavLink
         exact
@@ -56,9 +56,9 @@ const SideNav = () => {
         YOURS
       </NavLink>
     </div>
-    );
-    const loggedOutIcons = (
-      <div className={styles.List}>
+  );
+  const loggedOutIcons = (
+    <div className={styles.List}>
       <img className={`mx-auto mt-2 ${styles.Image}`} src={logo} alt="Beer Glass" height="35" width="35"></img>
       <NavLink
         exact
@@ -78,13 +78,13 @@ const SideNav = () => {
       </NavLink>
       <img className={`mx-auto mb-2 ${styles.Image}`} src={logo} alt="Beer Glass" height="35" width="35"></img>
     </div>
-    );
+  );
 
 
   return (
     <div className={styles.SideContainer}>
       <div className={`${styles.Side} ${borderStyles.LargeRedBorder}`}>
-      {currentUser ? loggedInIcons : loggedOutIcons}
+        {currentUser ? loggedInIcons : loggedOutIcons}
       </div>
 
     </div>

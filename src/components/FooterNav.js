@@ -8,60 +8,60 @@ import borderStyles from "../styles/Borders.module.css";
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 
 const FooterNav = () => {
-    // Use context to get current user data
-    // Functionality to log out
-    // Display relevant NavLinks depending on logged in status
-    const currentUser = useCurrentUser();
-    const setCurrentUser = useSetCurrentUser();
+  // Use context to get current user data
+  // Functionality to log out
+  // Display relevant NavLinks depending on logged in status
+  const currentUser = useCurrentUser();
+  const setCurrentUser = useSetCurrentUser();
 
-    const handleSignOut = async () => {
-        try {
-          await axios.post("dj-rest-auth/logout/");
-          setCurrentUser(null);
-        } catch (err) {
-          console.log(err);
-        }
-      };
+  const handleSignOut = async () => {
+    try {
+      await axios.post("dj-rest-auth/logout/");
+      setCurrentUser(null);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-    const loggedInIcons = (
-        <>
-            <NavLink
-                exact
-                className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
-                activeClassName={borderStyles.Active}
-                to="/contact"
-            >
-                Contact
-            </NavLink>
-            <NavLink
-                exact
-                className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
-                onClick ={handleSignOut}
-                to="/"
-            >
-                Logout
-            </NavLink>
-        </>
-    );
-    const loggedOutIcons = (
-        <>
-            <NavLink
-                exact
-                className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
-                activeClassName={borderStyles.Active}
-                to="/signup"
-            >
-                Register
-            </NavLink>
-        </>
-    );
-  
+  const loggedInIcons = (
+    <>
+      <NavLink
+        exact
+        className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
+        activeClassName={borderStyles.Active}
+        to="/contact"
+      >
+        Contact
+      </NavLink>
+      <NavLink
+        exact
+        className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
+        onClick={handleSignOut}
+        to="/"
+      >
+        Logout
+      </NavLink>
+    </>
+  );
+  const loggedOutIcons = (
+    <>
+      <NavLink
+        exact
+        className={`mr-4 mt-2 ${borderStyles.NormalBorder}`}
+        activeClassName={borderStyles.Active}
+        to="/signup"
+      >
+        Register
+      </NavLink>
+    </>
+  );
+
   return (
     <footer className={`mt-2 ${styles.Footer}`}>
       <div className={`m-2 ${styles.Logo}`} aria-label='Thanks For Visiting Logo'><b>Tha<span>nks</span>⁴Vi<span>sit</span>ing</b>
       </div>
       <div className={styles.FooterNavLinkContainer}>
-      {currentUser ? loggedInIcons : loggedOutIcons}
+        {currentUser ? loggedInIcons : loggedOutIcons}
       </div>
     </footer>
   )

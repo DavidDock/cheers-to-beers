@@ -52,7 +52,7 @@ const TopNav = () => {
                 </div>
             </NavLink>
             <div className={styles.TopNavLinkContainer}>
-            {currentUser ? loggedInIcons : loggedOutIcons}
+                {currentUser ? loggedInIcons : loggedOutIcons}
             </div>
         </nav>
     )

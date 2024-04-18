@@ -76,7 +76,7 @@ function PostEditForm() {
     formData.append("content", content);
     formData.append("type", type);
     formData.append("score", rating);
-    
+
     if (imageInput?.current?.files[0]) {
       formData.append("image", imageInput.current.files[0]);
     }
@@ -146,18 +146,18 @@ function PostEditForm() {
           {message}
         </Alert>
       ))}
-      
-        <div>
-            <Button
-                className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
-                onClick={() => history.goBack()}
-            >
-                cancel
-            </Button>
-            <Button className={`mx-3 my-3 ${borderStyles.NormalBorder}`} type="submit">
-                edit
-            </Button>
-        </div>
+
+      <div>
+        <Button
+          className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
+          onClick={() => history.goBack()}
+        >
+          cancel
+        </Button>
+        <Button className={`mx-3 my-3 ${borderStyles.NormalBorder}`} type="submit">
+          edit
+        </Button>
+      </div>
     </div>
   );
 
@@ -213,18 +213,18 @@ function PostEditForm() {
           {message}
         </Alert>
       ))}
-      
-        <div>
-            <Button
-                className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
-                onClick={() => history.goBack()}
-            >
-                cancel
-            </Button>
-            <Button className={`mx-3 my-3 ${borderStyles.NormalBorder}`} type="submit">
-                edit
-            </Button>
-        </div>
+
+      <div>
+        <Button
+          className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
+          onClick={() => history.goBack()}
+        >
+          cancel
+        </Button>
+        <Button className={`mx-3 my-3 ${borderStyles.NormalBorder}`} type="submit">
+          edit
+        </Button>
+      </div>
     </div>
   );
 
@@ -236,26 +236,26 @@ function PostEditForm() {
             className={` ${styles.Container} d-flex flex-column justify-content-center align-items-center`}
           >
             <Form.Group className="text-center">
-                {/* Form Image, change image and errors */}
-                <figure>
-                    <Image className={appStyles.Image} src={image} rounded alt={`Post of ${postData.title}`} />
-                </figure>
-                <div>
-                    <Form.Label
-                        className={borderStyles.NormalBorder}
-                        htmlFor="image-upload"
-                    >
-                        Change the image
-                    </Form.Label>
-                </div>
+              {/* Form Image, change image and errors */}
+              <figure>
+                <Image className={appStyles.Image} src={image} rounded alt={`Post of ${postData.title}`} />
+              </figure>
+              <div>
+                <Form.Label
+                  className={borderStyles.NormalBorder}
+                  htmlFor="image-upload"
+                >
+                  Change the image
+                </Form.Label>
+              </div>
 
-                <Form.File
-                    className="d-none"
-                    id="image-upload"
-                    accept="image/*"
-                    onChange={handleChangeImage}
-                    ref={imageInput}
-                />
+              <Form.File
+                className="d-none"
+                id="image-upload"
+                accept="image/*"
+                onChange={handleChangeImage}
+                ref={imageInput}
+              />
             </Form.Group>
             {errors.image?.map((message, idx) => (
               <Alert key={idx} className={styles.RedWarning}>

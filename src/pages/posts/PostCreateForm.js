@@ -128,18 +128,18 @@ function PostCreateForm() {
           {message}
         </Alert>
       ))}
-      
-        <div>
-            <Button
-                className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
-                onClick={() => history.goBack()}
-            >
-                cancel
-            </Button>
-            <Button className={`mx-3 my-3 ${borderStyles.NormalBorder}`} type="submit">
-                create
-            </Button>
-        </div>
+
+      <div>
+        <Button
+          className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
+          onClick={() => history.goBack()}
+        >
+          cancel
+        </Button>
+        <Button className={`mx-3 my-3 ${borderStyles.NormalBorder}`} type="submit">
+          create
+        </Button>
+      </div>
     </div>
   );
 
@@ -195,18 +195,18 @@ function PostCreateForm() {
           {message}
         </Alert>
       ))}
-      
-        <div>
-            <Button
-                className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
-                onClick={() => history.goBack()}
-            >
-                cancel
-            </Button>
-            <Button className={`mx-3 my-3 ${borderStyles.NormalBorder}`} type="submit">
-                create
-            </Button>
-        </div>
+
+      <div>
+        <Button
+          className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
+          onClick={() => history.goBack()}
+        >
+          cancel
+        </Button>
+        <Button className={`mx-3 my-3 ${borderStyles.NormalBorder}`} type="submit">
+          create
+        </Button>
+      </div>
     </div>
   );
 

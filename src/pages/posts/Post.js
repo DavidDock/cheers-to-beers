@@ -37,14 +37,14 @@ const Post = (props) => {
     postsPage,
     setPosts,
   } = props;
-  
+
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
-  
+
   // const to allow onMouseEnter/Leave fuction
   const [emptyImage, setEmptyImage] = useState(logoempty);
-  
+
   // handle edit and delete functions
   const handleEdit = () => {
     history.push(`/posts/${id}/edit`);
@@ -128,7 +128,7 @@ const Post = (props) => {
   };
 
   return (
-    <Card className= {postsPage ? `mb-5 ${styles.Post} ${borderStyles.PurpleBorder}` : `${styles.Post}` }>
+    <Card className={postsPage ? `mb-5 ${styles.Post} ${borderStyles.PurpleBorder}` : `${styles.Post}`}>
       <Card.Body>
         <Media className="align-items-center justify-content-center justify-content-md-between">
           <Link to={`/profiles/${profile_id}`} className={styles.OwnerName}>
@@ -138,10 +138,10 @@ const Post = (props) => {
           <div className="d-none d-md-flex align-items-center">
             <span className="mx-3">{updated_at}</span>
             {is_owner && postPage && (
-             <MoreDropdown
-             handleEdit={handleEdit}
-             handleDelete={handleDelete}
-             />
+              <MoreDropdown
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
+              />
             )}
           </div>
         </Media>
@@ -149,17 +149,17 @@ const Post = (props) => {
           <span className="mr-2">{updated_at}</span>
           {/* Is owner edit post buttons */}
           {is_owner && postPage && (
-             <MoreDropdown
-             handleEdit={handleEdit}
-             handleDelete={handleDelete}
-             />
+            <MoreDropdown
+              handleEdit={handleEdit}
+              handleDelete={handleDelete}
+            />
           )}
         </div>
       </Card.Body>
       <Link to={`/posts/${id}`}>
         <Card.Img
           src={image}
-          alt= {`Picture of ${title}`}
+          alt={`Picture of ${title}`}
           className={`p-0 ${styles.Image} ${borderStyles.RedBorderImage}`} />
       </Link>
 
@@ -168,11 +168,11 @@ const Post = (props) => {
         {content && <Card.Text>{content}</Card.Text>}
         {type && <Card.Text>Beer Type: {type}</Card.Text>}
         {/* Rating component */}
-        {score  !== 0 && <Card.Text><Rating readonly initialValue={score} size={20} /></Card.Text>}
+        {score !== 0 && <Card.Text><Rating readonly initialValue={score} size={20} /></Card.Text>}
         <div className="d-flex justify-content-around flex-wrap align-items-center ">
 
           <div className="d-flex flex-column justify-content-center">
-          {/* Star post:
+            {/* Star post:
           Differnt conditions for if owner/ current user or loggedin*/}
             {is_owner ? (
               <OverlayTrigger
@@ -201,7 +201,7 @@ const Post = (props) => {
           </div>
 
           <div className="d-flex flex-column justify-content-center">
-          {/* Cheer post:
+            {/* Cheer post:
           Differnt conditions for if owner/ current user or loggedin*/}
             {is_owner ? (
               <OverlayTrigger
