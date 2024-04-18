@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import "./api/axiosDefaults";
 
-import styles from  "./App.module.css";
+import styles from "./App.module.css";
 import Container from "react-bootstrap/Container";
 
 import TopNav from "./components/TopNav";
@@ -26,7 +26,7 @@ function App() {
     <div className={styles.App}>
       {/* Grid for TopNav Middle FooterNav */}
       <TopNav />
-      <div className={styles.Middle } >
+      <div className={styles.Middle} >
         {/* Middle Flex container for SideNav and Main */}
         <SideNav />
         <div className={styles.Main}>
