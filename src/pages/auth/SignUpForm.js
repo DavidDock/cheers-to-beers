@@ -50,7 +50,7 @@ const SignUpForm = () => {
             {/* Form */}
             <Form onSubmit={handleSubmit}>
             <Form.Group controlId="username">
-              <Form.Label className="d-none">username</Form.Label>
+              <Form.Label className="sr-only">username</Form.Label>
               <Form.Control
                 className={borderStyles.Input}
                 type="text"
@@ -68,7 +68,7 @@ const SignUpForm = () => {
             ))}
 
             <Form.Group controlId="password1">
-              <Form.Label className="d-none">Password</Form.Label>
+              <Form.Label className="sr-only">Password</Form.Label>
               <Form.Control
                 className={borderStyles.Input}
                 type="password"
@@ -85,7 +85,7 @@ const SignUpForm = () => {
             ))}
 
             <Form.Group controlId="password2">
-              <Form.Label className="d-none">Confirm password</Form.Label>
+              <Form.Label className="sr-only">Confirm password</Form.Label>
               <Form.Control
                 className={borderStyles.Input}
                 type="password"

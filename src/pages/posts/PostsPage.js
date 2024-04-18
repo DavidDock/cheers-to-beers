@@ -53,7 +53,7 @@ function PostsPage({ message, filter = "" }) {
                 className={`mx-5 mt-1 ${styles.SearchBar}`}
                 onSubmit={(event) => event.preventDefault()}
             >
-                <Form.Label className="d-none" htmlFor="search">Search</Form.Label>
+                <Form.Label className="sr-only" htmlFor="search">Search</Form.Label>
                 <Form.Control
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
