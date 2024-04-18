@@ -15,7 +15,12 @@
     background-color: transparent;
     color: #bc13fe;
     cursor: pointer;
-}              
+}
+
+.DropdownItemLink:hover,
+.DropdownItemLink:focus {
+    background-color: rgba(127, 17, 244, 0.5);
+}
   
 .Absolute {
 position: absolute;

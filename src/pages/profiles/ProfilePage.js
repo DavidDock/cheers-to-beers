@@ -10,6 +10,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Post from "../posts/Post";
 import NoResults from "../../assets/no-results.png";
+import { ProfileEditDropdown } from "../../components/MoreDropdown";
 
 import { axiosReq, axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
@@ -92,6 +93,7 @@ function ProfilePage() {
   const mainProfile = (
     // profile owner details
     <>
+      {profileData?.is_owner && <ProfileEditDropdown id={profileData?.id} />}
       <Row className="p-0 m-0 text-center">
         <Col lg={3} className="text-lg-left mt-4">
             <Image

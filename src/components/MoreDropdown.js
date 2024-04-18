@@ -1,6 +1,9 @@
 import React from "react";
+import { useHistory } from "react-router";
+
 import Dropdown from "react-bootstrap/Dropdown";
 import styles from "../styles/MoreDropdown.module.css";
+
 
 // Dropdown needs access to the DOM node in order to position the Menu
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
@@ -41,3 +44,37 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
     </Dropdown>
   );
 };
+
+export function ProfileEditDropdown({ id }) {
+  const history = useHistory();
+  return (
+    <Dropdown className={`ml-auto px-2 ${styles.Absolute}`} drop="left">
+      <Dropdown.Toggle as={ThreeDots} />
+      <Dropdown.Menu>
+        <Dropdown.Item
+          onClick={() => history.push(`/profiles/${id}/edit`)}
+          aria-label="edit-profile"
+          className={styles.DropdownItemLink}
+        >
+          <i className="fas fa-edit mr-2" /> edit profile
+        </Dropdown.Item>
+        <Dropdown.Item
+          onClick={() => history.push(`/profiles/${id}/edit/username`)}
+          aria-label="edit-username"
+          className={styles.DropdownItemLink}
+        >
+          <i className="far fa-id-card mr-2" />
+          change username
+        </Dropdown.Item>
+        <Dropdown.Item
+          onClick={() => history.push(`/profiles/${id}/edit/password`)}
+          aria-label="edit-password"
+          className={styles.DropdownItemLink}
+        >
+          <i className="fas fa-key mr-2" />
+          change password
+        </Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+}
