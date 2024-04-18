@@ -87,10 +87,11 @@ const ProfileEditForm = () => {
         // Textfields for form
         <>
             <Form.Group>
-                <Form.Label>Bio</Form.Label>
+                <Form.Label htmlFor="bio">Bio</Form.Label>
                 <Form.Control
                     as="textarea"
                     className={borderStyles.TextArea}
+                    id="bio"
                     value={content}
                     onChange={handleChange}
                     name="content"
@@ -105,10 +106,67 @@ const ProfileEditForm = () => {
             ))}
 
             <Form.Group>
-                <Form.Label>Favourite Beer</Form.Label>
+                <Form.Label htmlFor="favourite">Favourite Beer</Form.Label>
                 <Form.Control
                     type="text"
                     className={borderStyles.Input}
+                    id="favourite"
+                    value={favourite}
+                    onChange={handleChange}
+                    name="favourite"
+                    rows={7}
+                />
+            </Form.Group>
+
+            {errors?.favourite?.map((message, idx) => (
+                <Alert className={styles.RedWarning} key={idx}>
+                    {message}
+                </Alert>
+            ))}
+
+            <Button
+                className={`mx-2 my-3 ${borderStyles.NormalBorder}`}
+                onClick={() => history.goBack()}
+            >
+                cancel
+            </Button>
+            <Button
+                className={`mx-3 my-3 ${borderStyles.NormalBorder}`}
+                type="submit"
+            >
+                save
+            </Button>
+        </>
+    );
+
+    const textFieldsLarger = (
+        // Textfields for form
+        <>
+            <Form.Group>
+                <Form.Label htmlFor="bio-larger">Bio</Form.Label>
+                <Form.Control
+                    as="textarea"
+                    className={borderStyles.TextArea}
+                    id="bio-larger"
+                    value={content}
+                    onChange={handleChange}
+                    name="content"
+                    rows={7}
+                />
+            </Form.Group>
+
+            {errors?.content?.map((message, idx) => (
+                <Alert className={styles.RedWarning} key={idx}>
+                    {message}
+                </Alert>
+            ))}
+
+            <Form.Group>
+                <Form.Label htmlFor="larger-favourite">Favourite Beer</Form.Label>
+                <Form.Control
+                    type="text"
+                    className={borderStyles.Input}
+                    id="larger-favourite"
                     value={favourite}
                     onChange={handleChange}
                     name="favourite"
@@ -183,7 +241,7 @@ const ProfileEditForm = () => {
                 </Col>
 
                 <Col md={5} lg={6} className="d-none d-md-block p-0 p-md-2 text-center">
-                    <Container className={""}>{textFields}</Container>
+                    <Container className={""}>{textFieldsLarger}</Container>
                 </Col>
 
             </Row>

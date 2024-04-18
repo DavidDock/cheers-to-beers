@@ -147,11 +147,11 @@ function PostCreateForm() {
     // Textfields for form
     <div className="text-center">
       <Form.Group>
-        <Form.Label htmlFor="larger title">Title</Form.Label>
+        <Form.Label htmlFor="larger-title">Title</Form.Label>
         <Form.Control
           className={borderStyles.Input}
           type="text"
-          id="larger title"
+          id="larger-title"
           name="title"
           value={title}
           onChange={handleChange}
@@ -163,10 +163,10 @@ function PostCreateForm() {
         </Alert>
       ))}
       <Form.Group>
-        <Form.Label htmlFor="larger content">Content</Form.Label>
+        <Form.Label htmlFor="larger-content">Content</Form.Label>
         <Form.Control
           className={borderStyles.TextArea}
-          id="larger content"
+          id="larger-content"
           as="textarea"
           rows={4}
           name="content"
@@ -180,10 +180,10 @@ function PostCreateForm() {
         </Alert>
       ))}
       <Form.Group>
-        <Form.Label htmlFor="larger type">Beer Type</Form.Label>
+        <Form.Label htmlFor="larger-type">Beer Type</Form.Label>
         <Form.Control
           className={borderStyles.Input}
-          id="larger type"
+          id="larger-type"
           type="text"
           name="type"
           value={type}
