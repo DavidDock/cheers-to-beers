@@ -132,7 +132,8 @@ A single post can be seen on posts/#id with all relevant information displayed
 You can star and unstar a post.
 
 #### Results
-A logged in user can successfully star and unstar a post. The owner of the post cant star their own post and a non-user is be prompted to log in upon hover.
+A logged in user can successfully star and unstar a post. The owner of the post cant star their own post and a non-user is be prompted to log in upon hover.  
+Once a post is stared the user can successfully see all those posts on their "stared" feed allowing easy access to their favourite posts.
 
 ### Cheer and Uncheer a post
  
@@ -231,6 +232,7 @@ The comment owner can click on the dropdown next to their comment and press the 
 Can see all user details
 
 #### Results
+The user can successfully see all relevant details of the profile they clicked on with correct number of followers/following and posts displayed. A logged in user can see the follow/unfollow button depending if they follow the user or not.
 
 ### Profile Posts
  
@@ -238,6 +240,7 @@ Can see all user details
 Can see all user posts with infinite scroll.
 
 #### Results
+All the posts from the profile owner can be scrolled through and clicked on to go to the post.
 
 ### Follow, Unfollow user
  
@@ -246,6 +249,8 @@ Can see all user posts with infinite scroll.
 * Number of followers changes for relevant followers and following.
 
 #### Results
+A logged in user can successfully follow or unfollow another user by pressing the button, the number of followers atomatically changes on the profile.  
+When the user follows a new profile they can successfully see thats persons posts on thir "friends" feed to make it easier for the user to find relevant posts.
 
 ### Edit Profile
  

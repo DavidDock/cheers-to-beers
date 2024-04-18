@@ -174,7 +174,24 @@ There is a link to the comment modal were the user can view, add, edit and delet
 This modal opens when "comments" is clicked on the post page.  
 All the comments for the post can be viewed by scrolling down.    
 If the user is logged in they can add a comment using the form.  
-The logged in user can also delete and edit their comment using the dropdown menu.  
+The logged in user can also delete and edit their comment using the dropdown menu. 
+
+This modal is a change to the wireframes created during planning. It was added instead of the infinite scroll on each post because the infinite scroll container adds a new scroll-bar on this website due to the layout structure and I felt it wouldn't be the ideal customer experience.  
+I feel like the modal works a lot better. It adds interactivity to the site and allows for easy comment CRUD functionality.  
+
+### Profile
+
+![Post-Page](public/documentaion/images/features/post.png)  
+
+
+### Edit Profile
+
+![Post-Page](public/documentaion/images/features/post.png)  
+
+### Delete Profile
+
+![Post-Page](public/documentaion/images/features/post.png)
+
 
 ### Accessibility  
 
