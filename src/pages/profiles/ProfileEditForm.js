@@ -141,7 +141,7 @@ const ProfileEditForm = () => {
             <Form.Group>
               {image && (
                 <figure>
-                  <Image src={image} className={appStyles.Image} />
+                  <Image src={image} className={appStyles.Image} alt={`Avatar of ${profileData.name}`} />
                 </figure>
               )}
               <div>
