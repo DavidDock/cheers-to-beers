@@ -6,12 +6,16 @@ import { axiosReq } from "../../api/axiosDefaults";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import borderStyles from "../../styles/Borders.module.css";
+import Asset from "../../components/Asset";
+
+
 import { Image, Alert, Container, Col, Row, Button, Form } from "react-bootstrap";
 
 function PostEditForm() {
   // Set Post data, errors and rating
 
   const [errors, setErrors] = useState({});
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   const [postData, setPostData] = useState({
     title: "",
@@ -33,8 +37,8 @@ function PostEditForm() {
       try {
         const { data } = await axiosReq.get(`/posts/${id}/`);
         const { title, content, image, type, score, is_owner } = data;
-
         is_owner ? setPostData({ title, content, type, score, image }) : history.push("/");
+        setHasLoaded(true);
       } catch (err) {
         console.log(err);
       }
@@ -229,60 +233,67 @@ function PostEditForm() {
   );
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Row className="px-2">
-        <Col className="py-2 p-0 p-md-2" md={7}>
-          <Container
-            className={` ${styles.Container} d-flex flex-column justify-content-center align-items-center`}
-          >
-            <Form.Group className="text-center">
-              {/* Form Image, change image and errors */}
-              <figure>
-                <Image className={appStyles.Image} src={image} rounded alt={`Post of ${postData.title}`} />
-              </figure>
-              <div>
-                <Form.Label
-                  className={borderStyles.NormalBorder}
-                  htmlFor="image-upload"
-                >
-                  Change the image
-                </Form.Label>
-              </div>
+    <>
+      {hasLoaded ? (
+        // show form or spinner until data loaded 
+        <Form onSubmit={handleSubmit}>
+          <Row className="px-2">
+            <Col className="py-2 p-0 p-md-2" md={7}>
+              <Container
+                className={` ${styles.Container} d-flex flex-column justify-content-center align-items-center`}
+              >
+                <Form.Group className="text-center">
+                  {/* Form Image, change image and errors */}
+                  <figure>
+                    <Image className={appStyles.Image} src={image} rounded alt={`Post of ${postData.title}`} />
+                  </figure>
+                  <div>
+                    <Form.Label
+                      className={borderStyles.NormalBorder}
+                      htmlFor="image-upload"
+                    >
+                      Change the image
+                    </Form.Label>
+                  </div>
 
-              <Form.File
-                className="d-none"
-                id="image-upload"
-                accept="image/*"
-                onChange={handleChangeImage}
-                ref={imageInput}
-              />
-            </Form.Group>
-            {errors.image?.map((message, idx) => (
-              <Alert key={idx} className={styles.RedWarning}>
-                {message}
-              </Alert>
-            ))}
+                  <Form.File
+                    className="d-none"
+                    id="image-upload"
+                    accept="image/*"
+                    onChange={handleChangeImage}
+                    ref={imageInput}
+                  />
+                </Form.Group>
+                {errors.image?.map((message, idx) => (
+                  <Alert key={idx} className={styles.RedWarning}>
+                    {message}
+                  </Alert>
+                ))}
 
-            <Form.Group>
-              {/* Form rating and errors */}
-              <Rating onClick={handleRating} size={20} initialValue={score} />
-            </Form.Group>
-            {errors.score?.map((message, idx) => (
-              <Alert key={idx} className={styles.RedWarning}>
-                {message}
-              </Alert>
-            ))}
-            {/* Form textfields */}
-            <div className="d-md-none">{textFieldsLarger}</div>
-          </Container>
+                <Form.Group>
+                  {/* Form rating and errors */}
+                  <Rating onClick={handleRating} size={20} initialValue={score} />
+                </Form.Group>
+                {errors.score?.map((message, idx) => (
+                  <Alert key={idx} className={styles.RedWarning}>
+                    {message}
+                  </Alert>
+                ))}
+                {/* Form textfields */}
+                <div className="d-md-none">{textFieldsLarger}</div>
+              </Container>
 
-        </Col>
-        {/* Form textfields on larger devices */}
-        <Col md={5} className="d-none d-md-block p-0 p-md-2">
-          <Container className="">{textFields}</Container>
-        </Col>
-      </Row>
-    </Form>
+            </Col>
+            {/* Form textfields on larger devices */}
+            <Col md={5} className="d-none d-md-block p-0 p-md-2">
+              <Container className="">{textFields}</Container>
+            </Col>
+          </Row>
+        </Form>
+      ) : (
+        <Asset spinner />
+      )}
+    </>
   );
 }
 

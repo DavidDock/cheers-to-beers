@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import styles from "../../styles/About.module.css";
-import borderStyles from "../../styles/Borders.module.css";
-
 import { Container } from "react-bootstrap";
 import Asset from "../../components/Asset";
 import logo from "../../assets/beer-cheers.png";
+
+import borderStyles from "../../styles/Borders.module.css";
 
 function About() {
     const [abouts, setAbouts] = useState({ results: [] });
