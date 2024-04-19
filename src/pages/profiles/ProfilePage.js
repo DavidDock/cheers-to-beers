@@ -14,11 +14,12 @@ import { ProfileEditDropdown } from "../../components/MoreDropdown";
 
 import { axiosReq, axiosRes } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { useParams } from "react-router";
+import { useParams, useHistory } from "react-router";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const currentUser = useCurrentUser();
+  const history = useHistory();
   const { id } = useParams();
   const [profilePosts, setProfilePosts] = useState({ results: [] });
   const [profileData, setProfileData] = useState({
@@ -37,6 +38,25 @@ function ProfilePage() {
     updated_at: "",
   });
   const is_owner = currentUser?.username === profileData?.owner;
+
+  useEffect(() => {
+    // fetch and set profile data and profile owners posts
+    const fetchProfileData = async () => {
+      try {
+        const [{ data: pageProfile }, { data: profilePosts }] = await Promise.all([
+          axiosReq.get(`/profiles/${id}/`),
+          axiosReq.get(`/posts/?owner__profile=${id}`),
+        ]);
+        setProfileData(pageProfile);
+        setProfilePosts(profilePosts);
+        setHasLoaded(true);
+      } catch (err) {
+        console.log(err);
+        history.push("/");
+      }
+    };
+    fetchProfileData();
+  }, [id]);
 
   const handleFollow = async (profileData) => {
     // create a follow and amend profile data
@@ -71,24 +91,6 @@ function ProfilePage() {
       console.log(err);
     }
   };
-
-  useEffect(() => {
-    // fetch and set profile data and profile owners posts
-    const fetchProfileData = async () => {
-      try {
-        const [{ data: pageProfile }, { data: profilePosts }] = await Promise.all([
-          axiosReq.get(`/profiles/${id}/`),
-          axiosReq.get(`/posts/?owner__profile=${id}`),
-        ]);
-        setProfileData(pageProfile);
-        setProfilePosts(profilePosts);
-        setHasLoaded(true);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchProfileData();
-  }, [id]);
 
   const mainProfile = (
     // profile owner details
