@@ -157,9 +157,18 @@
     color: white;
   }
 
-  @media (min-width: 650px) {
+@media (min-width: 650px) {
 
     .NormalBorder {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 650px) {
+
+    .TextArea,
+    .Input {
         font-size: 1.5rem;
     }
 

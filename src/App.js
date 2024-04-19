@@ -3,6 +3,7 @@ import "./api/axiosDefaults";
 
 import styles from "./App.module.css";
 import Container from "react-bootstrap/Container";
+import { ToastContainer } from 'react-toastify';
 
 import TopNav from "./components/TopNav";
 import SideNav from "./components/SideNav";
@@ -35,6 +36,20 @@ function App() {
         <SideNav />
         <div className={styles.Main}>
           <Container className="pl-3 pr-2 m-0 py-2">
+            {/* Toast container */}
+            <ToastContainer
+              className={styles.Toast}
+              position="top-center"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
             {/* Container for content in route */}
             <Switch>
               <Route

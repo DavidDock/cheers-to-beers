@@ -5,6 +5,8 @@ import axios from "axios";
 import styles from "../../styles/ContactForm.module.css";
 import borderStyles from "../../styles/Borders.module.css";
 import { Form, Button, Alert, Container } from "react-bootstrap";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import logo from "../../assets/beer-cheers.png";
 
@@ -20,6 +22,17 @@ const ContactForm = () => {
 
     const history = useHistory();
 
+    const notify = () => toast('Message sent', {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+    });
+
     const handleChange = (event) => {
         // Set the contactData upon input
         setContactData({
@@ -34,6 +47,7 @@ const ContactForm = () => {
         try {
             await axios.post("/contact/", contactData);
             history.push("/");
+            notify();
         } catch (err) {
             setErrors(err.response?.data);
         }
