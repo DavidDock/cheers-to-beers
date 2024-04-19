@@ -41,6 +41,7 @@ function PostEditForm() {
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
+        history.push("/");
       }
     };
 

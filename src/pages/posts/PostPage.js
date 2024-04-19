@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
 import styles from "../../styles/PostPage.module.css"
@@ -21,6 +21,7 @@ function PostPage() {
   const [post, setPost] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const [show, setShow] = useState(false);
+  const history = useHistory();
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -43,6 +44,7 @@ function PostPage() {
         console.log(post);
       } catch (err) {
         console.log(err);
+        history.push("/");
       }
     };
 
@@ -55,7 +57,7 @@ function PostPage() {
       clearTimeout(timer);
     };
 
-  }, [id]);
+  }, [id, history]);
 
 
   return (
