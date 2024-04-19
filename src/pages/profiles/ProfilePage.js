@@ -56,7 +56,7 @@ function ProfilePage() {
       }
     };
     fetchProfileData();
-  }, [id]);
+  }, [id, history]);
 
   const handleFollow = async (profileData) => {
     // create a follow and amend profile data
