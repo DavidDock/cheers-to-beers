@@ -50,7 +50,7 @@ const UserPasswordForm = () => {
         <Row>
             <Col className="py-2 mx-auto text-center" md={6}>
                 <Container>
-                    <Form onSubmit={handleSubmit}>
+                    <Form onSubmit={handleSubmit} className="my-2 mx-auto w-75 w-md-50">
                         <Form.Group>
                             <Form.Label htmlFor="password">New password</Form.Label>
                             <Form.Control
