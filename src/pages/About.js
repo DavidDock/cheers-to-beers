@@ -14,7 +14,7 @@ function About() {
 
     useEffect(() => {
 
-        const fetchAbouts = async () => {
+        const handleMount = async () => {
             // fetch abouts and set data
             try {
                 const { data } = await axiosReq.get(`/about`);
@@ -27,7 +27,7 @@ function About() {
         setHasLoaded(false);
         // set has loaded timer fetching abouts
         const timer = setTimeout(() => {
-            fetchAbouts();
+            handleMount();
         }, 750);
         return () => {
             clearTimeout(timer);
@@ -50,7 +50,7 @@ function About() {
 
                     {/* Content */}
                     <div className={`mx-2 mx-sm-4 ${borderStyles.PurpleBorder}`}>
-                        <p className="p-2 p-sm-4">
+                        <p className="p-3 p-sm-4 my-0">
                             {abouts.results[0].content}
                         </p>
                     </div>
