@@ -90,6 +90,7 @@ const ContactForm = () => {
                         name="email"
                         value={email}
                         onChange={handleChange}
+                        autoComplete="off"
                     />
                 </Form.Group>
                 {errors.email?.map((message, idx) => (
