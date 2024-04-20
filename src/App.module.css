@@ -7,8 +7,8 @@
     grid-template-rows: 1fr 10fr 1fr;
     color: white;
     font-size: 1.1rem;
-    padding: none;
-    margin: none;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -44,7 +44,11 @@ a:focus {
     overflow-x: hidden;
     max-height: 100%;
     padding: 0;
-  }
+}
+
+.ToastContainer {
+    font-family: "Reenie Beanie", sans-serif;
+}
 
 /* scrollbar */
 *::-webkit-scrollbar {

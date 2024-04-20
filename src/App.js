@@ -38,7 +38,7 @@ function App() {
           <Container className="pl-3 pr-2 m-0 py-2">
             {/* Toast container */}
             <ToastContainer
-              className={styles.Toast}
+              bodyClassName={styles.ToastContainer}
               position="top-center"
               autoClose={3000}
               hideProgressBar={false}
