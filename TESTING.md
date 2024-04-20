@@ -26,7 +26,7 @@ The development environment was correctly created
 * See Deployed site
 
 #### Results
-The site was successfully deployed on Heroku
+The site was successfully deployed and can be viewed on Heroku
 
 ### Favicon
  
@@ -34,7 +34,7 @@ The site was successfully deployed on Heroku
 See the favicon
 
 #### Results
-The favicon can successfully be seen
+The favicon can clearly be seen
 
 ### Navigation
  
@@ -42,7 +42,7 @@ The favicon can successfully be seen
 Can see the basic nav bar, footer and sidebar.
 
 #### Results
-The top, side and footer navs can be correctly seen with relevent links.
+The top, side and footer navs can be correctly seen with relevent links to make the navigation on the site straight forward
 
 ### Router
  
@@ -255,9 +255,10 @@ When the user follows a new profile they can successfully see thats persons post
 ### Edit Profile
  
 #### Acceptance Criteria
-A logged in user can update name password of profile information.
+A logged in user can update thier name, password and profile information.
 
 #### Results
+The user can successfully change thier username and password along with adding/editing their profile information. This allows them to share more of their details with the other users.
 
 ### Redirecting
  
@@ -272,6 +273,8 @@ A user can only go onto relevant pages and gets redirected if they go on the wro
 An about page can be seen.
 
 #### Results
+A user can click on the about page and successfully see the about message and see a description of the website.  
+As admin in the backend [Cheers-API](https://cheers-to-beers-api-5a858b4697bd.herokuapp.com/) they can edit this message or create a new message and this then will be displayed in the about page.
 
 ### Contact Form
  
@@ -279,10 +282,22 @@ An about page can be seen.
 A user can send a contact message
 
 #### Results
+The user can contact the admin with thier suggestions or queires by sending a contact message and are given a success message once sent.
 
 ## Browser Testing
+This website has been tested in google chrome and microsoft edge with no errors seen.  
 
 ## Device Responsiveness
+This website is primarily developed for mobile devices as it is designed to be used on the go but it also works well on larger devices.  
+Layout changes for different size devices are present and React bootstrap, along with css media queries have been used throughout to ensure responsiveness.  
+Dev tools has been used throughout the development of the site to test responsiveness along with being tested on both laptop and mobile devices during the development . 
+The website is responsive from as small as 320px wide and upwards. There are no overlapping elements and images aren't stretched or squashed.  
+
+### Problems/Bugs highlighted and how they were fixed  
+
+There was a minor issue during development relating to the infinite scroll feature:  
+The layout of the site uses a scrollbar for the main section between the fixed top and bottom nav bar so when the infinite scroll container was added for all the posts to be seen another scrollbar is needed on larger devices (landscape). This is not ideal but in my opinion does not have a huge inpact on the user experience.  
+This prompted a change to the wirefames for the comments infinite scroll and a pop up modal was used for the comments instead to prevent the double scrollbar, this works extremly well and is an improvement to the initial design.
 
 ## JavaScript Validator 
 
@@ -290,9 +305,14 @@ A user can send a contact message
 
 ### Final Test Results 
 
-## CSS Validator
+## CSS Validator  
+
+All the css modules and site url has been run through [The-W3C-CSS-Validator](https://jigsaw.w3.org/css-validator/) with no errors found.  
+![CSS-Validator](public/documentaion/images/testing/cssvalidator.png)
 
 ### Problems/Bugs highlighted and how they were fixed  
+
+On two occassions the margin and padding were given a value of none instead of 0 - this was changed to 0 to fix the errors.
 
 ### Final Test Results 
 
