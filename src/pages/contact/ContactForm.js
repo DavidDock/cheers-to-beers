@@ -121,7 +121,7 @@ const ContactForm = () => {
                     className={`d-block mx-auto my-3 ${borderStyles.NormalBorder}`}
                     type="submit"
                 >
-                    Contact
+                    Submit
                 </Button>
                 {errors.non_field_errors?.map((message, idx) => (
                     <Alert key={idx} className={`mt-3 ${styles.RedWarning}`}>

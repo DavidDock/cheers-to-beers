@@ -48,6 +48,8 @@ a:focus {
 
 .ToastContainer {
     font-family: "Reenie Beanie", sans-serif;
+    color: #39FF14;
+    text-align: center;
 }
 
 /* scrollbar */
