@@ -181,17 +181,46 @@ I feel like the modal works a lot better. It adds interactivity to the site and 
 
 ### Profile
 
-![Post-Page](public/documentaion/images/features/post.png)  
+![Profile-Page](public/documentaion/images/features/profile.png)  
 
 
 ### Edit Profile
 
-![Post-Page](public/documentaion/images/features/post.png)  
+![PostEdit-Profile-Page](public/documentaion/images/features/editprofile.png)  
 
-### Delete Profile
+![PostEdit-Profile-Username](public/documentaion/images/features/editusername.png)  
 
-![Post-Page](public/documentaion/images/features/post.png)
+![PostEdit-Profile-Password](public/documentaion/images/features/editpassword.png)  
 
+### About  
+
+![About-Page](public/documentaion/images/features/about.png)  
+
+### Contact
+
+![Contact-Page](public/documentaion/images/features/contact.png)
+
+### Avatar  
+
+![Avatar](public/documentaion/images/features/avatar.png)
+
+### Asset
+
+![Asset-Spinner](public/documentaion/images/features/assetthree.png)  
+
+![Asset-No-Results](public/documentaion/images/features/asset.png)  
+
+![Asset-Image-Upload](public/documentaion/images/features/assettwo.png)
+
+### More dropdown  
+
+![More-Dropdown-Profile](public/documentaion/images/features/moredropdown.png)  
+
+![More-Dropdown-Post](public/documentaion/images/features/moredropdowntwo.png)
+
+### Favicon  
+
+![Favicon](public/documentaion/images/features/favicon.png)
 
 ### Accessibility  
 
