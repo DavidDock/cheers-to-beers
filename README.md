@@ -1,5 +1,7 @@
 # Cheers To Beers  
 
+![Website-Responsive](public/documentaion/images/features/responsive.png)  
+
 Cheers To Beers is a social media platform where users can show thier love of different beers and share a drink with one another even if they aren't in the same room. It offers the chance to find friends, interact and review their own drinks.  
 The deployed site can be found here - [Cheers-To-Beers](https://cheers-to-beers-4e5512c864fe.herokuapp.com/)  
 
@@ -198,7 +200,10 @@ I feel like the modal works a lot better. It adds interactivity to the site and 
 
 ### Contact
 
-![Contact-Page](public/documentaion/images/features/contact.png)
+![Contact-Page](public/documentaion/images/features/contact.png)  
+
+![Submit-Message](public/documentaion/images/features/toastmessage.png)
+
 
 ### Favicon  
 
