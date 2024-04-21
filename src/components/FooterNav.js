@@ -5,6 +5,8 @@ import axios from "axios";
 import styles from "../styles/FooterNav.module.css";
 import borderStyles from "../styles/Borders.module.css";
 
+import Logo from "./Logo";
+
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 
 const FooterNav = () => {
@@ -58,8 +60,7 @@ const FooterNav = () => {
 
   return (
     <footer className={`mt-2 ${styles.Footer}`}>
-      <div className={`m-2 ${styles.Logo}`} aria-label='Thanks For Visiting Logo'><b>Tha<span>nks</span>⁴Vi<span>sit</span>ing</b>
-      </div>
+      <Logo aria="Thanks For Visiting Logo" one="Tha" two="nks" three="⁴Vi" four="²sit" five="ing" />
       <div className={styles.FooterNavLinkContainer}>
         {currentUser ? loggedInIcons : loggedOutIcons}
       </div>

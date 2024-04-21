@@ -6,6 +6,7 @@ import borderStyles from "../styles/Borders.module.css";
 
 import { useCurrentUser } from "../contexts/CurrentUserContext";
 import Avatar from "./Avatar";
+import Logo from "./Logo";
 
 const TopNav = () => {
     // Use context to get current user data
@@ -48,8 +49,7 @@ const TopNav = () => {
     return (
         <nav className={`my-2 ${styles.Header}`}>
             <NavLink to="/">
-                <div className={`m-2 ${styles.Logo}`} aria-label='Cheers To Beers Logo'><b>Ch<span>eer</span>s<span>²Be</span>ers</b>
-                </div>
+                <Logo aria="Cheers To Beers Logo" one="Ch" two="eer" three="s" four="²Be" five="ers" />
             </NavLink>
             <div className={styles.TopNavLinkContainer}>
                 {currentUser ? loggedInIcons : loggedOutIcons}
