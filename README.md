@@ -200,11 +200,24 @@ I feel like the modal works a lot better. It adds interactivity to the site and 
 
 ![Contact-Page](public/documentaion/images/features/contact.png)
 
-### Avatar  
+### Favicon  
+
+![Favicon](public/documentaion/images/features/favicon.png)
+
+### Reusable React Components
+
+#### Post
+
+#### Logo  
+
+![Top-Logo](public/documentaion/images/features/toplogo.png)
+![Footer-Logo](public/documentaion/images/features/footerlogo.png)
+
+#### Avatar  
 
 ![Avatar](public/documentaion/images/features/avatar.png)
 
-### Asset
+#### Asset
 
 ![Asset-Spinner](public/documentaion/images/features/assetthree.png)  
 
@@ -212,15 +225,11 @@ I feel like the modal works a lot better. It adds interactivity to the site and 
 
 ![Asset-Image-Upload](public/documentaion/images/features/assettwo.png)
 
-### More dropdown  
+#### More dropdown  
 
 ![More-Dropdown-Profile](public/documentaion/images/features/moredropdown.png)  
 
 ![More-Dropdown-Post](public/documentaion/images/features/moredropdowntwo.png)
-
-### Favicon  
-
-![Favicon](public/documentaion/images/features/favicon.png)
 
 ### Accessibility  
 
