@@ -27,7 +27,7 @@ function PostEditForm() {
 
   const { title, content, type, score, image } = postData;
 
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(postData.score);
   const imageInput = useRef(null);
   const history = useHistory();
   const { id } = useParams();
