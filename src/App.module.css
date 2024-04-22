@@ -9,7 +9,7 @@
     font-size: 1.1rem;
     padding: 0;
     margin: 0;
-    word-break: break-all;
+    overflow-wrap: break-word;
 }
 
 a {
