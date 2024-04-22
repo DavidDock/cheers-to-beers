@@ -6,6 +6,7 @@ import styles from "../styles/FooterNav.module.css";
 import borderStyles from "../styles/Borders.module.css";
 
 import Logo from "./Logo";
+import { removeTokenTimestamp } from "../utils/utils";
 
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 
@@ -20,6 +21,7 @@ const FooterNav = () => {
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
+      removeTokenTimestamp();
     } catch (err) {
       console.log(err);
     }
