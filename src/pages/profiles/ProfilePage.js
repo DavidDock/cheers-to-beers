@@ -106,7 +106,7 @@ function ProfilePage() {
           />
         </Col>
         <Col className="mt-4" lg={6}>
-          <h3 className={styles.Green}>{profileData?.owner}</h3>
+          <h2 className={styles.Green}>{profileData?.owner}</h2>
           <Row className="justify-content-center no-gutters">
             <Col className="my-2">
               <div>{profileData?.posts_count}</div>
