@@ -41,9 +41,8 @@ function PostPage() {
         setPost({ results: [post] });
         setComments(comments);
         setHasLoaded(true);
-        console.log(post);
       } catch (err) {
-        console.log(err);
+        //console.log(err);
         history.push("/");
       }
     };

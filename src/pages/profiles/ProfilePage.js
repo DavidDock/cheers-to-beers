@@ -51,7 +51,7 @@ function ProfilePage() {
         setProfilePosts(profilePosts);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        //console.log(err);
         history.push("/");
       }
     };
@@ -72,7 +72,7 @@ function ProfilePage() {
         following_id: data.id,
       }));
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -88,7 +88,7 @@ function ProfilePage() {
         following_id: null,
       }));
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
