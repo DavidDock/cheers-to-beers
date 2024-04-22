@@ -247,7 +247,7 @@ const Post = (props) => {
 
           <div className="d-flex flex-column justify-content-center">
             {/* Post comments */}
-            <Link to={`/posts/${id}`} aria-hidden="true" aria-label="go to post to comment">
+            <Link to={`/posts/${id}`} aria-label="go to post to comment">
               <i className={`far fa-comments ${styles.CommentsIcon}`} />
             </Link>
             {comments_count}
