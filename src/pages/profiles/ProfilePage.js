@@ -151,9 +151,8 @@ function ProfilePage() {
   const mainProfilePosts = (
     // posts for profile owner
     <>
-      <hr />
       <p className={`text-center ${styles.Red} ${styles.LargerText}`}>{profileData?.owner}'s posts</p>
-      <hr />
+      <hr className={styles.Hr} />
       {/* display all posts with infinte scroll or no-posts asset */}
       {profilePosts.results.length ? (
         <InfiniteScroll
