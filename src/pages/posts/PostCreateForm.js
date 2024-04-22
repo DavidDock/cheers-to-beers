@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Rating } from "react-simple-star-rating";
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useRedirect } from "../../hooks/useRedirect";
 
 import Upload from "../../assets/upload.png";
 import Asset from "../../components/Asset";
@@ -12,6 +13,7 @@ import borderStyles from "../../styles/Borders.module.css";
 import { Image, Alert, Container, Col, Row, Button, Form } from "react-bootstrap";
 
 function PostCreateForm() {
+  useRedirect("loggedOut");
   // Set Post data, errors and rating
 
   const [errors, setErrors] = useState({});
