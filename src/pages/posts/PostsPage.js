@@ -6,6 +6,7 @@ import borderStyles from "../../styles/Borders.module.css";
 
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
@@ -18,6 +19,8 @@ function PostsPage({ message, filter = "" }) {
     const [posts, setPosts] = useState({ results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
+    const currentUser = useCurrentUser();
+
     const [query, setQuery] = useState("");
 
     useEffect(() => {
@@ -41,7 +44,7 @@ function PostsPage({ message, filter = "" }) {
             clearTimeout(timer);
         };
 
-    }, [filter, query, pathname]);
+    }, [filter, query, pathname, currentUser]);
 
     return (
         <Row className="d-flex justify-content-center p-0 m-0">
