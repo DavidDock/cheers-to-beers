@@ -85,10 +85,20 @@ The User Story table can be found below:
 
 ### Languages Used  
 
+- HTML
+- CSS
+- JavaScript
+- JSX - React converts into Javascript 
+
 ### Frameworks Libaries and Programs Used  
 
 - Git - Used for version control
 - GitHub - Used to store the repository and GitHub projects for the Kanban board
+- React - Frontend javascript libary used to build the site
+- React Bootstrapp - CSS framework used to help build a responsive site
+- Heroku - Used to deploy the website
+- [Simple-Star-Rating](https://www.npmjs.com/package/react-simple-star-rating)- A react component to add a star rating
+- [React-Toastify](https://www.npmjs.com/package/react-toastify) - A package allowing simple notifications to the user
 - [Google Fonts](https://fonts.google.com/) - Used for the font
 - [balsamiq](https://balsamiq.com/) - Used to create wireframes
 
@@ -138,7 +148,10 @@ The User can Register and Log In, they are prompted if an error is made during f
 
 ![Create-Post](public/documentaion/images/features/addpost.png)  
 
-The User can create a post with a image and title required and a score, content and beer type optional. The user is given an error message if the form data is invalid or left blank. Once they create their post it takes them to the created post page.
+The User can create a post with a image and title required and a score, content and beer type optional. 
+The [Simple-Star-Rating](https://www.npmjs.com/package/react-simple-star-rating) was installed and used to input/update the score to improve user experience.  
+The user is given an error message if the form data is invalid or left blank. Once they create their post it takes them to the created post page.  
+
 
 ### Delete Post
 
@@ -152,15 +165,6 @@ The Logged in user can see the "Three dot" dropdown menu on thier own posts and 
 
 When the logged in user clicks on the "Three dot" dropdown menu on thier own posts they can click on the edit icon. They then can change all details on their post. Again the user is given an error message if the form data is invalid or left blank. Once they edit their post it takes them to the created post page.
 
-### Posts Page
-
-![Posts-Page](public/documentaion/images/features/postspage.png)  
-
-This is the home page for the website and all posts will be seen and can be scrolled down until they are all shown.  
-The logged in user can filter these posts using the side navigation bar and the relevant posts will be shown. The filters show their own posts, their stared posts and the posts of people they follow.  
-The user can search through the posts using the search bar and this wil search posts by author, title or type.  
-The logged in user can use the star and cheer funtionality on each post.
-
 ### Post Page
 
 ![Post-Page](public/documentaion/images/features/post.png)  
@@ -168,6 +172,16 @@ The logged in user can use the star and cheer funtionality on each post.
 This displays all the single post details which includes funtionality to star and cheer the post if the user is logged in.  
 The number of stars, cheers and comments are displayed which changes once one is added.  
 There is a link to the comment modal were the user can view, add, edit and delete comments.
+
+### Star and Cheers  
+
+![Star-And-Cheers-Empty](public/documentaion/images/features/starandcheersempty.png)  
+
+![Star-And-Cheers](public/documentaion/images/features/starandcheers.png)  
+
+A logged in user and not the owner of the post can star and cheer the posts by clicking on the empty icons. Once they are pressed the number of stars/cheers increases and they then can unstar/uncheer the post.  
+Starring the post will add it to the users starred posts which they can look through using the filter on the side navigation menu.  
+This functionality is reused on the post page and on the posts page where all posts are displayed.
 
 ### Comments
 
@@ -179,12 +193,26 @@ If the user is logged in they can add a comment using the form.
 The logged in user can also delete and edit their comment using the dropdown menu. 
 
 This modal is a change to the wireframes created during planning. It was added instead of the infinite scroll on each post because the infinite scroll container adds a new scroll-bar on this website due to the layout structure and I felt it wouldn't be the ideal customer experience.  
-I feel like the modal works a lot better. It adds interactivity to the site and allows for easy comment CRUD functionality.  
+I feel like the modal works a lot better. It adds interactivity to the site and allows for easy comment CRUD functionality. 
+
+### Posts Page
+
+![Posts-Page](public/documentaion/images/features/postspage.png)  
+
+This is the home page for the website and all posts will be seen and can be scrolled down until they are all shown.  
+The logged in user can filter these posts using the side navigation bar and the relevant posts will be shown. The filters show their own posts, their stared posts and the posts of people they follow.  
+The user can search through the posts using the search bar and this wil search posts by author, title or type.  
+The logged in user can use the star and cheer funtionality on each post.
+ 
 
 ### Profile
 
 ![Profile-Page](public/documentaion/images/features/profile.png)  
 
+Displays all the details provided by the profile owner. 
+Displays the number of posts/ followers and people following which updates when these figures change.   
+A dropdown menu only for the profile owner to edit their profile/username and pasword.  
+All the profile owners posts can be scrolled underneath the profile owners details.  
 
 ### Edit Profile
 
@@ -194,33 +222,55 @@ I feel like the modal works a lot better. It adds interactivity to the site and 
 
 ![PostEdit-Profile-Password](public/documentaion/images/features/editpassword.png)  
 
+The owner of the profile are taken to an edit page to edit their username/password or profile by clicking on the relevent button on the dropdown menu.  
+All details can be changed and updated in their profile page.  
+
+
 ### About  
 
 ![About-Page](public/documentaion/images/features/about.png)  
+
+Displays the welcome message for the website.
 
 ### Contact
 
 ![Contact-Page](public/documentaion/images/features/contact.png)  
 
-![Submit-Message](public/documentaion/images/features/toastmessage.png)
+![Submit-Message](public/documentaion/images/features/toastmessage.png)  
 
+Allows users to contact the admin of the site with thier name, email and message.  
+Upon submit they user is redirected home and given a success message. For this message the [React-Toastify](https://www.npmjs.com/package/react-toastify) package was installed and used, it provides a simple and effective way to give the user feedback.
 
 ### Favicon  
 
 ![Favicon](public/documentaion/images/features/favicon.png)
 
+Displayed on the browsers tab.
+
+### Page Not Found
+
+![Page-Not-Found](public/documentaion/images/features/pagenotfound.png)  
+
+If the user goes to an unknown page the page not found is displayed.
+
 ### Reusable React Components
 
-#### Post
+#### Post  
+
+This component is used throughout the website: on the posts page, single post page and profile page and its star/cheers functionality works wherever it is displayed.
 
 #### Logo  
 
 ![Top-Logo](public/documentaion/images/features/toplogo.png)
-![Footer-Logo](public/documentaion/images/features/footerlogo.png)
+![Footer-Logo](public/documentaion/images/features/footerlogo.png)  
+
+This is used on the both the top and footer navigation bars and is passed the relevent props to display correctly.
 
 #### Avatar  
 
-![Avatar](public/documentaion/images/features/avatar.png)
+![Avatar](public/documentaion/images/features/avatar.png)  
+
+This is used to display the users avatar on the top navigation, comment component, comment create component, post and profile edit component. It passes the relevent props for src, size and text if required.
 
 #### Asset
 
@@ -228,17 +278,31 @@ I feel like the modal works a lot better. It adds interactivity to the site and 
 
 ![Asset-No-Results](public/documentaion/images/features/asset.png)  
 
-![Asset-Image-Upload](public/documentaion/images/features/assettwo.png)
+![Asset-Image-Upload](public/documentaion/images/features/assettwo.png)  
+
+This is used for the spinner, no-results icon and the image upload icon throughout the website. It passes the relevent props for src, spinner and message if required.  
 
 #### More dropdown  
 
 ![More-Dropdown-Profile](public/documentaion/images/features/moredropdown.png)  
 
-![More-Dropdown-Post](public/documentaion/images/features/moredropdowntwo.png)
+![More-Dropdown-Post](public/documentaion/images/features/moredropdowntwo.png)  
+
+This component is used three times on the profile page, post component (if on single post page) and the comments component. It returns  a different dropdown if on the profile page and passes back handle edit and hadle delete props for the comments component and post compnent.
 
 ### Accessibility  
 
 ### Future Implementations  
+
+There are two issues remaining after initial release of the website:  
+About page edit -  this will allow admin to log in as admin in the frontend and edit the message and title without going to the backend.  
+See contact messages - Again this will allow adin to log in on the front end and see the contact messages created.  
+
+Other future Implementaions:  
+Allow members to see who follows them.
+Allow members to see who stared or cheered their posts.
+Allow members to have direct message conversations with other members.
+Add a story type page where a member can show and see other members daily stories.
 
 ## Deployment  
 
