@@ -3,8 +3,8 @@
 * [User Story Testing](#user-story-testing)
 * [Browser Support](#browser-testing)
 * [Device Responsiveness](#device-responsiveness)
-* [JavaScript Validator](#javascript-validator)
-* [CSS Validator](#css-validator)
+* [JavaScript Validation](#javascript-validation)
+* [CSS Validation](#css-validation)
 * [Lighthouse](#lighthouse)
 * [Wave](#wave)
 * [Manual Testing](#manual-testing)
@@ -48,7 +48,7 @@ As a user I can view navbar, sidebar and footer from every page so that I can na
 Can see the basic nav bar, footer and sidebar.
 
 #### Results
-The top, side and footer navs can be correctly seen with relevent links to make the navigation on the site straight forward  
+The top, side and footer navs can be correctly seen with relevant links to make the navigation on the site straight forward  
 
 Current features created for user story:
 - Top navbar, sidebar and footer
@@ -64,7 +64,7 @@ As a user I can navigate through pages quickly so that I can view content seamle
 The router is working correctly with all links created going to the correct route.  
 
 ### Connect to API  
-As a developer I need the front and backend need conected to build the site.
+As a developer I need the front and backend need connected to build the site.
  
 #### Acceptance Criteria
 Have the front and backend connected.
@@ -79,7 +79,7 @@ As a user I can create a new account so that I can access all the features for s
 A new user can sign up
 
 #### Results
-A new user can sign up correctly and a profile is created and relevent errors shown if details entered are incorrect
+A new user can sign up correctly and a profile is created and relevant errors shown if details entered are incorrect
 
 Current features created for user story:
 - Sign-up page
@@ -91,7 +91,7 @@ As a user I can sign in to the app so that I can access functionality for logged
 A user can sign in
 
 #### Results
-A user can sign in using the form with relavent errors shown if details entered are incorrect  
+A user can sign in using the form with relevant errors shown if details entered are incorrect  
 
 Current features created for user story:
 - Sign-in page
@@ -171,7 +171,7 @@ You can star and unstar a post.
 
 #### Results
 A logged in user can successfully star and unstar a post. The owner of the post cant star their own post and a non-user is be prompted to log in upon hover.  
-Once a post is stared the user can successfully see all those posts on their "stared" feed allowing easy access to their favourite posts.  
+Once a post is stared the user can successfully see all those posts on their "stared" feed allowing easy access to their favourit posts.  
 
 Current features created for user story:
 - Star and cheer buttons
@@ -195,13 +195,13 @@ As a logged in user I can view all posts I have starred or of profiles I follow 
 See all posts by filter when button pressed.
 
 #### Results
-When logged in each filter link can be pressed on the SideNav and relevent posts are shown.  
+When logged in each filter link can be pressed on the SideNav and relevant posts are shown.  
 
 Current features created for user story:
 - Side Navigation buttons and posts page filters
 
 ### Search Posts  
-As a user I can search posts by auther title or type to impove navigation of site.
+As a user I can search posts by author, title or type to improve navigation of site.
  
 #### Acceptance Criteria
 Search function working on Posts page
@@ -210,10 +210,10 @@ Search function working on Posts page
 The search function works within all or filtered posts, you can successfully search by title, type or user.  
 
 Current features created for user story:
-- Search bar on posts page with querey feature
+- Search bar on posts page with query feature
 
 ### Infinite scroll  
-As a user I can continue srolling posts as they autoload to imporve user experience.
+As a user I can continue scrolling posts as they auto load to improve user experience.
  
 #### Acceptance Criteria
 See posts loading when scrolling down
@@ -225,7 +225,7 @@ Current features created for user story:
 - Infinite scroll component in single post page, profile and comments modal
 
 ### Edit Post  
-As a logged in user I can edit a post if I want to ammend details.
+As a logged in user I can edit a post if I want to amend details.
  
 #### Acceptance Criteria
 A logged in user can edit their post.
@@ -272,7 +272,7 @@ As a user I can see all comments on a post to enhance interaction with the websi
 All comments can be seen in the comments modal when pressed, the comments keep loading when scrolling down until there are none left.  
 
 Current features created for user story:
-- Comment compent, can be seen within the infinite scroll component on the post page comment modal
+- Comment component, can be seen within the infinite scroll component on the post page comment modal
 
 ### Delete comment  
 As a logged in user I can delete my own comment if I wish to.
@@ -327,12 +327,12 @@ Current features created for user story:
 As a logged in user I can follow and unfollow user to interact with other users and see updated posts feed.
  
 #### Acceptance Criteria
-* A logged in user can follow and unfollow ther user.
+* A logged in user can follow and unfollow their user.
 * Number of followers changes for relevant followers and following.
 
 #### Results
-A logged in user can successfully follow or unfollow another user by pressing the button, the number of followers atomatically changes on the profile.  
-When the user follows a new profile they can successfully see thats persons posts on thir "friends" feed to make it easier for the user to find relevant posts.  
+A logged in user can successfully follow or unfollow another user by pressing the button, the number of followers automatically changes on the profile.  
+When the user follows a new profile they can successfully see that persons posts on their "friends" feed to make it easier for the user to find relevant posts.  
 
 Current features created for user story:
 - Follow/unfollow buttons on profile page, following/followers stats on profile page
@@ -341,10 +341,10 @@ Current features created for user story:
 As a logged in user I can edit my profile, name and password so I update my information.
  
 #### Acceptance Criteria
-A logged in user can update thier name, password and profile information.
+A logged in user can update their name, password and profile information.
 
 #### Results
-The user can successfully change thier username and password along with adding/editing their profile information. This allows them to share more of their details with the other users.  
+The user can successfully change their username and password along with adding/editing their profile information. This allows them to share more of their details with the other users.  
 
 Current features created for user story:
 - Edit profile page, edit username page and edit password page
@@ -382,10 +382,10 @@ As a user I can contact the site admin with a message so I can add feedback to t
 A user can send a contact message
 
 #### Results
-The user can contact the admin with thier suggestions or queires by sending a contact message and are given a success message once sent.  
+The user can contact the admin with their suggestions or queries by sending a contact message and are given a success message once sent.  
 
 Current features created for user story:
-- Contact page and toat container
+- Contact page and toast container
 
 ## Browser Testing
 This website has been tested in google chrome and microsoft edge with no errors seen.  
@@ -399,21 +399,21 @@ The website is responsive from as small as 320px wide and upwards. There are no 
 ### Problems/Bugs highlighted and how they were fixed  
 
 There was a minor issue during development relating to the infinite scroll feature:  
-The layout of the site uses a scrollbar for the main section between the fixed top and bottom nav bar so when the infinite scroll container was added for all the posts to be seen in both the postspage and profile page another scrollbar is needed on larger devices (landscape). This is not ideal but in my opinion does not have a huge inpact on the user experience and does not need changing but the fix I considered was to change the layout of the website to use fixed navigtion bars instead of using css grid and overflow-y scroll.  
-This prompted a change to the wirefames for the comments infinite scroll and a pop up modal was used for the comments instead to prevent the double scrollbar, this works extremly well and is an improvement to the initial design.  
-During development it was noticed that user inputed data that had really long words in would cause responsive issues, in the unlikely event someone inputs a really long word I added word break css style to the effected elements.
+The layout of the site uses a scrollbar for the main section between the fixed top and bottom nav bar so when the infinite scroll container was added for all the posts to be seen in both the postspage and profile page another scrollbar is needed on larger devices (landscape). This is not ideal but in my opinion does not have a huge impact on the user experience and does not need changing but the fix I considered was to change the layout of the website to use fixed navigation bars instead of using css grid and overflow-y scroll.  
+This prompted a change to the wirefames for the comments infinite scroll and a pop up modal was used for the comments instead to prevent the double scrollbar, this works extremely well and is an improvement to the initial design.  
+During development it was noticed that user inputted data that had really long words in would cause responsive issues, in the unlikely event someone inputs a really long word I added word break css style to the effected elements.
 
-## JavaScript Validator 
+## JavaScript Validation
 
 ### Problems/Bugs highlighted and how they were fixed  
 
 ### Final Test Results 
 
-## CSS Validator  
+## CSS Validation 
 
 ### Problems/Bugs highlighted and how they were fixed  
 
-On two occassions the margin and padding were given a value of none instead of 0 - this was changed to 0 to fix the errors.
+On two occasions the margin and padding were given a value of none instead of 0 - this was changed to 0 to fix the errors.
 
 ### Final Test Results 
 

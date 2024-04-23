@@ -2,7 +2,7 @@
 
 ![Website-Responsive](public/documentaion/images/features/responsive.png)  
 
-Cheers To Beers is a social media platform where users can show thier love of different beers and share a drink with one another even if they aren't in the same room. It offers the chance to find friends, interact and review their own drinks.  
+Cheers To Beers is a social media platform where users can show their love of different beers and share a drink with one another even if they aren't in the same room. It offers the chance to find friends, interact and review their own drinks.  
 The deployed site can be found here - [Cheers-To-Beers](https://cheers-to-beers-4e5512c864fe.herokuapp.com/)  
 
 This website uses the Cheers To Beers API.  
@@ -38,19 +38,19 @@ The deployed API found here- [Cheers-API](https://cheers-to-beers-api-5a858b4697
 ## User Experience
 
 ### Who is the Website for  
-For people with an interest in beers and wish to interact with other like minded people through a socail media website. It allows people to review their drinks and interact with other members by giving them a cheers, commenting their post or following them. It allows peolpe to share a drink with eachother even if they are not physically together.
+For people with an interest in beers and wish to interact with other like minded people through a social media website. It allows people to review their drinks and interact with other members by giving them a cheers, commenting their post or following them. It allows people to share a drink with each other even if they are not physically together.
 
 ### Design  
-The idea of this website is to take the user into a bar setting with a dark backround and neon colors to emulate bar signs.
+The idea of this website is to take the user into a bar setting with a dark background and neon colors to emulate bar signs.
 
 ### Colour Scheme
-The color scheme fits in with the overal design goals. With a dark overall feel with neon colors to match the atmosphere of a bar.  
-To meet WCAG 2.0 criteria, the color scheme was then passed to [eightshapes.com](https://eightshapes.com/) to generate an accessibility table, only accessible text colors were then used to ensure easy reading. Prodominantly white text was used as this worked well with the design theme.
+The color scheme fits in with the overall design goals. With a dark overall feel with neon colors to match the atmosphere of a bar.  
+To meet WCAG 2.0 criteria, the color scheme was then passed to [eightshapes.com](https://eightshapes.com/) to generate an accessibility table, only accessible text colors were then used to ensure easy reading. Prominently white text was used as this worked well with the design theme.
 
 ![Color-grid](public/documentaion/images/contrast-grid.png)
 
 ### Typography
-The choice of Typography again follows the overall style. Reenie-Beanie from [Google Fonts](https://fonts.google.com/specimen/Reenie+Beanie) was used throughout to add some playfull style to the website.
+The choice of Typography again follows the overall style. Reenie-Beanie from [Google Fonts](https://fonts.google.com/specimen/Reenie+Beanie) was used throughout to add some playful style to the website.
 
 ![Reenie-Beanie](public/documentaion/images/reenie-beanie.png)
 
@@ -67,9 +67,9 @@ The choice of Typography again follows the overall style. Reenie-Beanie from [Go
 
 ## Agile Methodology 
 
-Agile methodology was used throughout the deveploment for this project and I found it extremly helpful to keep track of my project.
+Agile methodology was used throughout the development for this project and I found it extremley helpful to keep track of my project.
 
-The project was broken down into Epics and User Stories and the MoSCoW method was used to determine relevent features needed for the scope of this project.
+The project was broken down into Epics and User Stories and the MoSCoW method was used to determine relevant features needed for the scope of this project.
 
 Issues were created in GitHub for each Epic and User Story with Tasks to complete and MoSCoW labels on each one. A Kanban board was also created to keep track of these Issues. A Milestone for the MVP was also created and linked to relevant Issues.
 
@@ -106,7 +106,7 @@ The User Story table can be found below:
 
 ### Navigation Bars and Footer  
 
-Having three navigation bars allows users to have easy access to all features. These navigation bars are pivotal to the overal design theme of the website echoing bar signs and menus, giving the user the feel that they are in a virtual bar.
+Having three navigation bars allows users to have easy access to all features. These navigation bars are pivotal to the overall design theme of the website echoing bar signs and menus, giving the user the feel that they are in a virtual bar.
 
 #### Top Nav Bar
 User Logged Out  
@@ -135,7 +135,7 @@ User Logged Out and In
 
 ![Footer-Logged-Out](public/documentaion/images/features/sidenav.png)  
 
-The Side navigation bar allows the logged in user easy access to filter the posts by them all, thier starred posts, their friends posts and thier own posts. If the are not logged in yet then it provides links to the about and contact pages.
+The Side navigation bar allows the logged in user easy access to filter the posts by them all, their starred posts, their friends posts and their own posts. If the are not logged in yet then it provides links to the about and contact pages.
 
 ### Register and Log In
 
@@ -157,19 +157,19 @@ The user is given an error message if the form data is invalid or left blank. On
 
 ![Delete-Post](public/documentaion/images/features/deletepost.png)  
 
-The Logged in user can see the "Three dot" dropdown menu on thier own posts and when clicking the bin button it deletes their post.
+The Logged in user can see the "Three dot" dropdown menu on their own posts and when clicking the bin button it deletes their post.
 
 ### Edit Post
 
 ![Edit-Post](public/documentaion/images/features/editpost.png)  
 
-When the logged in user clicks on the "Three dot" dropdown menu on thier own posts they can click on the edit icon. They then can change all details on their post. Again the user is given an error message if the form data is invalid or left blank. Once they edit their post it takes them to the created post page.
+When the logged in user clicks on the "Three dot" dropdown menu on their own posts they can click on the edit icon. They then can change all details on their post. Again the user is given an error message if the form data is invalid or left blank. Once they edit their post it takes them to the created post page.
 
 ### Post Page
 
 ![Post-Page](public/documentaion/images/features/post.png)  
 
-This displays all the single post details which includes funtionality to star and cheer the post if the user is logged in.  
+This displays all the single post details which includes functionality to star and cheer the post if the user is logged in.  
 The number of stars, cheers and comments are displayed which changes once one is added.  
 There is a link to the comment modal were the user can view, add, edit and delete comments.
 
@@ -201,8 +201,8 @@ I feel like the modal works a lot better. It adds interactivity to the site and 
 
 This is the home page for the website and all posts will be seen and can be scrolled down until they are all shown.  
 The logged in user can filter these posts using the side navigation bar and the relevant posts will be shown. The filters show their own posts, their stared posts and the posts of people they follow.  
-The user can search through the posts using the search bar and this wil search posts by author, title or type.  
-The logged in user can use the star and cheer funtionality on each post.
+The user can search through the posts using the search bar and this will search posts by author, title or type.  
+The logged in user can use the star and cheer functionality on each post.
  
 
 ### Profile
@@ -211,7 +211,7 @@ The logged in user can use the star and cheer funtionality on each post.
 
 Displays all the details provided by the profile owner. 
 Displays the number of posts/ followers and people following which updates when these figures change.   
-A dropdown menu only for the profile owner to edit their profile/username and pasword.  
+A dropdown menu only for the profile owner to edit their profile/username and password.  
 All the profile owners posts can be scrolled underneath the profile owners details.  
 
 ### Edit Profile
@@ -222,7 +222,7 @@ All the profile owners posts can be scrolled underneath the profile owners detai
 
 ![PostEdit-Profile-Password](public/documentaion/images/features/editpassword.png)  
 
-The owner of the profile are taken to an edit page to edit their username/password or profile by clicking on the relevent button on the dropdown menu.  
+The owner of the profile are taken to an edit page to edit their username/password or profile by clicking on the relevant button on the dropdown menu.  
 All details can be changed and updated in their profile page.  
 
 
@@ -238,7 +238,7 @@ Displays the welcome message for the website.
 
 ![Submit-Message](public/documentaion/images/features/toastmessage.png)  
 
-Allows users to contact the admin of the site with thier name, email and message.  
+Allows users to contact the admin of the site with their name, email and message.  
 Upon submit they user is redirected home and given a success message. For this message the [React-Toastify](https://www.npmjs.com/package/react-toastify) package was installed and used, it provides a simple and effective way to give the user feedback.
 
 ### Favicon  
@@ -264,13 +264,13 @@ This component is used throughout the website: on the posts page, single post pa
 ![Top-Logo](public/documentaion/images/features/toplogo.png)
 ![Footer-Logo](public/documentaion/images/features/footerlogo.png)  
 
-This is used on the both the top and footer navigation bars and is passed the relevent props to display correctly.
+This is used on the both the top and footer navigation bars and is passed the relevant props to display correctly.
 
 #### Avatar  
 
 ![Avatar](public/documentaion/images/features/avatar.png)  
 
-This is used to display the users avatar on the top navigation, comment component, comment create component, post and profile edit component. It passes the relevent props for src, size and text if required.
+This is used to display the users avatar on the top navigation, comment component, comment create component, post and profile edit component. It passes the relevant props for src, size and text if required.
 
 #### Asset
 
@@ -280,7 +280,7 @@ This is used to display the users avatar on the top navigation, comment componen
 
 ![Asset-Image-Upload](public/documentaion/images/features/assettwo.png)  
 
-This is used for the spinner, no-results icon and the image upload icon throughout the website. It passes the relevent props for src, spinner and message if required.  
+This is used for the spinner, no-results icon and the image upload icon throughout the website. It passes the relevant props for src, spinner and message if required.  
 
 #### More dropdown  
 
@@ -288,7 +288,7 @@ This is used for the spinner, no-results icon and the image upload icon througho
 
 ![More-Dropdown-Post](public/documentaion/images/features/moredropdowntwo.png)  
 
-This component is used three times on the profile page, post component (if on single post page) and the comments component. It returns  a different dropdown if on the profile page and passes back handle edit and hadle delete props for the comments component and post compnent.
+This component is used three times on the profile page, post component (if on single post page) and the comments component. It returns  a different dropdown if on the profile page and passes back handle edit and handle delete props for the comments component and post component.
 
 ### Accessibility  
 
@@ -296,9 +296,9 @@ This component is used three times on the profile page, post component (if on si
 
 There are two issues remaining after initial release of the website:  
 About page edit -  this will allow admin to log in as admin in the frontend and edit the message and title without going to the backend.  
-See contact messages - Again this will allow adin to log in on the front end and see the contact messages created.  
+See contact messages - Again this will allow admin to log in on the frontend and see the contact messages created.  
 
-Other future Implementaions:  
+Other future Implementations:  
 Allow members to see who follows them.
 Allow members to see who stared or cheered their posts.
 Allow members to have direct message conversations with other members.
@@ -311,7 +311,7 @@ Add a story type page where a member can show and see other members daily storie
 - Make sure the backend api has the correct CLIENT_ORIGIN convig var to match the frontend url. Details can be found in the README's deployment section of [Cheers-API-GitHub-Repository](https://github.com/DavidDock/cheers-api)
 - Log in to Heroku and create App with unique name
 - Click on deploy and choose GitHub and link to the repository [Cheers-To-Beers-GitHub-Repository](https://github.com/DavidDock/cheers-to-beers)
-- Click on deply branch
+- Click on depoly branch
 - Open App
 
 Visit the deployed site: [Cheers-To-Beers](https://cheers-to-beers-4e5512c864fe.herokuapp.com/)  
@@ -335,7 +335,7 @@ Please refer to [TESTING.MD](TESTING.md)
 ## Credits  
 
 ### Learning
-The code used for this project was taught to me by code insitute. The Code Insitutes project run throughs 'Django Rest Framework' and 'Moments' helped me greatly with the development of my project.
+The code used for this project was taught to me by code institute. The Code Institute's project run throughs 'Django Rest Framework' and 'Moments' helped me greatly with the development of my project.
 
 ## Media
 
