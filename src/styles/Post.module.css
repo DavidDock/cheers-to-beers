@@ -12,6 +12,10 @@
   font-size: larger;
 }
 
+.OwnerName {
+  word-break: break-all;
+}
+
 .OwnerName:hover,
 .OwnerName:focus {
   color:#ff0000;

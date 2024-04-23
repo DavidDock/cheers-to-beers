@@ -52,7 +52,7 @@ const Comment = (props) => {
   return (
     <div>
       <hr />
-      <Media>
+      <Media className={styles.WordBreak}>
         <Link to={`/profiles/${profile_id}`}>
           <Avatar src={profile_image} />
         </Link>
@@ -69,7 +69,7 @@ const Comment = (props) => {
               setShowEditForm={setShowEditForm}
             />
           ) : (
-            <p className={styles.WordBreak}>{content}</p>
+            <p>{content}</p>
           )}
         </Media.Body>
         {is_owner && !showEditForm && (
