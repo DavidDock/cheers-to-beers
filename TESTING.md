@@ -1,13 +1,99 @@
 # CONTENTS
 
-* [User Story Testing](#user-story-testing)
 * [Browser Support](#browser-testing)
 * [Device Responsiveness](#device-responsiveness)
-* [JavaScript Validation](#javascript-validation)
+* [JSX Validation](#jsx-validation)
 * [CSS Validation](#css-validation)
 * [Lighthouse](#lighthouse)
 * [Wave](#wave)
-* [Manual Testing](#manual-testing)
+* [Manual Testing](#manual-testing)  
+* [User Story Testing](#user-story-testing)  
+
+## Browser Testing
+This website has been tested in google chrome and microsoft edge with no errors seen.  
+
+## Device Responsiveness
+This website is primarily developed for mobile devices as it is designed to be used on the go but it also works well on larger devices.  
+Layout changes for different size devices are present and React bootstrap, along with css media queries have been used throughout to ensure responsiveness.  
+Dev tools has been used throughout the development of the site to test responsiveness along with being tested on both laptop and mobile devices during the development . 
+The website is responsive from as small as 320px wide and upwards. There are no overlapping elements and images aren't stretched or squashed.  
+
+### Problems/Bugs highlighted and how they were fixed  
+
+There was a minor issue during development relating to the infinite scroll feature:  
+The layout of the site uses a scrollbar for the main section between the fixed top and bottom nav bar so when the infinite scroll container was added for all the posts to be seen in both the postspage and profile page another scrollbar is needed on larger devices (landscape). This is not ideal but in my opinion does not have a huge impact on the user experience and does not need changing but the fix I considered was to change the layout of the website to use fixed navigation bars instead of using css grid and overflow-y scroll.  
+This prompted a change to the wirefames for the comments infinite scroll and a pop up modal was used for the comments instead to prevent the double scrollbar, this works extremely well and is an improvement to the initial design.  
+During development it was noticed that user inputted data that had really long words in would cause responsive issues, in the unlikely event someone inputs a really long word I added word break css style to the effected elements.
+
+## JSX Validation  
+
+Most of the code validation was done through the gitpod ide problems tab which highlighted any unused vars or issues along the way.  
+The formatting extension was used on all .js files to ensure correct formatting and indentation.  
+All of the jsx files were also put through [eslint](https://eslint.org/play/).
+
+### Problems/Bugs highlighted and how they were fixed  
+
+On two occassions there were empty block statements which were filled by commented out console logs with the error.
+
+### Final Test Results 
+
+All passed through validation successfully.  
+Unused and global var errors were highlighted due to the nature of testing each page externally but these were checked using th problems window in gitpod and no un-used vars were present.
+
+## HTML Validation 
+
+### Problems/Bugs highlighted and how they were fixed  
+
+Unneccessary back slashes removed.
+
+### Final Test Results 
+
+The website html was run through [The-W3C-HTML-Validator](https://validator.w3.org/) which checked the index.html with no erros found.  
+
+![CSS-Validation](public/documentaion/images/testing/htmlvalidator.png)
+
+## CSS Validation 
+
+### Problems/Bugs highlighted and how they were fixed  
+
+On two occasions the margin and padding were given a value of none instead of 0 - this was changed to 0 to fix the errors.
+
+### Final Test Results 
+
+All the css modules and site url has been run through [The-W3C-CSS-Validator](https://jigsaw.w3.org/css-validator/) with no errors found.  
+![CSS-Validation](public/documentaion/images/testing/cssvalidator.png)
+
+## Lighthouse  
+
+### Problems/Bugs highlighted and how they were fixed  
+
+Some forms were missing labels, these were added to improve the results.  
+An autocompelte attribute was missing from the signIn/Up form, this was added to improve results.  
+An unnecessary arial label for the comments link was highlighted and removed.  
+
+### Final Test Results  
+
+The tests were performed on each page in an incognito tab and gave 100 for Accessibility, Best practices and SEO. The performance score ranged from 80-90.  
+
+The less than ideal performance score is mostly due to the image sizes, undeclared width and height of the images and layer changes.  
+These can be looked into at a later date, ideally the images should be resized upon upload to small webp images.
+
+![Lighthouse-Results-Home](public/documentaion/images/testing/homelighthouse.png)
+
+## Wave  
+
+### Problems/Bugs highlighted and how they were fixed  
+
+Initially Wave picked up on quite a few errors relating to form labels and ecessary labels were added. Some of the form labels were present but with display-none which was satisfactory for Lighthouse but was changed to screen reader only to fix the issue and make more accessible.
+
+### Final Test Results  
+
+No errors or contrast errors present on any page.  
+There were multiple alerts regarding redundant links and possible headings, these were looked into but these do not overlly impact the website.  
+
+## Manual Testing  
+
+![Manual-Testing](public/documentaion/images/testing/manual-testing-cheers-frontend.png)  
 
 ## User Story Testing  
 
@@ -386,82 +472,3 @@ The user can contact the admin with their suggestions or queries by sending a co
 
 Current features created for user story:
 - Contact page and toast container
-
-## Browser Testing
-This website has been tested in google chrome and microsoft edge with no errors seen.  
-
-## Device Responsiveness
-This website is primarily developed for mobile devices as it is designed to be used on the go but it also works well on larger devices.  
-Layout changes for different size devices are present and React bootstrap, along with css media queries have been used throughout to ensure responsiveness.  
-Dev tools has been used throughout the development of the site to test responsiveness along with being tested on both laptop and mobile devices during the development . 
-The website is responsive from as small as 320px wide and upwards. There are no overlapping elements and images aren't stretched or squashed.  
-
-### Problems/Bugs highlighted and how they were fixed  
-
-There was a minor issue during development relating to the infinite scroll feature:  
-The layout of the site uses a scrollbar for the main section between the fixed top and bottom nav bar so when the infinite scroll container was added for all the posts to be seen in both the postspage and profile page another scrollbar is needed on larger devices (landscape). This is not ideal but in my opinion does not have a huge impact on the user experience and does not need changing but the fix I considered was to change the layout of the website to use fixed navigation bars instead of using css grid and overflow-y scroll.  
-This prompted a change to the wirefames for the comments infinite scroll and a pop up modal was used for the comments instead to prevent the double scrollbar, this works extremely well and is an improvement to the initial design.  
-During development it was noticed that user inputted data that had really long words in would cause responsive issues, in the unlikely event someone inputs a really long word I added word break css style to the effected elements.
-
-## JSX Validation  
-
-Most of the code validation was done through the gitpod ide problems tab which highlighted any unused vars or issues along the way.  
-The formatting extension was used on all .js files to ensure correct formatting and indentation.  
-All of the jsx files were also put through [eslint](https://eslint.org/play/).
-
-### Problems/Bugs highlighted and how they were fixed  
-
-On two occassions there were empty block statements which were filled by commented out console logs with the error.
-
-### Final Test Results 
-
-All passed through validation successfully.  
-Unused and global var errors were highlighted due to the nature of testing each page externally but these were checked using th problems window in gitpod and no un-used vars were present.
-
-## HTML Validation 
-
-### Problems/Bugs highlighted and how they were fixed  
-
-Unneccessary back slashes removed.
-
-### Final Test Results 
-
-The website html was run through [The-W3C-HTML-Validator](https://validator.w3.org/) which checked the index.html with no erros found.  
-
-![HTML-Validation](public/documentaion/images/testing/htmlvalidator.png)
-
-## CSS Validation 
-
-### Problems/Bugs highlighted and how they were fixed  
-
-On two occasions the margin and padding were given a value of none instead of 0 - this was changed to 0 to fix the errors.
-
-### Final Test Results 
-
-All the css modules and site url has been run through [The-W3C-CSS-Validator](https://jigsaw.w3.org/css-validator/) with no errors found.  
-![CSS-Validation](public/documentaion/images/testing/cssvalidator.png)
-
-## Lighthouse  
-
-### Problems/Bugs highlighted and how they were fixed  
-
-Some forms were missing labels, these were added to improve the results.  
-An autocompelte attribute was missing from the signIn/Up form, this was added to improve results.  
-An unnecessary arial label for the comments link was highlighted and removed.  
-
-### Final Test Results  
-
-## Wave  
-
-### Problems/Bugs highlighted and how they were fixed  
-
-Initially Wave picked up on quite a few errors relating to form labels. Necessary labels were added. Some of the form labels were present but with display-none which was satisfactory for Lighthouse but was changed to screen reader only to fix the issue and make more accessible.
-
-### Final Test Results  
-
-No errors or contrasct errors present on any page.  
-There were multiple alerts rgarding redundant links and possible headings, these were looked into but these do not overly impact the website.  
-
-## Manual Testing  
-
-![Manual-Testing](public/documentaion/images/testing/manual-testing-cheers-frontend.png)
