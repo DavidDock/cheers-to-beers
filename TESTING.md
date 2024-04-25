@@ -445,13 +445,22 @@ All the css modules and site url has been run through [The-W3C-CSS-Validator](ht
 
 ### Problems/Bugs highlighted and how they were fixed  
 
+Some forms were missing labels, these were added to improve the results.  
+An autocompelte attribute was missing from the signIn/Up form, this was added to improve results.  
+An unnecessary arial label for the comments link was highlighted and removed.  
+
 ### Final Test Results  
 
 ## Wave  
 
-### Problems/Bugs highlighted and how they were fixed
+### Problems/Bugs highlighted and how they were fixed  
+
+Initially Wave picked up on quite a few errors relating to form labels. Necessary labels were added. Some of the form labels were present but with display-none which was satisfactory for Lighthouse but was changed to screen reader only to fix the issue and make more accessible.
 
 ### Final Test Results  
+
+No errors or contrasct errors present on any page.  
+There were multiple alerts rgarding redundant links and possible headings, these were looked into but these do not overly impact the website.  
 
 ## Manual Testing  
 
