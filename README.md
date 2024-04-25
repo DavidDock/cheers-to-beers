@@ -24,6 +24,7 @@ The deployed API found here- [Cheers-API](https://cheers-to-beers-api-5a858b4697
     - [Languages Used](#languages-used)
     - [Frameworks Libaries and Programs Used](#frameworks-libaries-and-programs-used)
   - [Features](#features)
+    - [Current Features](#current-features)
     - [Accessibility](#accessibility)
     - [Future Implementations](#future-implementations)
   - [Deployment](#deployment)
@@ -104,7 +105,9 @@ The User Story table can be found below:
 
 ## Features
 
-### Navigation Bars and Footer  
+### Current Features
+
+#### Navigation Bars and Footer  
 
 Having three navigation bars allows users to have easy access to all features. These navigation bars are pivotal to the overall design theme of the website echoing bar signs and menus, giving the user the feel that they are in a virtual bar.
 
@@ -292,17 +295,27 @@ This component is used three times on the profile page, post component (if on si
 
 ### Accessibility  
 
+- The accessibility of the website was tested by both Wave and Lighthouse (score of 100), Please refer to [TESTING.MD](TESTING.md) page for details.  
+- All the images have relevant alt descriptions.  
+- Aria Labels are used correctly.  
+- All the forms have labels.  
+- There are no contrast errors.  
+- The buttons have clear hover effects and also have a focus effect for keyboard users.
+
+
 ### Future Implementations  
 
 There are two issues remaining after initial release of the website:  
-About page edit -  this will allow admin to log in as admin in the frontend and edit the message and title without going to the backend.  
-See contact messages - Again this will allow admin to log in on the frontend and see the contact messages created.  
+- About page edit -  this will allow admin to log in as admin in the frontend and edit the message and title without going to the backend.  
+- See contact messages - Again this will allow admin to log in on the frontend and see the contact messages created.  
 
 Other future Implementations:  
-Allow members to see who follows them.
-Allow members to see who stared or cheered their posts.
-Allow members to have direct message conversations with other members.
-Add a story type page where a member can show and see other members daily stories.
+- Error pages for specific errors.
+- Review feature to allow members to review other members posts/drinks.
+- Allow members to see who follows them.
+- Allow members to see who stared or cheered their posts.
+- Allow members to have direct message conversations with other members.
+- Add a story type page where a member can show and see other members daily stories.
 
 ## Deployment  
 

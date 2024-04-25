@@ -15,7 +15,7 @@ This website has been tested in google chrome and microsoft edge with no errors 
 ## Device Responsiveness
 This website is primarily developed for mobile devices as it is designed to be used on the go but it also works well on larger devices.  
 Layout changes for different size devices are present and React bootstrap, along with css media queries have been used throughout to ensure responsiveness.  
-Dev tools has been used throughout the development of the site to test responsiveness along with being tested on both laptop and mobile devices during the development . 
+Dev tools has been used throughout the development of the site to test responsiveness along with being tested on both laptop and mobile devices during the development.  
 The website is responsive from as small as 320px wide and upwards. There are no overlapping elements and images aren't stretched or squashed.  
 
 ### Problems/Bugs highlighted and how they were fixed  
@@ -73,7 +73,7 @@ An unnecessary arial label for the comments link was highlighted and removed.
 
 ### Final Test Results  
 
-The tests were performed on each page in an incognito tab and gave 100 for Accessibility, Best practices and SEO. The performance score ranged from 80-90.  
+The tests were performed on each page in an incognito tab for desktop and gave 100 for Accessibility, Best practices and SEO. The performance score ranged from 80-90.  
 
 The less than ideal performance score is mostly due to the image sizes, undeclared width and height of the images and layer changes.  
 These can be looked into at a later date, ideally the images should be resized upon upload to small webp images.
