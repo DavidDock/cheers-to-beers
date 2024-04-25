@@ -403,11 +403,32 @@ The layout of the site uses a scrollbar for the main section between the fixed t
 This prompted a change to the wirefames for the comments infinite scroll and a pop up modal was used for the comments instead to prevent the double scrollbar, this works extremely well and is an improvement to the initial design.  
 During development it was noticed that user inputted data that had really long words in would cause responsive issues, in the unlikely event someone inputs a really long word I added word break css style to the effected elements.
 
-## JavaScript Validation
+## JSX Validation  
+
+Most of the code validation was done through the gitpod ide problems tab which highlighted any unused vars or issues along the way.  
+The formatting extension was used on all .js files to ensure correct formatting and indentation.  
+All of the jsx files were also put through [eslint](https://eslint.org/play/).
 
 ### Problems/Bugs highlighted and how they were fixed  
 
+On two occassions there were empty block statements which were filled by commented out console logs with the error.
+
 ### Final Test Results 
+
+All passed through validation successfully.  
+Unused and global var errors were highlighted due to the nature of testing each page externally but these were checked using th problems window in gitpod and no un-used vars were present.
+
+## HTML Validation 
+
+### Problems/Bugs highlighted and how they were fixed  
+
+Unneccessary back slashes removed.
+
+### Final Test Results 
+
+The website html was run through [The-W3C-HTML-Validator](https://validator.w3.org/) which checked the index.html with no erros found.  
+
+![HTML-Validation](public/documentaion/images/testing/htmlvalidator.png)
 
 ## CSS Validation 
 
@@ -418,7 +439,7 @@ On two occasions the margin and padding were given a value of none instead of 0 
 ### Final Test Results 
 
 All the css modules and site url has been run through [The-W3C-CSS-Validator](https://jigsaw.w3.org/css-validator/) with no errors found.  
-![CSS-Validator](public/documentaion/images/testing/cssvalidator.png)
+![CSS-Validation](public/documentaion/images/testing/cssvalidator.png)
 
 ## Lighthouse  
 
