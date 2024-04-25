@@ -10,6 +10,8 @@
 .Title {
   margin: 0 auto;
   font-size: larger;
+  display: inline;
+  color: #39FF14;
 }
 
 .OwnerName {
