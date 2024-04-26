@@ -14,6 +14,7 @@ The deployed API found here- [Cheers-API](https://cheers-to-beers-api-5a858b4697
 - [Cheers To Beers](#cheers-to-beers)
   - [CONTENTS](#contents)
   - [User Experience](#user-experience)
+    - [Site goals](#site-goals)
     - [Who is the Website for](#who-is-the-website-for)
     - [Design](#design)
     - [Colour Scheme](#colour-scheme)
@@ -38,8 +39,16 @@ The deployed API found here- [Cheers-API](https://cheers-to-beers-api-5a858b4697
 
 ## User Experience
 
+### Site goals  
+To create a website for people with a common interest to get together online and interact allowing them to share drinks they have with old and new friends.  
+The website encourages people to interact through comments, cheering/staring each others posts and along with following each others profiles.  
+It allows people to share a drink with each other even if they are not physically together.
+
 ### Who is the Website for  
-For people with an interest in beers and wish to interact with other like minded people through a social media website. It allows people to review their drinks and interact with other members by giving them a cheers, commenting their post or following them. It allows people to share a drink with each other even if they are not physically together.
+For people with an interest in beers and wish to interact with other like minded people through a social media website. 
+It allows people to review their drinks and interact with other members by giving them a cheers, commenting their post or following them.  
+This website can be for the beer connoisseur to review their drinks with tasting notes or for the more regular user who just wants to get the social feel of a pub without actually being there.  
+A logged out user can still see the posts but is encouraged to register to use all functionality.  
 
 ### Design  
 The idea of this website is to take the user into a bar setting with a dark background and neon colors to emulate bar signs.
@@ -109,7 +118,13 @@ The User Story table can be found below:
 
 #### Navigation Bars and Footer  
 
-Having three navigation bars allows users to have easy access to all features. These navigation bars are pivotal to the overall design theme of the website echoing bar signs and menus, giving the user the feel that they are in a virtual bar.
+Having three navigation bars allows users to have easy access to all features. These navigation bars are pivotal to the overall design theme of the website echoing bar signs and menus, giving the user the feel that they are in a virtual bar.  
+
+##### User Stories:  
+- As a user I can view navbar, sidebar and footer from every page so that I can navigate easily between pages
+- As a user I can tell if I am logged in or not so that I can log in if I need to
+- As a user I can sign out so I log out if needs be.
+- As a logged in user I can view all posts I have starred or of profiles I follow so I can interact with my favorite posts.
 
 #### Top Nav Bar
 User Logged Out  
@@ -145,7 +160,12 @@ The Side navigation bar allows the logged in user easy access to filter the post
 ![Register](public/documentaion/images/features/register.png)
 ![Log-In](public/documentaion/images/features/login.png)  
 
-The User can Register and Log In, they are prompted if an error is made during form submission.
+The User can Register and Log In, they are prompted if an error is made during form submission.  
+
+#### Related user stories:  
+
+- As a user I can create a new account so that I can access all the features for signed up users
+- As a user I can sign in to the app so that I can access functionality for logged in users
 
 ### Create Post
 
@@ -155,6 +175,8 @@ The User can create a post with a image and title required and a score, content 
 The [Simple-Star-Rating](https://www.npmjs.com/package/react-simple-star-rating) was installed and used to input/update the score to improve user experience.  
 The user is given an error message if the form data is invalid or left blank. Once they create their post it takes them to the created post page.  
 
+#### Related user story:  
+- As a logged in user I can create a post so I can share and interact with other users.
 
 ### Delete Post
 
@@ -162,11 +184,17 @@ The user is given an error message if the form data is invalid or left blank. On
 
 The Logged in user can see the "Three dot" dropdown menu on their own posts and when clicking the bin button it deletes their post.
 
+#### Related user story:  
+- As a logged on user I can delete my post
+
 ### Edit Post
 
 ![Edit-Post](public/documentaion/images/features/editpost.png)  
 
-When the logged in user clicks on the "Three dot" dropdown menu on their own posts they can click on the edit icon. They then can change all details on their post. Again the user is given an error message if the form data is invalid or left blank. Once they edit their post it takes them to the created post page.
+When the logged in user clicks on the "Three dot" dropdown menu on their own posts they can click on the edit icon. They then can change all details on their post. Again the user is given an error message if the form data is invalid or left blank. Once they edit their post it takes them to the created post page.  
+
+#### Related user story:  
+- As a logged in user I can edit a post if I want to amend details.
 
 ### Post Page
 
@@ -174,7 +202,12 @@ When the logged in user clicks on the "Three dot" dropdown menu on their own pos
 
 This displays all the single post details which includes functionality to star and cheer the post if the user is logged in.  
 The number of stars, cheers and comments are displayed which changes once one is added.  
-There is a link to the comment modal were the user can view, add, edit and delete comments.
+There is a link to the comment modal were the user can view, add, edit and delete comments.  
+
+#### Related user stories:  
+- As a user I can view a single post so I can read its details.
+- As a user I can continue scrolling posts as they auto load to improve user experience.
+- As a user I can see all comments on a post to enhance interaction with the website
 
 ### Star and Cheers  
 
@@ -184,7 +217,11 @@ There is a link to the comment modal were the user can view, add, edit and delet
 
 A logged in user and not the owner of the post can star and cheer the posts by clicking on the empty icons. Once they are pressed the number of stars/cheers increases and they then can unstar/uncheer the post.  
 Starring the post will add it to the users starred posts which they can look through using the filter on the side navigation menu.  
-This functionality is reused on the post page and on the posts page where all posts are displayed.
+This functionality is reused on the post page and on the posts page where all posts are displayed.  
+
+#### Related user stories:  
+- As a logged in user I can star a post to add it to my starred posts and interact with other users.
+- As a logged in user I can cheer/uncheer a post and interact with other users.
 
 ### Comments
 
@@ -198,6 +235,12 @@ The logged in user can also delete and edit their comment using the dropdown men
 This modal is a change to the wireframes created during planning. It was added instead of the infinite scroll on each post because the infinite scroll container adds a new scroll-bar on this website due to the layout structure and I felt it wouldn't be the ideal customer experience.  
 I feel like the modal works a lot better. It adds interactivity to the site and allows for easy comment CRUD functionality. 
 
+#### Related user stories:  
+- As a logged in user I can add a comment to a post to interact with other users
+- As a user I can see all comments on a post to enhance interaction with the website
+- As a logged in user I can delete my own comment if I wish to
+- As a logged in user I can edit my comment if I wish to.
+
 ### Posts Page
 
 ![Posts-Page](public/documentaion/images/features/postspage.png)  
@@ -205,7 +248,12 @@ I feel like the modal works a lot better. It adds interactivity to the site and 
 This is the home page for the website and all posts will be seen and can be scrolled down until they are all shown.  
 The logged in user can filter these posts using the side navigation bar and the relevant posts will be shown. The filters show their own posts, their stared posts and the posts of people they follow.  
 The user can search through the posts using the search bar and this will search posts by author, title or type.  
-The logged in user can use the star and cheer functionality on each post.
+The logged in user can use the star and cheer functionality on each post.  
+
+#### Related user stories:  
+- As a user I can see all the posts so I can see peoples posts.
+- As a logged in user I can view all posts I have starred or of profiles I follow so I can interact with my favorite posts.
+- As a user I can search posts by author, title or type to improve navigation of site.
  
 
 ### Profile
@@ -215,7 +263,13 @@ The logged in user can use the star and cheer functionality on each post.
 Displays all the details provided by the profile owner. 
 Displays the number of posts/ followers and people following which updates when these figures change.   
 A dropdown menu only for the profile owner to edit their profile/username and password.  
-All the profile owners posts can be scrolled underneath the profile owners details.  
+
+
+#### Related user stories:  
+- As a user I can see every users profile so I can find new posts, users and interact with them.
+- As a user I can see all users posts below their details so I can see what they have created
+- As a logged in user I can follow and unfollow user to interact with other users and see updated posts feed.
+- As a user I can continue scrolling posts as they auto load to improve user experience.
 
 ### Edit Profile
 
@@ -228,12 +282,18 @@ All the profile owners posts can be scrolled underneath the profile owners detai
 The owner of the profile are taken to an edit page to edit their username/password or profile by clicking on the relevant button on the dropdown menu.  
 All details can be changed and updated in their profile page.  
 
+#### Related user story:  
+- As a logged in user I can edit my profile, name and password so I update my information.
+
 
 ### About  
 
 ![About-Page](public/documentaion/images/features/about.png)  
 
-Displays the welcome message for the website.
+Displays the welcome message for the website.  
+
+#### Related user story:  
+- As a user I would like more information about the website so I can understand its goals and functions.
 
 ### Contact
 
@@ -242,13 +302,20 @@ Displays the welcome message for the website.
 ![Submit-Message](public/documentaion/images/features/toastmessage.png)  
 
 Allows users to contact the admin of the site with their name, email and message.  
-Upon submit they user is redirected home and given a success message. For this message the [React-Toastify](https://www.npmjs.com/package/react-toastify) package was installed and used, it provides a simple and effective way to give the user feedback.
+Upon submit they user is redirected home and given a success message. For this message the [React-Toastify](https://www.npmjs.com/package/react-toastify) package was installed and used, it provides a simple and effective way to give the user feedback.  
+
+#### Related user story:  
+- As a user I can contact the site admin with a message so I can add feedback to the website.
 
 ### Favicon  
 
 ![Favicon](public/documentaion/images/features/favicon.png)
 
-Displayed on the browsers tab.
+Displayed on the browsers tab.  
+
+#### Related user story:  
+
+- As a user I would like to quickly identify the websites tab so I can access it quickly
 
 ### Page Not Found
 
@@ -260,7 +327,22 @@ If the user goes to an unknown page the page not found is displayed.
 
 #### Post  
 
-This component is used throughout the website: on the posts page, single post page and profile page and its star/cheers functionality works wherever it is displayed.
+This component is used throughout the website: on the posts page, single post page and profile page and its star/cheers functionality works wherever it is displayed.  
+
+##### Related user stories:  
+- As a user I can view a single post so I can read its details.
+
+#### Fetch More Data  
+
+This function in the utils.js is reused for the infinite scroll container fetching posts and comments.
+
+#### Current User Context
+
+This is used throughout the website to determine what functionality is avaliable to the user.  
+
+#### Redirect
+
+useRedirect.js hook is used throughout the site to redirect the user if they are not authorised to be on that page.
 
 #### Logo  
 
@@ -273,7 +355,10 @@ This is used on the both the top and footer navigation bars and is passed the re
 
 ![Avatar](public/documentaion/images/features/avatar.png)  
 
-This is used to display the users avatar on the top navigation, comment component, comment create component, post and profile edit component. It passes the relevant props for src, size and text if required.
+This is used to display the users avatar on the top navigation, comment component, comment create component, post and profile edit component. It passes the relevant props for src, size and text if required.  
+
+#### Related user story:  
+- As a user I can see my profile image when logged in to enhance user experience
 
 #### Asset
 

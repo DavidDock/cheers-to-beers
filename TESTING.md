@@ -191,6 +191,9 @@ A user can see if they are logged in
 #### Results
 When a user is logged in they can successfully see the relevant icons on all nav bars by using the current user context throughout the app.
 
+Current features created for user story:
+- Top, side and fotter nav bars
+
 ### Refresh access tokens  
 As a user I can maintain my logged-in status until I choose to log out so that my user experience is not compromised
  
@@ -257,10 +260,22 @@ You can star and unstar a post.
 
 #### Results
 A logged in user can successfully star and unstar a post. The owner of the post cant star their own post and a non-user is be prompted to log in upon hover.  
-Once a post is stared the user can successfully see all those posts on their "stared" feed allowing easy access to their favourit posts.  
+Once a post is stared the user can successfully see all those posts on their "stared" feed allowing easy access to their favourite posts.  
 
 Current features created for user story:
-- Star and cheer buttons
+- Star buttons
+
+### Cheer and Uncheer a post  
+As a logged in user I can cheer/uncheer a post and interact with other users.
+ 
+#### Acceptance Criteria
+You can cheer and uncheer a post.
+
+#### Results
+A logged in user can successfully cheer and uncheer a post. The owner of the post cant cheer their own post and a non-user is be prompted to log in upon hover.  
+
+Current features created for user story:
+- Cheer button
 
 ### View all posts  
 As a user I can see all the posts so I can see peoples posts.
@@ -308,7 +323,7 @@ See posts loading when scrolling down
 The infinite scroll works on posts, fetching more posts every 10 posts.  
 
 Current features created for user story:
-- Infinite scroll component in single post page, profile and comments modal
+- Infinite scroll component in single post page and profile
 
 ### Edit Post  
 As a logged in user I can edit a post if I want to amend details.
